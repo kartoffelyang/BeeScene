@@ -1,0 +1,930 @@
+{
+  "TOP-003": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "小P看世界",
+      "boundary": "配置表列明视觉问答入口；连续追问与沿途理解范围待实车核查。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Xiao P world recognition",
+        "boundary": "Visual Q&A listed; ongoing contextual follow-up requires verification.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-005": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "AI保镖、哨兵与行车录像",
+      "boundary": "提供记录；未证明能够解释事件并组织后续处置。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "AI Guard and recording",
+        "boundary": "Recording is offered; explanation and resolution are unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    },
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "澳大利亚；需核对配置与软件",
+      "feature": "Sentry Mode",
+      "boundary": "事件记录；AI解释与服务处置未证明。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_au/GUID-56703182-8191-4DAE-AF07-2FDC0EB64663.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Sentry Mode",
+        "boundary": "Event recording; AI explanation and resolution unverified.",
+        "region": "Australia; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-009": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "小P形象与音色",
+      "boundary": "支持形象音色；稳定人格及长期关系效果未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Custom avatar and voice",
+        "boundary": "Long-term personality consistency remains unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    },
+    {
+      "brand": "NIO",
+      "model": "ET5 Touring / EL7（NT2）",
+      "region": "挪威；2024官方说明",
+      "feature": "NOMI GPT",
+      "boundary": "自然对话与个性欢迎；稳定人格效果未验证。",
+      "source": "https://www.nio.com/no_NO/blog/NOMIGPT",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "NOMI GPT",
+        "boundary": "Conversation and tailored greetings; consistent personality unverified.",
+        "region": "Norway; official 2024 information"
+      },
+      "sourceDate": "2024-04-10"
+    }
+  ],
+  "TOP-018": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "睡眠空间",
+      "boundary": "提供固定模式；空间自动转换范围待核查。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Sleep space",
+        "boundary": "Preset mode; automatic spatial conversion is unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQS（2021资料，选装包）",
+      "region": "德国官方历史资料；现款需另核对",
+      "source": "https://media.mercedes-benz.com/article/d7b935fa-d988-4336-aef1-f4a1a2ada9b7",
+      "feature": "Power Nap三阶段休息",
+      "boundary": "环境、座椅、唤醒恢复联动；口述任意时长待核对。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Three-stage Power Nap",
+        "boundary": "Cabin, seat and waking sequence; free-form duration unverified.",
+        "region": "德国官方历史资料；现款需另核对"
+      },
+      "sourceDate": "2021-07-24"
+    }
+  ],
+  "TOP-023": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "远程诊断",
+      "boundary": "提供诊断入口；证据解释与维修协商未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Remote diagnostics",
+        "boundary": "Evidence explanation and repair negotiation are unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-027": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "小P约定",
+      "boundary": "列明约定能力；口述整车配方的覆盖范围待核查。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Xiao P agreements",
+        "boundary": "Spoken whole-vehicle recipes require verification.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "用户自定义Routines",
+      "boundary": "条件连接舒适功能；不是口述自由配方的证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Custom routines",
+        "boundary": "Condition-based comfort automation; free-form spoken recipes unverified.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-028": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "本地对话与离线导航",
+      "boundary": "支持离线入口；不代表全部AI任务在弱网下可用。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Offline conversation and navigation",
+        "boundary": "Does not establish that all AI tasks work offline.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-037": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "X_ID云同步",
+      "boundary": "同步部分设置；跨车连续AI记忆未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "X_ID cloud settings",
+        "boundary": "Cross-vehicle AI memory remains unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-047": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "6kW对外放电",
+      "boundary": "支持供电；共同生活任务编排未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "6 kW external power",
+        "boundary": "Shared camping task orchestration is unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    },
+    {
+      "brand": "小米",
+      "model": "YU7（配置/OTA依功能）",
+      "region": "中国；核对配置与OTA",
+      "source": "https://www.xiaomiev.com/smartcabin",
+      "feature": "智能露营空间",
+      "boundary": "提供模式；共同生活编排未证明。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Camping space",
+        "boundary": "Collaborative living orchestration unverified.",
+        "region": "中国；核对配置与OTA"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-053": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "小P创作",
+      "boundary": "通用创作入口；现场漫画生成未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Xiao P creation",
+        "boundary": "Scene-grounded comic generation is unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-058": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "多语言对话",
+      "boundary": "多语言入口；多人实时翻译流程未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Multilingual conversation",
+        "boundary": "Multi-party real-time translation is unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-065": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "小P形象与音色",
+      "boundary": "支持定制入口；角色规则工坊未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Avatar and voice customization",
+        "boundary": "A user-defined character-rule workshop is unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-067": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "宠物模式",
+      "boundary": "支持停驻模式；全程宠物协作未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Pet mode",
+        "boundary": "End-to-end pet travel assistance is unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    },
+    {
+      "brand": "小米",
+      "model": "YU7（配置/OTA依功能）",
+      "region": "中国；核对配置与OTA",
+      "source": "https://www.xiaomiev.com/smartcabin",
+      "feature": "智能宠物空间",
+      "boundary": "提供模式；全程照料闭环未证明。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Pet space",
+        "boundary": "End-to-end pet care unverified.",
+        "region": "中国；核对配置与OTA"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-090": [
+    {
+      "brand": "小鹏",
+      "model": "G6（2025款）",
+      "region": "中国",
+      "feature": "小P百科与看世界",
+      "boundary": "提供相关问答；兴趣持续延展未验证。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Knowledge and visual Q&A",
+        "boundary": "Ongoing interest development is unverified.",
+        "region": "China"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-004": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "声光联动与4D音响",
+      "boundary": "按声音驱动光与触觉；完整内容语义编排未证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Sound visualization and 4D audio",
+        "boundary": "Sound-driven light and touch; semantic content orchestration unverified.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-052": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "声音可视化",
+      "boundary": "按音频信号响应；剧情语义理解未证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Sound visualization",
+        "boundary": "Audio response does not establish narrative understanding.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-056": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "Zoom/Webex应用",
+      "boundary": "停驻视频会议；航程式商务准备未证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Zoom/Webex apps",
+        "boundary": "Parked conferencing; itinerary-driven preparation unverified.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-085": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "Burmester 4D与氛围灯",
+      "boundary": "部分配置声光触觉联动；情节理解未证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Burmester 4D and lighting",
+        "boundary": "Sound/light/touch integration; narrative understanding unverified.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-086": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "乘客屏隐私保护",
+      "boundary": "提供隐私屏能力；协商式个人共享切换未证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Passenger display privacy",
+        "boundary": "Privacy feature; negotiated personal/shared modes unverified.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-089": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "自定义Routines",
+      "boundary": "可定义条件与功能；仪式内容自由生成未证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Custom routines",
+        "boundary": "Configurable conditions; free-form ritual generation unverified.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-096": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "E-Class（2024 W214）",
+      "region": "美国",
+      "feature": "自定义Routines",
+      "boundary": "可组合条件与功能；体验比较和试验闭环未证明。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Custom routines",
+        "boundary": "Recipe configuration; comparative experimentation unverified.",
+        "region": "United States"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-012": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "美国；需核对配置与软件",
+      "feature": "Actually Smart Summon",
+      "boundary": "用户发起并持续监督；非无人全程接驳。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-7D207174-88CD-4795-8265-9162A72AA578.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Actually Smart Summon",
+        "boundary": "User initiated and supervised; no end-to-end unattended handoff.",
+        "region": "United States; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-025": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "美国；需核对配置与软件",
+      "feature": "Come to Me",
+      "boundary": "用户长按召唤；非临停结束自动接回。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-7D207174-88CD-4795-8265-9162A72AA578.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Come to Me",
+        "boundary": "Press-and-hold retrieval; automatic timed pickup unverified.",
+        "region": "United States; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-100": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "美国；需核对配置与软件",
+      "feature": "Go to Target",
+      "boundary": "用户指定目标并监督；自主返位持续待命未证明。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-7D207174-88CD-4795-8265-9162A72AA578.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Go to Target",
+        "boundary": "Supervised target movement; autonomous return and standby unverified.",
+        "region": "United States; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-020": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "澳大利亚；需核对配置与软件",
+      "feature": "哨兵录像与远程查看",
+      "boundary": "可查看证据；自动事故处置未证明。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_au/GUID-56703182-8191-4DAE-AF07-2FDC0EB64663.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Sentry recording and remote viewing",
+        "boundary": "Evidence access; automatic incident resolution unverified.",
+        "region": "Australia; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-046": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "澳大利亚；需核对配置与软件",
+      "feature": "View Live Camera",
+      "boundary": "提供限条件远程影像；代理解释与行动未证明。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_au/GUID-56703182-8191-4DAE-AF07-2FDC0EB64663.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "View Live Camera",
+        "boundary": "Conditional remote video; agent explanation and action unverified.",
+        "region": "Australia; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-001": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "美国；需核对配置与软件",
+      "feature": "预约充电",
+      "boundary": "需人工连接充电枪；不能覆盖自主移动与物理补能。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-76995CEC-6402-4BFF-99FA-CEFA36E64A19.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Scheduled charging",
+        "boundary": "Requires a plugged-in charger; autonomous movement and connection unverified.",
+        "region": "United States; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-031": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "美国；需核对配置与软件",
+      "feature": "预约充电与预调温",
+      "boundary": "支持时间设置；持续能源管理代理未证明。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-76995CEC-6402-4BFF-99FA-CEFA36E64A19.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Scheduled charging and preconditioning",
+        "boundary": "Scheduling only; ongoing energy-agent management unverified.",
+        "region": "United States; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-038": [
+    {
+      "brand": "Tesla",
+      "model": "Model Y",
+      "region": "美国；需核对配置与软件",
+      "feature": "出发前预调温",
+      "boundary": "按预约准备座舱与电池；完整待命任务未证明。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-76995CEC-6402-4BFF-99FA-CEFA36E64A19.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Departure preconditioning",
+        "boundary": "Cabin/battery preparation; whole readiness task unverified.",
+        "region": "United States; configuration/software dependent"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-036": [
+    {
+      "brand": "NIO",
+      "model": "ET5 Touring / EL7（NT2）",
+      "region": "挪威；2024官方说明",
+      "feature": "RAG车辆信息问答",
+      "boundary": "车辆知识检索；个人车书持续适应未证明。",
+      "source": "https://www.nio.com/no_NO/blog/NOMIGPT",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "RAG vehicle Q&A",
+        "boundary": "Vehicle information retrieval; adaptive personal manual unverified.",
+        "region": "Norway; official 2024 information"
+      },
+      "sourceDate": "2024-04-10"
+    }
+  ],
+  "TOP-078": [
+    {
+      "brand": "NIO",
+      "model": "ET5 Touring / EL7（NT2）",
+      "region": "挪威；2024官方说明",
+      "feature": "车辆专属信息问答",
+      "boundary": "检索车辆说明；现场提示证据关联待验证。",
+      "source": "https://www.nio.com/no_NO/blog/NOMIGPT",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Vehicle-specific Q&A",
+        "boundary": "Retrieves documentation; grounding in live alerts unverified.",
+        "region": "Norway; official 2024 information"
+      },
+      "sourceDate": "2024-04-10"
+    }
+  ],
+  "TOP-019": [
+    {
+      "brand": "小米",
+      "model": "新一代SU7（配置/OTA依功能）",
+      "region": "中国；核对年款与OTA",
+      "source": "https://www.xiaomiev.com/smartcabin",
+      "feature": "模糊语义导航与停靠点规划",
+      "boundary": "官方列明顺路安排；多服务事务重排待验证。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Navigation with stop planning",
+        "boundary": "Cross-service task replanning unverified.",
+        "region": "中国；核对年款与OTA"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-042": [
+    {
+      "brand": "小米",
+      "model": "新一代SU7（配置/OTA依功能）",
+      "region": "中国；核对年款与OTA",
+      "source": "https://www.xiaomiev.com/smartcabin",
+      "feature": "HyperTask车家场景",
+      "boundary": "支持预设到家触发；自由口述任务链待验证。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "HyperTask home routines",
+        "boundary": "Free-form spoken task chains unverified.",
+        "region": "中国；核对年款与OTA"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-087": [
+    {
+      "brand": "小米",
+      "model": "新一代SU7（配置/OTA依功能）",
+      "region": "中国；核对年款与OTA",
+      "source": "https://www.xiaomiev.com/smartcabin",
+      "feature": "小爱陪伴与情绪回应",
+      "boundary": "官方功能说明；情绪识别准确性及长期效果未验证。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "XiaoAI companionship",
+        "boundary": "Emotion accuracy and lasting effects unverified.",
+        "region": "中国；核对年款与OTA"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-040": [
+    {
+      "brand": "小米",
+      "model": "YU7（配置/OTA依功能）",
+      "region": "中国；核对配置与OTA",
+      "source": "https://www.xiaomiev.com/smartcabin",
+      "feature": "停驻K歌空间",
+      "boundary": "支持无麦K歌；即兴AI合演未证明。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "Parked karaoke",
+        "boundary": "AI improvisational collaboration unverified.",
+        "region": "中国；核对配置与OTA"
+      },
+      "sourceDate": "年款/手册见来源"
+    }
+  ],
+  "TOP-011": [
+    {
+      "brand": "BMW",
+      "model": "i5 / 5 Series（2023发布）",
+      "region": "全球发布；地区应用可用性需核对",
+      "source": "https://www.press.bmwgroup.com/global/article/detail/T0417865EN/new-bmw-5-series-launches-with-airconsole-gaming-platform?language=en",
+      "feature": "AirConsole多人游戏",
+      "boundary": "手机作控制器；沿途感知剧情未证明。",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "AirConsole multiplayer",
+        "boundary": "Scene-aware roadside narrative unverified.",
+        "region": "全球发布；地区应用可用性需核对"
+      },
+      "sourceDate": "2023-05-26"
+    }
+  ],
+  "TOP-033": [
+    {
+      "brand": "BMW",
+      "model": "i5 / 5 Series（2023发布）",
+      "region": "全球发布；地区应用可用性需核对",
+      "source": "https://www.press.bmwgroup.com/global/article/detail/T0417865EN/new-bmw-5-series-launches-with-airconsole-gaming-platform?language=en",
+      "feature": "AirConsole游戏平台",
+      "boundary": "休闲游戏；3A游戏AI伴演未证明。",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "AirConsole gaming",
+        "boundary": "AAA AI game companion unverified.",
+        "region": "全球发布；地区应用可用性需核对"
+      },
+      "sourceDate": "2023-05-26"
+    }
+  ],
+  "TOP-064": [
+    {
+      "brand": "BMW",
+      "model": "i5 / 5 Series（2023发布）",
+      "region": "全球发布；地区应用可用性需核对",
+      "source": "https://www.press.bmwgroup.com/global/article/detail/T0417865EN/new-bmw-5-series-launches-with-airconsole-gaming-platform?language=en",
+      "feature": "AirConsole多人参与",
+      "boundary": "支持多人加入；AI观战解说未证明。",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "AirConsole multiplayer participation",
+        "boundary": "AI spectator commentary unverified.",
+        "region": "全球发布；地区应用可用性需核对"
+      },
+      "sourceDate": "2023-05-26"
+    }
+  ],
+  "TOP-010": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQS（2021资料，选装包）",
+      "region": "德国官方历史资料；现款需另核对",
+      "source": "https://media.mercedes-benz.com/article/d7b935fa-d988-4336-aef1-f4a1a2ada9b7",
+      "feature": "ENERGIZING COMFORT",
+      "boundary": "联动部分舒适功能；路线底盘协同未证明。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "ENERGIZING COMFORT",
+        "boundary": "Route and chassis orchestration unverified.",
+        "region": "德国官方历史资料；现款需另核对"
+      },
+      "sourceDate": "2021-07-24"
+    }
+  ],
+  "TOP-043": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQS（2021资料，选装包）",
+      "region": "德国官方历史资料；现款需另核对",
+      "source": "https://media.mercedes-benz.com/article/d7b935fa-d988-4336-aef1-f4a1a2ada9b7",
+      "feature": "ENERGIZING NATURE",
+      "boundary": "预设自然声景；沿途情境自适应未证明。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "ENERGIZING NATURE",
+        "boundary": "Preset soundscapes; adaptive roadside context unverified.",
+        "region": "德国官方历史资料；现款需另核对"
+      },
+      "sourceDate": "2021-07-24"
+    }
+  ],
+  "TOP-076": [
+    {
+      "brand": "Mercedes-Benz",
+      "model": "EQS（2021资料，选装包）",
+      "region": "德国官方历史资料；现款需另核对",
+      "source": "https://media.mercedes-benz.com/article/d7b935fa-d988-4336-aef1-f4a1a2ada9b7",
+      "feature": "ENERGIZING训练与提示",
+      "boundary": "提供训练提示；AI互动运动闭环未证明。",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "en": {
+        "feature": "ENERGIZING training and tips",
+        "boundary": "Interactive AI exercise loop unverified.",
+        "region": "德国官方历史资料；现款需另核对"
+      },
+      "sourceDate": "2021-07-24"
+    }
+  ]
+}

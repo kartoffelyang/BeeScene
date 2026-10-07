@@ -1,0 +1,18 @@
+[Unit]
+Description=BeeScene private scenarios API
+After=network.target
+[Service]
+Type=simple
+User=beescene
+WorkingDirectory=/opt/beescene
+EnvironmentFile=/etc/beescene.env
+ExecStart=/usr/bin/node /opt/beescene/server/index.mjs
+Restart=on-failure
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/beescene
+[Install]
+WantedBy=multi-user.target

@@ -1,1 +1,24 @@
-{"name":"fengcang-scenario-library","version":"0.1.0","private":true,"type":"module","scripts":{"dev":"vite --host 127.0.0.1","build":"vite build","preview":"vite preview --host 127.0.0.1"},"dependencies":{"@radix-ui/react-icons":"^1.3.2","react":"^19.0.0","react-dom":"^19.0.0"},"devDependencies":{"@babel/parser":"^8.0.6","@tailwindcss/vite":"^4.0.0","tailwindcss":"^4.0.0","vite":"^7.0.0"}}
+{
+  "name": "fengcang-scenario-library",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "api": "node --env-file-if-exists=.env.local server/index.mjs",
+    "test:backend": "node --test tests/backend.mjs"
+  },
+  "dependencies": {
+    "@radix-ui/react-icons": "^1.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/parser": "^8.0.6",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^7.0.0"
+  }
+}

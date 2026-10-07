@@ -5,8 +5,14 @@ qa/
 .npm-cache/
 .env
 .env.*
+!.env.example
 archive/
 scripts/
 TOP100*.json
 TOP100*.md
 投资决策卡案例-*.json
+.env.local
+.local/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
