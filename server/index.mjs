@@ -52,13 +52,13 @@ export function start({path=process.env.DATABASE_PATH||'.local/beescene.sqlite',
  }
  if(route==='/api/scenes'&&method==='POST'){
  const scene=validateScene(body.scene),baseId=body.baseId||null;
- if(baseId&&(!/^TOP-\d{3}$/.test(baseId)||Number(baseId.slice(4))<1||Number(baseId.slice(4))>100))return send(400,{error:'基础场景编号无效'});
- if(baseId&&db.prepare('SELECT id FROM scenes WHERE owner_id=? AND base_id=?').get(user.id,baseId))return send(409,{error:'该场景已有个人版本，请编辑现有版本'});
+ if(baseId)return send(403,{error:'公共场景不可修改或创建副本，请单独新增场景'});
  const id=randomUUID(),updated=new Date().toISOString();db.prepare('INSERT INTO scenes VALUES(?,?,?,?,?,?)').run(id,user.id,baseId,1,JSON.stringify(scene),updated);audit(user.id,id,'create',1);return send(201,{id,revision:1});
  }
  const match=route.match(/^\/api\/scenes\/([a-f0-9-]{36})$/);
  if(match&&['PUT','DELETE'].includes(method)){
  const existing=db.prepare('SELECT * FROM scenes WHERE id=? AND owner_id=?').get(match[1],user.id);if(!existing)return send(404,{error:'场景不存在或无编辑权限'});
+ if(existing.base_id)return send(403,{error:'现有公共场景副本只读，请单独新增场景'});
  if(body.revision!==existing.revision)return send(409,{error:'场景已更新，请刷新后重新编辑'});
  if(method==='DELETE'){db.prepare('DELETE FROM scenes WHERE id=?').run(existing.id);audit(user.id,existing.id,'delete',existing.revision);return send(200,{ok:true});}
  const scene=validateScene(body.scene),revision=existing.revision+1;db.prepare('UPDATE scenes SET body=?,revision=?,updated=? WHERE id=?').run(JSON.stringify(scene),revision,new Date().toISOString(),existing.id);audit(user.id,existing.id,'update',revision);return send(200,{id:existing.id,revision});

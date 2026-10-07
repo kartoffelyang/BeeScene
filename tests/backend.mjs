@@ -13,10 +13,10 @@ test('private ownership, administrator visibility, revisions, restart persistenc
  try{
  const a=await req('register','POST',{username:'user_a',password:'test-password-a'}),b=await req('register','POST',{username:'user_b',password:'test-password-b'}),admin=await req('login','POST',{username:'admin',password:'test-admin-password'});assert.equal(a.status,200);assert.equal(admin.status,200);
  assert.equal((await req('scenes')).status,401);
- const create=await req('scenes','POST',{scene,baseId:'TOP-003'},a.cookie);assert.equal(create.status,201);const id=create.data.id;
- assert.equal((await req('scenes','POST',{scene,baseId:'TOP-003'},a.cookie)).status,409);
+ const create=await req('scenes','POST',{scene},a.cookie);assert.equal(create.status,201);const id=create.data.id;
+ assert.equal((await req('scenes','POST',{scene,baseId:'TOP-003'},a.cookie)).status,403);
  assert.equal((await req('scenes','POST',{scene:{...scene,primaryNeed:'fake'}},a.cookie)).status,400);
- assert.equal((await req('scenes','POST',{scene,baseId:'TOP-999'},a.cookie)).status,400);
+ assert.equal((await req('scenes','POST',{scene,baseId:'TOP-999'},a.cookie)).status,403);
  assert.equal((await req('scenes','POST',{scene:{...scene,market:[{brand:'Brand',model:'Model',region:'',feature:'',boundary:'',source:'javascript:alert(1)',status:'unverified',match:'partial'}]}},a.cookie)).status,400);
  assert.equal((await req('scenes','POST',{scene},a.cookie,'https://evil.test')).status,403);
  assert.equal((await req('scenes', 'GET',null,b.cookie)).data.scenes.length,0);
@@ -26,6 +26,8 @@ test('private ownership, administrator visibility, revisions, restart persistenc
  assert.equal((await req('scenes/'+id,'DELETE',{revision:1},b.cookie)).status,404);
  assert.equal((await req('scenes/'+id,'PUT',{scene:{...scene,name:'updated'},revision:1},a.cookie)).data.revision,2);
  assert.equal((await req('scenes/'+id,'PUT',{scene,revision:1},a.cookie)).status,409);
+ const legacy='11111111-1111-1111-1111-111111111111';app.db.prepare('INSERT INTO scenes VALUES(?,?,?,?,?,?)').run(legacy,a.data.user.id,'TOP-003',1,JSON.stringify(scene),new Date().toISOString());
+ assert.equal((await req('scenes/'+legacy,'PUT',{scene,revision:1},a.cookie)).status,403);app.db.prepare('DELETE FROM scenes WHERE id=?').run(legacy);
  assert.equal((await req('generate','POST',{description:'描述足够长的一个测试场景'},a.cookie)).status,200);
  await app.close();app=start({path:join(dir,'db.sqlite'),port:0});await once(app.server,'listening');base=`http://127.0.0.1:${app.server.address().port}/api/`;
  assert.equal((await req('scenes','GET',null,a.cookie)).data.scenes[0].scene.name,'updated');

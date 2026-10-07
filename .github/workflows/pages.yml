@@ -26,6 +26,7 @@ jobs:
           node tests/hai.mjs
           node tests/decision-evidence.mjs
           node tests/i18n.mjs
+          npm run test:industry
           npm run test:backend
       - run: npm run build
         env:

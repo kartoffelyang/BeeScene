@@ -1,0 +1,896 @@
+{
+  "reviewedAt": "2026-10-07",
+  "scope": "中国主要自主集团及合资体系；欧美、日韩及印度主要OEM体系。代表车型/官方资料核查，不是销量加权装车率调查。",
+  "scopeEn": "Major Chinese groups and joint ventures; major European, American, Japanese, Korean and Indian OEM systems. Representative official product evidence, not a sales-weighted penetration survey.",
+  "groups": [
+    {
+      "id": "byd",
+      "region": "cn",
+      "name": "比亚迪 / 腾势",
+      "model": "海狮06 DM-i、腾势N7",
+      "system": "DiLink / 智能座舱",
+      "capabilities": [
+        "security",
+        "remote",
+        "media"
+      ],
+      "note": "已扩展到主流价位；哨兵不等于事件解释或远程事故处理。",
+      "source": "https://prod2.byd.com/cn/ocean-home/models/haishi/haishi-06-dm-i",
+      "level": "documented",
+      "en": {
+        "name": "BYD / Denza",
+        "model": "SEALION 06 DM-i / Denza N7",
+        "system": "DiLink",
+        "note": "Monitoring is model-specific; event explanation and incident handling are unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "geely",
+      "region": "cn",
+      "name": "吉利 / 银河 / 极氪 / 领克",
+      "model": "银河E5",
+      "system": "Flyme Auto",
+      "capabilities": [
+        "voice",
+        "media"
+      ],
+      "note": "代表车型证明座舱平台应用；不推定集团所有品牌功能相同。",
+      "source": "https://galaxy.geely.com/E5",
+      "level": "documented",
+      "en": {
+        "name": "Geely / Galaxy / Zeekr / Lynk & Co",
+        "model": "Galaxy E5",
+        "system": "Flyme Auto",
+        "note": "A representative platform, not proof of equivalent functions across sister brands."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "changan",
+      "region": "cn",
+      "name": "长安 / 深蓝 / 阿维塔",
+      "model": "UNI-K；启源E07、深蓝S05另见报告",
+      "system": "IMS / 天域座舱",
+      "capabilities": [
+        "voice"
+      ],
+      "note": "可核实语音车控；生成式助手覆盖需逐车型核查。",
+      "source": "https://www.changan.com.cn/3Dhall/UNI-K/",
+      "level": "documented",
+      "en": {
+        "name": "Changan / Deepal / Avatr",
+        "model": "UNI-K; E07 / S05 in company reports",
+        "system": "IMS / Tianyu",
+        "note": "Voice controls documented; model-specific generative capabilities need verification."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "chery",
+      "region": "cn",
+      "name": "奇瑞 / 风云 / 星途",
+      "model": "风云T8",
+      "system": "AI语音助手",
+      "capabilities": [
+        "voice",
+        "dialog"
+      ],
+      "note": "车型官网列明大模型助手；复杂委托完成度待核查。",
+      "source": "https://fulwin.chery.cn/vehicles/t8/",
+      "level": "documented",
+      "en": {
+        "name": "Chery / Fulwin / Exeed",
+        "model": "Fulwin T8",
+        "system": "AI voice assistant",
+        "note": "LLM assistant listed; complex delegated task completion remains unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "saic",
+      "region": "cn",
+      "name": "上汽 / 智己 / 荣威 / 名爵",
+      "model": "智己L6",
+      "system": "IMOS 4.0 / AI生态座舱",
+      "capabilities": [
+        "dialog",
+        "voice"
+      ],
+      "note": "集团发布明确到代表车型；不将品牌战略等同全系交付。",
+      "source": "https://www.saicmotor.com/chinese/xwzx/xwk/2025/61406.shtml",
+      "level": "documented",
+      "en": {
+        "name": "SAIC / IM / Roewe / MG",
+        "model": "IM L6",
+        "system": "IMOS 4.0",
+        "note": "Representative production platform; group strategy is not whole-fleet delivery."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "gwm",
+      "region": "cn",
+      "name": "长城 / 魏牌 / 哈弗 / 坦克",
+      "model": "蓝山（Coffee OS 3）",
+      "system": "Coffee GPT / Coffee OS",
+      "capabilities": [
+        "dialog",
+        "media",
+        "voice"
+      ],
+      "note": "大模型对话与AI音频已在平台推出；复杂场景另行核查。",
+      "source": "https://www.gwm.com.cn/news/3403366.html",
+      "level": "documented",
+      "en": {
+        "name": "GWM / Wey / Haval / Tank",
+        "model": "Wey Blue Mountain",
+        "system": "Coffee GPT / Coffee OS",
+        "note": "LLM dialogue and AI audio offered; complete scenario workflows need separate evidence."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "gac",
+      "region": "cn",
+      "name": "广汽 / 传祺 / 埃安 / 昊铂",
+      "model": "传祺向往M8",
+      "system": "鸿蒙座舱",
+      "capabilities": [
+        "voice",
+        "home",
+        "media"
+      ],
+      "note": "官网列明车控家与K歌；不外推到其他广汽车型。",
+      "source": "https://gacmotor.com/2024m8_new/",
+      "level": "documented",
+      "en": {
+        "name": "GAC / Trumpchi / Aion / Hyptec",
+        "model": "Trumpchi M8",
+        "system": "HarmonyOS cockpit",
+        "note": "Voice home-control and karaoke listed; not generalized to all GAC models."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "faw",
+      "region": "cn",
+      "name": "一汽 / 红旗 / 奔腾",
+      "model": "天工05 / 06；D-life平台",
+      "system": "灵犀座舱 / DeepSeek",
+      "capabilities": [
+        "dialog",
+        "creation"
+      ],
+      "note": "集团称语音聊天与文生图量产应用；品牌配置需分别核对。",
+      "source": "https://www.faw.com.cn/fawcn/373694/373708/5864765/index.html",
+      "level": "documented",
+      "en": {
+        "name": "FAW / Hongqi / Bestune",
+        "model": "Tiangong 05 / 06; D-life platform",
+        "system": "Lingxi / DeepSeek",
+        "note": "Company reports production chat and text-to-image; verify each trim."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "dongfeng",
+      "region": "cn",
+      "name": "东风 / 岚图 / 猛士 / 奕派",
+      "model": "岚图知音",
+      "system": "DeepSeek / AI智能体座舱",
+      "capabilities": [
+        "dialog"
+      ],
+      "note": "集团宣布接入及代表车型OTA窗口；不能据此认定全系同时可用。",
+      "source": "https://www.dfmc.com.cn/news/zixunjujiao/news_20250210_1015.html",
+      "level": "announced",
+      "en": {
+        "name": "Dongfeng / Voyah / M-Hero / eπ",
+        "model": "Voyah Courage",
+        "system": "DeepSeek cockpit",
+        "note": "Announced integration and OTA window, not simultaneous fleet-wide availability."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "baic",
+      "region": "cn",
+      "name": "北汽 / 极狐 / 北京汽车",
+      "model": "考拉、阿尔法T5 / S5",
+      "system": "大模型智能座舱",
+      "capabilities": [
+        "dialog",
+        "voice"
+      ],
+      "note": "官方明确对话、用户助手、百科量产；多模态及心境空间属后续计划。",
+      "source": "https://www.bjev.com.cn/media/details/195.html",
+      "level": "documented",
+      "en": {
+        "name": "BAIC / Arcfox / Beijing",
+        "model": "Kaola / Alpha T5 / S5",
+        "system": "LLM cockpit",
+        "note": "Conversation and knowledge functions documented; multimodal upgrades were planned."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "seres",
+      "region": "cn",
+      "name": "赛力斯 / 问界",
+      "model": "M9",
+      "system": "鸿蒙座舱",
+      "capabilities": [
+        "media",
+        "comfort"
+      ],
+      "note": "官网与手册按配置区分；多屏、座椅体验不能替代多人AI协商证明。",
+      "source": "https://aito.auto/model/m9-new/",
+      "level": "documented",
+      "en": {
+        "name": "Seres / AITO",
+        "model": "M9",
+        "system": "HarmonyOS cockpit",
+        "note": "Screens and seats are trim-dependent; no proof of full multi-party negotiation."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "li",
+      "region": "cn",
+      "name": "理想",
+      "model": "L9 Pro / Max（2023资料）",
+      "system": "理想智能空间 SS Max+",
+      "capabilities": [
+        "media",
+        "voice"
+      ],
+      "note": "多屏娱乐有明确车型资料；此条不据历史资料断言最新MindGPT能力。",
+      "source": "https://www.lixiang.com/community/detail/article/855162.html",
+      "level": "documented",
+      "en": {
+        "name": "Li Auto",
+        "model": "L9 Pro / Max (2023 evidence)",
+        "system": "SS Max+",
+        "note": "Multi-screen entertainment documented; no claim about current MindGPT from this historical source."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "nio",
+      "region": "cn",
+      "name": "蔚来",
+      "model": "ET5 Touring / EL7（NT2）",
+      "system": "NOMI GPT",
+      "capabilities": [
+        "dialog",
+        "manual"
+      ],
+      "note": "挪威资料核实GPT与车书检索；中国具体版本需另核对。",
+      "source": "https://www.nio.com/no_NO/blog/NOMIGPT",
+      "level": "regional",
+      "en": {
+        "name": "NIO",
+        "model": "ET5 Touring / EL7 (NT2)",
+        "system": "NOMI GPT",
+        "note": "Norwegian evidence verifies GPT/vehicle Q&A; Chinese variants need separate checks."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "xpeng",
+      "region": "cn",
+      "name": "小鹏",
+      "model": "G6（2025）",
+      "system": "AI小P / AI天玑",
+      "capabilities": [
+        "dialog",
+        "vision",
+        "security",
+        "rest",
+        "pet",
+        "remote",
+        "creation",
+        "voice"
+      ],
+      "note": "功能已越过普通语音；仍需分清配置入口与完整任务闭环。",
+      "source": "https://www.xiaopeng.com/g6_2025/configuration.html",
+      "level": "documented",
+      "en": {
+        "name": "XPENG",
+        "model": "G6 (2025)",
+        "system": "AI Xiao P / Tianji",
+        "note": "Beyond command voice; listed feature entry points do not establish full task completion."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "xiaomi",
+      "region": "cn",
+      "name": "小米",
+      "model": "SU7 / YU7",
+      "system": "超级小爱 / HyperOS",
+      "capabilities": [
+        "dialog",
+        "home",
+        "pet",
+        "camp",
+        "media",
+        "voice"
+      ],
+      "note": "车型和OTA依功能区分；不要把官网演示视为所有车辆已经装配。",
+      "source": "https://www.xiaomiev.com/smartcabin",
+      "level": "documented",
+      "en": {
+        "name": "Xiaomi",
+        "model": "SU7 / YU7",
+        "system": "XiaoAI / HyperOS",
+        "note": "Model/OTA conditions vary; demonstrations do not establish every car has the feature."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "leap",
+      "region": "cn",
+      "name": "零跑",
+      "model": "C10",
+      "system": "LEAP OS",
+      "capabilities": [
+        "voice",
+        "media"
+      ],
+      "note": "已纳入核查；当前可读取OTA资料为海外版本，中国AI能力仍待核实。",
+      "source": "https://www.leapmotor.net/otac10",
+      "level": "regional",
+      "en": {
+        "name": "Leapmotor",
+        "model": "C10",
+        "system": "LEAP OS",
+        "note": "Included in review; accessible OTA evidence is overseas, Chinese AI details remain unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "vw-cn",
+      "region": "cn",
+      "name": "大众中国 / 一汽大众 / 上汽大众",
+      "model": "ID.7 VIZZION",
+      "system": "ID.OS 2.0 / 科大讯飞",
+      "capabilities": [
+        "voice",
+        "dialog"
+      ],
+      "note": "中国版单独核查，不沿用欧洲ChatGPT适用范围。",
+      "source": "https://www.vw.com.cn/BrandCarModel.html?source=ID7VIZZION",
+      "level": "documented",
+      "en": {
+        "name": "Volkswagen China / FAW-VW / SAIC-VW",
+        "model": "ID.7 VIZZION",
+        "system": "ID.OS 2.0 / iFlytek",
+        "note": "Chinese version reviewed separately from European ChatGPT availability."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "gm-cn",
+      "region": "cn",
+      "name": "通用中国 / 上汽通用",
+      "model": "别克至境L7；中国创新体系",
+      "system": "本地AI语音 / 逍遥架构",
+      "capabilities": [
+        "voice"
+      ],
+      "note": "中国本地生态与美国Google内置体系分开；智驾大模型不当作座舱助手。",
+      "source": "https://www.gm.com.cn/zh/home/innovation/in-china-for-china.html",
+      "level": "documented",
+      "en": {
+        "name": "GM China / SAIC-GM",
+        "model": "Buick Electra L7 / local innovation",
+        "system": "Local AI voice / architecture",
+        "note": "Chinese ecosystem is separate from US Google built-in; AD models are not cockpit agents."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "toyota-cn",
+      "region": "cn",
+      "name": "丰田中国 / 一汽丰田 / 广汽丰田",
+      "model": "铂智3X / 铂智7",
+      "system": "中国本地智能座舱",
+      "capabilities": [
+        "voice"
+      ],
+      "note": "2025发布明确本地座舱方向；逐车型交付和助手功能待补核查。",
+      "source": "https://www.toyota.com.cn/upload/news/2025/download/0423.pdf",
+      "level": "announced",
+      "en": {
+        "name": "Toyota China / FAW-Toyota / GAC-Toyota",
+        "model": "bZ3X / bZ7",
+        "system": "Localized smart cockpit",
+        "note": "2025 release confirms platform direction; delivery and assistant features need further checks."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "nissan-cn",
+      "region": "cn",
+      "name": "日产中国 / 东风日产",
+      "model": "N7",
+      "system": "中国本地智能座舱",
+      "capabilities": [
+        "comfort"
+      ],
+      "note": "官方明确智能防晕车；不能等同乘客反馈驱动的完整协作闭环。",
+      "source": "https://www.nissan.com.cn/all-news/all-pressrelease/5945",
+      "level": "documented",
+      "en": {
+        "name": "Nissan China / Dongfeng Nissan",
+        "model": "N7",
+        "system": "Localized smart cockpit",
+        "note": "Motion-sickness mitigation documented; full passenger-feedback collaboration is unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "vw",
+      "region": "global",
+      "name": "Volkswagen Group",
+      "model": "ID.3 / 4 / 5 / 7、Golf、Tiguan、Passat",
+      "system": "IDA + ChatGPT",
+      "capabilities": [
+        "dialog",
+        "voice"
+      ],
+      "note": "多车型扩展，受软件、语言、订阅限制；百科对话不等于执行任意事务。",
+      "source": "https://www.volkswagen-newsroom.com/en/press-releases/chatgpt-is-now-available-in-many-volkswagen-models-18459",
+      "level": "documented",
+      "en": {
+        "name": "Volkswagen Group",
+        "model": "ID.3/4/5/7, Golf, Tiguan, Passat",
+        "system": "IDA + ChatGPT",
+        "note": "Multi-model rollout subject to software, language and subscription; Q&A is not arbitrary execution."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "stellantis",
+      "region": "global",
+      "name": "Stellantis",
+      "model": "Peugeot 208 / 308 / 3008等；DS 3 / 4 / 7 / 9",
+      "system": "ChatGPT语音集成",
+      "capabilities": [
+        "dialog",
+        "voice"
+      ],
+      "note": "跨品牌扩展已公开；适用市场和Connect套餐有条件。",
+      "source": "https://www.media.stellantis.com/em-en/peugeot/press/peugeot-integrates-chatgpt-as-standard-across-its-entire-line-up",
+      "level": "documented",
+      "en": {
+        "name": "Stellantis",
+        "model": "Peugeot 208/308/3008; DS 3/4/7/9",
+        "system": "ChatGPT integration",
+        "note": "Multi-brand expansion with regional/Connect package conditions."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "gm",
+      "region": "global",
+      "name": "General Motors",
+      "model": "2022+部分Cadillac / Chevrolet / Buick / GMC",
+      "system": "Google built-in / Gemini",
+      "capabilities": [
+        "dialog",
+        "planning",
+        "media"
+      ],
+      "note": "2026公布美国分批推送；约400万为符合条件车辆，绝不是实装量或普及率。",
+      "source": "https://news.gm.com/home.detail.html/Pages/news/us/en/2026/apr/0428-Google-Gemini.html",
+      "level": "announced",
+      "en": {
+        "name": "General Motors",
+        "model": "Eligible 2022+ Cadillac / Chevrolet / Buick / GMC",
+        "system": "Google built-in / Gemini",
+        "note": "US phased rollout announced in 2026. Four million eligible cars is not installation count or penetration."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "ford",
+      "region": "global",
+      "name": "Ford / Lincoln",
+      "model": "F-150；SYNC 4 / 4A适配车型",
+      "system": "Alexa Built-in",
+      "capabilities": [
+        "voice",
+        "home"
+      ],
+      "note": "语音、媒体与智能家居联动；不能推定为当前生成式Alexa+。",
+      "source": "https://www.ford.com/alexa/",
+      "level": "documented",
+      "en": {
+        "name": "Ford / Lincoln",
+        "model": "F-150; compatible SYNC 4/4A vehicles",
+        "system": "Alexa Built-in",
+        "note": "Voice, media and home controls; does not establish generative Alexa+."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "toyota",
+      "region": "global",
+      "name": "Toyota / Lexus",
+      "model": "适配Toyota Connected车型",
+      "system": "Connected Services / Voice Assistant",
+      "capabilities": [
+        "voice",
+        "remote"
+      ],
+      "note": "普通语音、远程准备与状态服务较成熟；地域和套餐不同。",
+      "source": "https://www.toyota.com.au/services/connected",
+      "level": "documented",
+      "en": {
+        "name": "Toyota / Lexus",
+        "model": "Compatible Connected Services vehicles",
+        "system": "Connected Services",
+        "note": "Conventional voice, readiness and status services vary by region and subscription."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "honda",
+      "region": "global",
+      "name": "Honda / Acura",
+      "model": "Google built-in适配车型",
+      "system": "Google Assistant",
+      "capabilities": [
+        "voice"
+      ],
+      "note": "官方支持资料确认联网助手；ASIMO OS愿景不当作当前全系能力。",
+      "source": "https://global.honda/en/Googlebuilt-in/philippines/faq/faq01.html",
+      "level": "documented",
+      "en": {
+        "name": "Honda / Acura",
+        "model": "Compatible Google built-in vehicles",
+        "system": "Google Assistant",
+        "note": "Official connected assistant support; ASIMO OS vision is not current fleet capability."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "nissan",
+      "region": "global",
+      "name": "Nissan / Infiniti",
+      "model": "Rogue SL / Platinum",
+      "system": "Google built-in",
+      "capabilities": [
+        "voice",
+        "media"
+      ],
+      "note": "限定年款与配置；不将普通Google Assistant算作Gemini已推送。",
+      "source": "https://www.nissanusa.com/owners/connect/features-apps/google-services.html",
+      "level": "documented",
+      "en": {
+        "name": "Nissan / Infiniti",
+        "model": "Rogue SL / Platinum",
+        "system": "Google built-in",
+        "note": "Year/trim restrictions; Google Assistant is not evidence of Gemini rollout."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "hyundai",
+      "region": "global",
+      "name": "Hyundai / Kia / Genesis",
+      "model": "IONIQ 6 / Kia EV3及适配ccNC车型",
+      "system": "AI Assistant / ccNC",
+      "capabilities": [
+        "dialog",
+        "voice"
+      ],
+      "note": "生成式助手正扩展；语言、区域、平台和OTA条件仍决定可用性。",
+      "source": "https://www.kia.com/th/en/util/news/ai-voice-assistant-driver.html",
+      "level": "documented",
+      "en": {
+        "name": "Hyundai / Kia / Genesis",
+        "model": "IONIQ 6 / Kia EV3; compatible ccNC vehicles",
+        "system": "AI Assistant / ccNC",
+        "note": "Generative assistant expansion remains language, region, platform and OTA dependent."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "renault",
+      "region": "global",
+      "name": "Renault Group",
+      "model": "Renault 4 / 5 / Twingo适配车型",
+      "system": "reno + ChatGPT",
+      "capabilities": [
+        "dialog",
+        "manual"
+      ],
+      "note": "有明确人格化入口与车书指导；长时人格一致性未验证。",
+      "source": "https://www.renault.co.uk/renault-connect/reno.html",
+      "level": "documented",
+      "en": {
+        "name": "Renault Group",
+        "model": "Compatible Renault 4 / 5 / Twingo",
+        "system": "reno + ChatGPT",
+        "note": "Character and vehicle guidance documented; long-term personality consistency unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "volvo",
+      "region": "global",
+      "name": "Volvo Cars",
+      "model": "EX90 / XC60等Google built-in适配车型",
+      "system": "Gemini",
+      "capabilities": [
+        "dialog",
+        "planning"
+      ],
+      "note": "2026已开始美国首批推送，US English账户与联网有条件；不外推到中国。",
+      "source": "https://www.volvocars.com/intl/media/press-releases/789E7B09CD4D75AB/",
+      "level": "documented",
+      "en": {
+        "name": "Volvo Cars",
+        "model": "EX90 / XC60 and eligible Google built-in models",
+        "system": "Gemini",
+        "note": "US rollout began in 2026, requiring US English account/connectivity; not assumed available in China."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "mb",
+      "region": "global",
+      "name": "Mercedes-Benz",
+      "model": "E-Class W214 / EQS",
+      "system": "MBUX / Routines / ENERGIZING",
+      "capabilities": [
+        "comfort",
+        "rest",
+        "media",
+        "routines"
+      ],
+      "note": "固定或条件联动较成熟；AI自动学习、语义剧情联动仍要单独核实。",
+      "source": "https://media.mbusa.com/news/2024-e-class-sedan-quick-reference-guide",
+      "level": "documented",
+      "en": {
+        "name": "Mercedes-Benz",
+        "model": "E-Class W214 / EQS",
+        "system": "MBUX / Routines / ENERGIZING",
+        "note": "Presets/conditional comfort mature; AI habit learning and semantic effects need independent evidence."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "bmw",
+      "region": "global",
+      "name": "BMW Group / MINI",
+      "model": "BMW i5 / 5 Series",
+      "system": "AirConsole / iDrive",
+      "capabilities": [
+        "media",
+        "game"
+      ],
+      "note": "停驻多人游戏已提供；不等于AI理解沿途场景或3A伴演。",
+      "source": "https://www.press.bmwgroup.com/global/article/detail/T0417865EN/new-bmw-5-series-launches-with-airconsole-gaming-platform?language=en",
+      "level": "documented",
+      "en": {
+        "name": "BMW Group / MINI",
+        "model": "BMW i5 / 5 Series",
+        "system": "AirConsole / iDrive",
+        "note": "Parked multiplayer gaming documented; no proof of AI roadside narrative or AAA companion."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "tesla",
+      "region": "global",
+      "name": "Tesla",
+      "model": "Model Y",
+      "system": "Sentry / Summon / Scheduled Precondition",
+      "capabilities": [
+        "security",
+        "remote",
+        "physical"
+      ],
+      "note": "召唤明确需要监督；不是自主接驳、自动补能或服务交接。",
+      "source": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-7D207174-88CD-4795-8265-9162A72AA578.html",
+      "level": "documented",
+      "en": {
+        "name": "Tesla",
+        "model": "Model Y",
+        "system": "Sentry / Summon / Preconditioning",
+        "note": "Summon is supervised; not autonomous pickup, physical charging or service handoff."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "jlr",
+      "region": "global",
+      "name": "JLR / Range Rover / Defender",
+      "model": "Pivi Pro适配Land Rover",
+      "system": "Alexa Built-in",
+      "capabilities": [
+        "voice",
+        "home"
+      ],
+      "note": "多车型内置Alexa；不等于生成式代理或所有中国配置。",
+      "source": "https://media.jlr.com/corporate/news/2022/02/land-rover-introduces-amazon-alexa-across-its-vehicle-portfolio",
+      "level": "documented",
+      "en": {
+        "name": "JLR / Range Rover / Defender",
+        "model": "Pivi Pro-compatible Land Rover",
+        "system": "Alexa Built-in",
+        "note": "Multi-model Alexa; not a generative agent or all Chinese configurations."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "mazda",
+      "region": "global",
+      "name": "Mazda",
+      "model": "CX-50（2025）",
+      "system": "Alexa Built-in",
+      "capabilities": [
+        "voice",
+        "home"
+      ],
+      "note": "普通语音车控与家居控制已扩展到主流车型。",
+      "source": "https://news.mazdausa.com/vehicles-2025-cx-50",
+      "level": "documented",
+      "en": {
+        "name": "Mazda",
+        "model": "CX-50 (2025)",
+        "system": "Alexa Built-in",
+        "note": "Conventional vehicle voice and smart-home controls on a mainstream model."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "subaru",
+      "region": "global",
+      "name": "Subaru",
+      "model": "MySubaru适配车型",
+      "system": "Connected Services",
+      "capabilities": [
+        "remote"
+      ],
+      "note": "远程温控及车辆状态按配置、套餐提供；生成式助手仍待核查。",
+      "source": "https://www.subaru.com/subaru-starlink/overview.html",
+      "level": "documented",
+      "en": {
+        "name": "Subaru",
+        "model": "MySubaru-compatible models",
+        "system": "Connected Services",
+        "note": "Remote climate/status depend on trim and package; generative assistant coverage unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "suzuki",
+      "region": "global",
+      "name": "Suzuki / Maruti Suzuki",
+      "model": "Suzuki Connect适配车型",
+      "system": "Suzuki Connect",
+      "capabilities": [
+        "remote"
+      ],
+      "note": "日本官方明确远程空调；全球车型与印度版本不直接外推。",
+      "source": "https://www.suzuki.co.jp/car/suzukiconnect/comfortable/",
+      "level": "documented",
+      "en": {
+        "name": "Suzuki / Maruti Suzuki",
+        "model": "Suzuki Connect-compatible models",
+        "system": "Suzuki Connect",
+        "note": "Japanese remote climate documented; not generalized to global/Indian variants."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "tata",
+      "region": "global",
+      "name": "Tata Motors（印度乘用车）",
+      "model": "Safari / iRA适配车型",
+      "system": "iRA / iRA.ev",
+      "capabilities": [
+        "remote"
+      ],
+      "note": "连接、状态与诊断已有产品；生成式助手覆盖待核查。",
+      "source": "https://www.tata.com/newsroom/business/tata-motors-india-emobility-revolution",
+      "level": "documented",
+      "en": {
+        "name": "Tata Motors (India passenger vehicles)",
+        "model": "Safari / iRA-compatible models",
+        "system": "iRA / iRA.ev",
+        "note": "Connectivity, status and diagnostics offered; generative assistant coverage unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "mahindra",
+      "region": "global",
+      "name": "Mahindra",
+      "model": "XUV700",
+      "system": "Adrenox / Alexa",
+      "capabilities": [
+        "voice",
+        "remote"
+      ],
+      "note": "联网、远控与Alexa并不意味着完整AI任务委托。",
+      "source": "https://auto.mahindra.com/talk-about-it.html",
+      "level": "documented",
+      "en": {
+        "name": "Mahindra",
+        "model": "XUV700",
+        "system": "Adrenox / Alexa",
+        "note": "Connectivity/remote control/Alexa do not establish full AI delegation."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "honda-cn",
+      "region": "cn",
+      "name": "本田中国 / 广汽本田 / 东风本田",
+      "model": "皓影（2022发布）",
+      "system": "Honda CONNECT 3.0",
+      "capabilities": [
+        "voice",
+        "home",
+        "remote"
+      ],
+      "note": "中国官方列明精准语音、手机控车与家居联动；不套用海外Google方案。",
+      "source": "https://www.honda.com.cn/news/20221223.html",
+      "level": "documented",
+      "en": {
+        "name": "Honda China / GAC-Honda / Dongfeng Honda",
+        "model": "Breeze (2022 launch)",
+        "system": "Honda CONNECT 3.0",
+        "note": "Chinese voice, phone controls and home integration documented; separate from overseas Google systems."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "bmw-cn",
+      "region": "cn",
+      "name": "宝马中国 / 华晨宝马",
+      "model": "i5（中国版）",
+      "system": "BMW智能个人助理",
+      "capabilities": [
+        "voice"
+      ],
+      "note": "一语三连与辅助泊车有本地车型资料；不等同自由目标的自主委托。",
+      "source": "https://www.bmw.com.cn/zh/all-models/bmw-i/i5/2024/inspire.html",
+      "level": "documented",
+      "en": {
+        "name": "BMW China / BMW Brilliance",
+        "model": "i5 (China)",
+        "system": "BMW Personal Assistant",
+        "note": "Chained voice commands and parking documented; free-form autonomous delegation unverified."
+      },
+      "reviewedAt": "2026-10-07"
+    },
+    {
+      "id": "mb-cn",
+      "region": "cn",
+      "name": "奔驰中国 / 北京奔驰",
+      "model": "S-Class（中国版）",
+      "system": "MBUX",
+      "capabilities": [
+        "voice"
+      ],
+      "note": "本地资料列明读心语音和后排控车；不等同真实情绪理解或完整多人协商。",
+      "source": "https://www.mercedes-benz.com.cn/vehicles/sedan/s-class.html",
+      "level": "documented",
+      "en": {
+        "name": "Mercedes-Benz China / Beijing Benz",
+        "model": "S-Class (China)",
+        "system": "MBUX",
+        "note": "Local voice and rear-seat control documented; not proof of emotional understanding or negotiation."
+      },
+      "reviewedAt": "2026-10-07"
+    }
+  ]
+}
