@@ -28,6 +28,7 @@ jobs:
           node tests/i18n.mjs
           node tests/patents.mjs
           npm run test:industry
+          npm run test:germany
           npm run test:backend
       - run: npm run build
         env:

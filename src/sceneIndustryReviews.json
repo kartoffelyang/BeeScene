@@ -1,0 +1,750 @@
+{
+  "PAT-001": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "车载旅途影像捕捉与保存；安全门控、任意目标与自动配文另核",
+      "en": "Vehicle-based scenic capture and storage; safety gating, arbitrary targeting and captions require separate verification."
+    },
+    "regions": {
+      "cn": {
+        "note": "车载旅途拍摄已有少量量产应用；驾驶状态门控、目标理解与配文仍未核实为完整闭环。",
+        "noteEn": "Scenic capture has limited production use; safety gating, intent interpretation and captioning are not verified as a full workflow.",
+        "sources": [
+          "https://static.cninfo.com.cn/finalpage/2025-04-11/1223057068.PDF"
+        ]
+      },
+      "global": {
+        "note": "车载旅途拍摄已有少量量产应用；驾驶状态门控、目标理解与配文仍未核实为完整闭环。",
+        "noteEn": "Scenic capture has limited production use; safety gating, intent interpretation and captioning are not verified as a full workflow.",
+        "sources": [
+          "https://www.bmw.co.uk/en/shop/ls/dp/Base_Drive_Recorder_gb"
+        ]
+      }
+    }
+  },
+  "PAT-002": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "非接触生命体/运动感知与提醒、温控等部分关怀；不把诊断和连续生理分析算作已实现",
+      "en": "Non-contact presence/motion sensing with alerts or climate care; diagnosis and continuous physiology analysis are not inferred."
+    },
+    "regions": {
+      "cn": {
+        "note": "中外已有非接触生命体/运动感知与提醒、温控等局部关怀；连续生理分析仍需单独核查。",
+        "noteEn": "Non-contact presence/motion sensing, alerts and limited climate care exist; continuous physiology analysis is not established.",
+        "sources": [
+          "https://aito.auto/model/m9/"
+        ]
+      },
+      "global": {
+        "note": "中外已有非接触生命体/运动感知与提醒、温控等局部关怀；连续生理分析仍需单独核查。",
+        "noteEn": "Non-contact presence/motion sensing, alerts and limited climate care exist; continuous physiology analysis is not established.",
+        "sources": [
+          "https://www.volvocars.com/us/cars/ex90-electric/features/",
+          "https://www.hyundai.com/csa/en/find-a-car/new-santa-fe/safety"
+        ]
+      }
+    }
+  },
+  "PAT-003": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "体压/状态反馈驱动的按摩适配；固定按摩、定时姿态调节仅算相关能力",
+      "en": "Pressure/state-feedback adaptive massage; fixed massage and scheduled posture changes are related capabilities only."
+    },
+    "regions": {
+      "cn": {
+        "note": "普通按摩已在多品牌提供，但本场景要求体压与状态驱动的自适应，核查中只找到相关能力。",
+        "noteEn": "Massage is offered by multiple brands, but this scenario requires pressure/state-driven adaptation; only related capabilities were verified.",
+        "sources": [
+          "https://manuals.lixiang.com/zh-cn/X042024PRO/20251009151824/topic-2023-B1E9B457-001.html",
+          "https://www.zeekrlife.com/zh-cn/zeekr009"
+        ]
+      },
+      "global": {
+        "note": "普通按摩已在多品牌提供，但本场景要求体压与状态驱动的自适应，核查中只找到相关能力。",
+        "noteEn": "Massage is offered by multiple brands, but this scenario requires pressure/state-driven adaptation; only related capabilities were verified.",
+        "sources": [
+          "https://media.mercedes-benz.com/article/c90b03ec-d0ed-423e-8632-f49e46ca6636",
+          "https://www.bentleymotors.com/uk/en/models/technology.html"
+        ]
+      }
+    }
+  },
+  "PAT-004": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "声音随内容或舱内声学条件适配；逐歌曲与跨车偏好迁移另核",
+      "en": "Audio adaptation to content or cabin acoustics; per-song and cross-car preferences require separate verification."
+    },
+    "regions": {
+      "cn": {
+        "note": "音频内容处理、噪声补偿和个人调音已有应用或供应商方案；逐歌曲与跨车辆偏好迁移未核实。",
+        "noteEn": "Content processing, noise compensation and personalization exist; per-song and cross-vehicle preference transfer remain unverified.",
+        "sources": [
+          "https://www.nio.io/et9"
+        ]
+      },
+      "global": {
+        "note": "音频内容处理、噪声补偿和个人调音已有应用或供应商方案；逐歌曲与跨车辆偏好迁移未核实。",
+        "noteEn": "Content processing, noise compensation and personalization exist; per-song and cross-vehicle preference transfer remain unverified.",
+        "sources": [
+          "https://news.mazdausa.com/vehicles-2025-cx-5",
+          "https://car.harman.com/Pages/ready-tune.aspx"
+        ]
+      }
+    }
+  },
+  "PAT-005": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "调光天幕作为投影面及观看联动；普通影院屏/幕布不计入",
+      "en": "Dimmable roof as projection surface with viewing coordination; conventional cinema screens are excluded."
+    },
+    "regions": {
+      "cn": {
+        "note": "舱内影院已有量产车型，现有证据是专用幕布或折叠显示屏；未找到调光天幕直接投影的量产证据。",
+        "noteEn": "Cabin cinema exists with dedicated screens or folding displays; dimmable-roof projection was not verified in production.",
+        "sources": [
+          "https://aito.auto/dam/content/dam/aito/cn/service/pdf/m9-product-manual-20240918.pdf"
+        ]
+      },
+      "global": {
+        "note": "舱内影院已有量产车型，现有证据是专用幕布或折叠显示屏；未找到调光天幕直接投影的量产证据。",
+        "noteEn": "Cabin cinema exists with dedicated screens or folding displays; dimmable-roof projection was not verified in production.",
+        "sources": [
+          "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0382793EN_GB/the-new-bmw-7-series"
+        ]
+      }
+    }
+  },
+  "PAT-006": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "停驻时按乘员请求以受限机械臂取放轻小物品；工厂机器人不计入",
+      "en": "Parked occupant-requested lightweight object handling by bounded cabin arm; factory robots are excluded."
+    },
+    "regions": {
+      "cn": {
+        "note": "按停驻、轻小物品取放、乘员指定与受限抓取机制检索，未找到中外量产乘用车型官方证据。工厂机械臂与车外机器人不计入；专利单独展示。",
+        "noteEn": "Search for parked, occupant-requested lightweight object handling found no official production passenger-car evidence. Factory and external robots are excluded; patents are shown separately.",
+        "sources": [
+          "https://patents.google.com/patent/CN121696991B/zh"
+        ]
+      },
+      "global": {
+        "note": "按停驻、轻小物品取放、乘员指定与受限抓取机制检索，未找到中外量产乘用车型官方证据。工厂机械臂与车外机器人不计入；专利单独展示。",
+        "noteEn": "Search for parked, occupant-requested lightweight object handling found no official production passenger-car evidence. Factory and external robots are excluded; patents are shown separately.",
+        "sources": [
+          "https://www.bmwgroup.com/en/news/general/2024/humanoid-robots.html",
+          "https://www.hyundai.com/worldwide/en/company/innovation/future-mobility"
+        ]
+      }
+    }
+  },
+  "PAT-007": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "无回应提醒与专用驾驶系统受控停车链；一般疲劳提醒、AEB、手动停车不计入",
+      "en": "Unresponsive-driver warning and dedicated controlled stop; basic fatigue warnings, AEB and manual stops are excluded."
+    },
+    "regions": {
+      "cn": {
+        "note": "计数对象为无回应提醒衔接受控停车：海外已有多集团应用，中国本次核实小鹏X9；普通DMS/AEB不计入。",
+        "noteEn": "The counted mechanism is unresponsive-driver warning followed by controlled stop: multiple overseas groups and XPENG X9 in China are verified. Generic DMS/AEB are excluded.",
+        "sources": [
+          "https://bbs.xiaopeng.com/article/3806549?tidType=1",
+          "https://www.changan.com.cn/3Dhall/UNI-K/",
+          "https://www.honda.com.cn/news/20231117.html"
+        ]
+      },
+      "global": {
+        "note": "计数对象为无回应提醒衔接受控停车：海外已有多集团应用，中国本次核实小鹏X9；普通DMS/AEB不计入。",
+        "noteEn": "The counted mechanism is unresponsive-driver warning followed by controlled stop: multiple overseas groups and XPENG X9 in China are verified. Generic DMS/AEB are excluded.",
+        "sources": [
+          "https://www.volkswagen-newsroom.com/en/the-new-t-roc-international-media-drive-19983/assist-and-chassis-systems-19985",
+          "https://www.toyota.com/owners/warranty-owners-manuals/digital/article/bz/2026/om42j21u/ch05se040413/",
+          "https://www.volvocars.com/static/support-content/pdfs/uk_en-GB_ex90_2026_UM_5419c90e5c9565b950aa7048a75af275.pdf",
+          "https://www.press.bmwgroup.com/global/article/attachment/T0308711EN/463958",
+          "https://www.mercedes-benz.ca/en/owners/manuals/s-class-sedan-2024-09-v223-mbux/driving-and-driving-safety-systems/function-of-active-emergency-stop-assist"
+        ]
+      }
+    }
+  },
+  "PAT-008": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "同一屏跨座舱与营地的机械位置迁移；固定后排屏与外部投影不计入",
+      "en": "Mechanical repositioning of one display across cabin/campsite; fixed rear screens and external projection are excluded."
+    },
+    "regions": {
+      "cn": {
+        "note": "现有量产证据包括舱内折叠屏与车外投影；未找到同一柔性屏跨前后排、尾门与营地移动的量产证据。",
+        "noteEn": "Existing products include interior folding screens and exterior projection; a flexible screen repositioned across cabin/tailgate/campsite is unverified.",
+        "sources": [
+          "https://aito.auto/model/m9/"
+        ]
+      },
+      "global": {
+        "note": "现有量产证据包括舱内折叠屏与车外投影；未找到同一柔性屏跨前后排、尾门与营地移动的量产证据。",
+        "noteEn": "Existing products include interior folding screens and exterior projection; a flexible screen repositioned across cabin/tailgate/campsite is unverified.",
+        "sources": [
+          "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0382793EN_GB/the-new-bmw-7-series"
+        ]
+      }
+    }
+  },
+  "DE-001": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "支持城市的车内停车缴费；复杂标牌识别、居民许可与支付一致性另核",
+      "en": "In-car parking payments in supported cities; complex signs, resident permits and payment consistency require separate verification."
+    },
+    "regions": {
+      "de": {
+        "note": "已核实宝马车内停车支付这一部分核心应用；复杂标牌、居民许可与支付一致性检查仍属本场景增量。不能用支付覆盖代替完整视觉流程普及率。",
+        "noteEn": "BMW verifies partial core parking payment. Complex signs, resident permits and payment consistency remain incremental; payment coverage does not establish full visual workflow adoption.",
+        "sources": [
+          "https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/ordnungsamt/parkraumbewirtschaftung/",
+          "https://www.bmwgroup.com/de/news/allgemein/2024/in-car-payment.html"
+        ],
+        "benchmarks": [
+          {
+            "name": "EasyPark",
+            "feature": "手机停车缴费、调整停车时长",
+            "boundary": "移动服务参考；不证明OEM具备标牌理解与许可核对。",
+            "url": "https://www.easypark.com/de/so-gehts",
+            "en": {
+              "name": "EasyPark",
+              "feature": "Mobile parking payment and duration adjustment",
+              "boundary": "Service benchmark, not proof of OEM sign/permit understanding."
+            }
+          }
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-002": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "停车盘标志、适用时段及到达时间相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving disc requirement, active hours and arrival time; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国停车盘要求包含设置方式；允许时长仍取决于现场标牌。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German parking-disc rules include how arrival is set; local signs determine duration. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.gesetze-im-internet.de/stvo_2013/__13.html"
+        ],
+        "benchmarks": [
+          {
+            "name": "Needit PARK LITE",
+            "feature": "电子停车盘自动设置到达时间",
+            "boundary": "厂商资料；不证明车载视觉读取附加标牌、推导停车许可或自动延长停留。",
+            "url": "https://www.needit.dk/park-lite-2/?lang=de",
+            "en": {
+              "name": "Needit PARK LITE",
+              "feature": "Automatic arrival-time setting on an electronic parking disc",
+              "boundary": "Manufacturer information; no proof of in-car supplementary-sign reading, permit reasoning or automatic stay extensions."
+            }
+          }
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-003": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "移动禁停标牌、日期时间、方向与停车位置相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving temporary signs, date/time, direction and parked location; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国搬家、施工等临时禁停可影响原先已停车辆；需识别生效范围。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. Moving and construction restrictions can affect previously parked vehicles; effective extent matters. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.berlin.de/polizei/aufgaben/bussgeldstelle/kfz-umsetzung/"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-004": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "充电专用标牌、限时与实时充电状态相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving charging-bay signs, time limits and live charging state; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国充电车位条件与服务商占位费分别核对，不把任一收费上限当停车许可。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German charging-bay restrictions and provider idle fees are checked separately; a fee cap is not parking permission. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.enbw.com/service/faq/e-mobilitaet/blockiergebuehr/"
+        ],
+        "benchmarks": [
+          {
+            "name": "EnBW mobility+",
+            "feature": "充电进度、占位费与超时规则",
+            "boundary": "充电服务参考；不同场站和套餐规则不同，不能据此推断车辆自动判断泊位标牌和返车时间。",
+            "url": "https://www.enbw.com/service/faq/e-mobilitaet/blockiergebuehr/",
+            "en": {
+              "name": "EnBW mobility+",
+              "feature": "Charging progress, idle fees and time limits",
+              "boundary": "Service benchmark; station/plan rules differ and do not prove vehicle sign interpretation or coordinated return timing."
+            }
+          }
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-005": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "可读轮胎标识与路线天气；胎种不能靠外形猜测相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving readable tire markings and route weather; appearance alone cannot identify tire type; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国冬季轮胎义务对应实际冰雪等条件；本场景只组织准备，不认证道路安全。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German winter-tire obligations relate to actual winter conditions; this workflow coordinates preparation rather than certifying safety. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.gesetze-im-internet.de/stvo_2013/__2.html"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-006": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "拥堵中的救援通道辅助；历史车型先例不计入当前已应用数量",
+      "en": "Emergency-corridor assistance in congestion; historical model precedents are excluded from current adoption counts."
+    },
+    "regions": {
+      "de": {
+        "note": "宝马2020年5系资料记载历史量产救援通道辅助。仅作已有应用先例，不计入当前已应用OEM数量；现款配置仍需核实。",
+        "noteEn": "The 2020 BMW 5 Series documentation records production emergency-corridor assistance. This is a historical precedent, excluded from current adoption counts; current configurations require verification.",
+        "sources": [
+          "https://www.gesetze-im-internet.de/stvo_2013/__11.html",
+          "https://www.press.bmwgroup.com/deutschland/article/attachment/T0308529DE/464003"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-007": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "自行车街道标志、附加许可和骑行者位置相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving bicycle-street signs, supplementary permissions and cyclist positions; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国自行车街道机动车准入需看附加标牌；准入不等于骑行者应让路。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. Motor access to German bicycle streets depends on supplementary signs; access does not imply cyclist yielding. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.gesetze-im-internet.de/stvo_2013/anlage_2.html"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-008": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "车型限制、场地标牌与计划的停驻活动相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving vehicle restrictions, site signs and intended activities; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国需区分休息停车与露营活动，地方和场地要求分别核实。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. Rest parking and camping must be distinguished with local and site-specific checks. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.adac.de/reise-freizeit/reiseplanung/reiseziele/deutschland/fahrzeug/"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-009": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "牌照有效月份、存放位置和交接凭证相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving registration months, storage location and handoff evidence; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国季节性牌照有效期外不得在公共道路驾驶或停放。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German seasonal-registration vehicles cannot be driven or parked on public roads outside their period. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://service.berlin.de/dienstleistung/121480/"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-010": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "自动行程记录与账本分类；任意口述补录及税务接受另核",
+      "en": "Automatic trip recording and logbook categorization; free-form spoken updates and tax acceptance require separate verification."
+    },
+    "regions": {
+      "de": {
+        "note": "已核实奔驰自动行程记录与分类服务。税务合规口述账本的完整流程尚未核实，税务接受须依实际记录和当地要求。",
+        "noteEn": "Mercedes-Benz verifies automatic trip logging and categorization. A complete spoken tax-compliant workflow is not verified; tax acceptance depends on actual records and local requirements.",
+        "sources": [
+          "https://ksth.bundesfinanzministerium.de/lsth/2026/B-Anhaenge/Anhang-24/IV/IV-1/anhang-24-IV-1.html",
+          "https://www.mercedes-benz.de/passengercars/buy/digital-extras-overview/apps/fahrtenbuch.html"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-011": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "环保区入口标牌与可读标贴；车辆资格以资料核验相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving zone signs and readable sticker; vehicle eligibility needs document verification; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国部分城市环保区调整或取消，需按当前城市核查。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German city zones can change or be removed; current local verification matters. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.umweltbundesamt.de/themen/luft/luftschadstoffe/feinstaub/umweltzonen-in-deutschland"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-012": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "临时限宽标牌、车道边界、隔离设施与邻车相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving width signs, temporary boundaries, barriers and adjacent vehicles; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "奥迪A6的窄道辅助是相关基础能力，不等于本场景要求的车宽、现场限宽牌与通行资格联合判断，因此不计入核心应用OEM数量。",
+        "noteEn": "Audi A6 narrow-passage assistance is a related building block, not joint vehicle-width, posted-limit and eligibility assessment; it is excluded from core adoption counts.",
+        "sources": [
+          "https://presse.adac.de/meldungen/adac-ev/verkehr/sicher-durch-die-baustelle.html",
+          "https://www.audi.com/de/der-audi-a6-bis-2025-das-multitalent-in-der-business-class-10240/komfort-10254"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-013": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "公交身份、双侧灯光时间序列、速度与乘客活动相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving bus identity, bilateral flashing over time, speed and passenger activity; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国对接近与停靠的警示灯公交规定不同，需要时间序列理解。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German rules differ for approaching and stopped hazard-lit buses, requiring temporal interpretation. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.gesetze-im-internet.de/stvo_2013/__20.html"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-014": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "电车车门、站台隔离、乘客路径与遮挡区域相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving tram doors, platform separation, passenger paths and occlusion; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国电车站点结构不同，不能把所有停靠都解释为乘客会跨越车道。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German tram stops differ; not every stop implies passengers crossing a vehicle lane. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.gesetze-im-internet.de/stvo_2013/__20.html"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-015": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "区域标牌、儿童、球、遮挡车辆与可见变化相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving area signs, children, balls, parked occluders and visible changes; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国交通缓和区域允许儿童活动，行人使用空间与普通道路不同。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German traffic-calmed areas allow child activity and differ from ordinary road space. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.adac.de/verkehr/recht/verkehrsvorschriften-deutschland/spielstrasse/"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-016": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "大型动物识别提醒；连续穿越预判另核，历史车型不计入当前应用数量",
+      "en": "Large-animal detection/warnings; sequential crossing inference requires verification, and historical models are excluded from current adoption counts."
+    },
+    "regions": {
+      "de": {
+        "note": "大型动物识别提醒已核实保时捷Taycan的部分核心实现。宝马2013年车型作为历史先例单列，不计入当前应用数量；连续穿越预判未核实。",
+        "noteEn": "Porsche Taycan verifies partial large-animal detection/warnings. BMW 2013 models are listed as historical precedents, excluded from current counts; sequential crossing inference is unverified.",
+        "sources": [
+          "https://www.adac.de/verkehr/verkehrssicherheit/tiere/wildunfaelle/",
+          "https://ask.porsche.com/de/de-DE/night-vision-assist-taycan/",
+          "https://www.press.bmwgroup.com/deutschland/article/detail/T0141144DE/bmw-modellpflege-massnahmen-zum-sommer-2013"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-017": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "自行车架、重复号牌、灯具与外露绑带相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving bike carrier, repeat plate, lights and exposed straps; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国自行车运输需注意号牌和照明遮挡；图像只支持可见项核验。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German bicycle transport requires attention to plate/light visibility; images cover only visible checks. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://www.adac.de/rund-ums-fahrzeug/ausstattung-technik-zubehoer/zubehoer/fahrradhecktraeger/"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-018": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "限高标牌、横梁与已确认的车顶装载状态相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving clearance signs, barriers and confirmed roof-load state; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "奔驰提供按输入尺寸规划路线的相关能力；车顶载物视觉测量和现场净空确认没有由此得到证明，不计入核心应用数量。",
+        "noteEn": "Mercedes-Benz documents dimension-aware routing, a related capability. This does not verify visual roof-load measurement or on-site clearance assessment, so it is excluded from core adoption counts.",
+        "sources": [
+          "https://www.adac.de/rund-ums-fahrzeug/zweirad/fahrrad-ebike-pedelec/kauf-ausruestung/fahrrad-transport/",
+          "https://www.mercedes-benz.de/vans/buy/digital-extras/navigation/navigation-for-trailers-and-oversized-vehicles.html"
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  },
+  "DE-019": {
+    "checkedAt": "2026-10-07",
+    "scope": {
+      "zh": "设备型号、上下层、限高限重与操作状态相关的核心任务实现；通用导航、提醒、法规页面及手机服务不计入OEM应用",
+      "en": "Core implementation involving lift model, level, height/load ratings and operating state; generic navigation, reminders, legal pages and mobile services are excluded from OEM adoption."
+    },
+    "regions": {
+      "de": {
+        "note": "本次围绕德国核查。德国厂商提供双层机械停车设备，其限制随型号与层位不同，不以品牌名称推断适配。 法规和服务证明任务背景，不证明OEM已实现完整AI流程；车型、年份与配置需逐条核对。",
+        "noteEn": "This review targets Germany. German suppliers provide two-level parking equipment with model/level-specific limits; brand alone does not establish fit. Rules and services establish context, not a complete OEM AI workflow; model years and trims remain explicit.",
+        "sources": [
+          "https://woehr.de/files/uploads/woehr/downloads/datasheets/parklift/de/WOEHR_450-32_DE.pdf"
+        ],
+        "benchmarks": [
+          {
+            "name": "WÖHR Parklift 450",
+            "feature": "机械停车设备尺寸、载荷与操作限制",
+            "boundary": "设备参数用于匹配判断，不是OEM已实现视觉验车或自动驶入的证据。",
+            "url": "https://woehr.de/files/uploads/woehr/downloads/datasheets/parklift/de/WOEHR_450-32_DE.pdf",
+            "en": {
+              "name": "WÖHR Parklift 450",
+              "feature": "Mechanical parking dimensions, loads and operating limits",
+              "boundary": "Equipment specifications support fit assessment; they do not verify OEM visual vehicle checks or automated entry."
+            }
+          }
+        ]
+      },
+      "cn": {
+        "note": "本次新增场景以德国为目标市场，未开展中国市场的穷尽核查。",
+        "noteEn": "These additions target Germany; China has not been exhaustively reviewed.",
+        "sources": []
+      },
+      "global": {
+        "note": "德国可核实应用列在德国市场；海外其他市场未作普遍性判断。",
+        "noteEn": "Verified German applications are shown under Germany; no prevalence conclusion is made for other overseas markets.",
+        "sources": []
+      }
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import evidence from './marketEvidence.json' with {type:'json'};
-export const statusLabels={none:['尚未发现应用','No application identified'],related:['仅相关能力','Related capabilities only'],few:['起步应用','Early adoption'],multiple:['逐步扩散','Expanding adoption'],common:['开始普及','Adoption broadening'],announced:['试点 / 发布中','Pilot / announced']};
+import reviews from './sceneIndustryReviews.json' with {type:'json'};
+export const industryReview=(id,region)=>reviews[id]?.regions[region];
+export const statusLabels={historical:['历史应用先例','Historical application precedents'],none:['尚未发现应用','No application identified'],related:['仅相关能力','Related capabilities only'],few:['起步应用','Early adoption'],multiple:['逐步扩散','Expanding adoption'],common:['开始普及','Adoption broadening'],announced:['试点 / 发布中','Pilot / announced']};
 const scopes={
  'TOP-001':['自动泊入并补能；完整无人找站、补能后返回单独核实，预约充电不计入','Automated docking and replenishment. Unattended travel/return needs separate verification; scheduling alone is excluded.'],
  'TOP-005':['停驻守护、事件检测与取证；AI事件摘要和解释尚未证实普及','Parked monitoring and incident evidence; AI summaries/explanation are not established as widespread.'],
@@ -17,19 +19,20 @@ const scopes={
  'TOP-089':['用户可设置的条件触发与多动作仪式；AI角色表达另核','User-defined conditional multi-action rituals; AI role expression needs verification.'],
  'TOP-100':['限定场地/距离的泊入返位；全过程无人自主待命另核','Parking/return within constrained areas/distances; full unattended standby needs verification.']
 };
-export function applicationScope(s){const pair=scopes[s.id]||['本场景核心任务的完整或部分实现；仅聊天、一般导航等相关能力不计入','Full/partial implementation of this scenario’s core task; generic chat/navigation is excluded.'];return {zh:pair[0],en:pair[1]};}
+export function applicationScope(s){if(reviews[s.id]?.scope)return reviews[s.id].scope;const pair=scopes[s.id]||['本场景核心任务的完整或部分实现；仅聊天、一般导航等相关能力不计入','Full/partial implementation of this scenario’s core task; generic chat/navigation is excluded.'];return {zh:pair[0],en:pair[1]};}
 const canonical=id=>({kia:'hyundai',volvo:'geely',zeekr:'geely',lynk:'geely',denza:'byd',avatr:'changan',deepal:'changan',voyah:'dongfeng',onvo:'nio'}[id.replace(/-cn$/,'')]||id.replace(/-cn$/,''));
 function group(rows){const result=new Map();for(const r of rows){const id=canonical(r.oemId);if(!result.has(id))result.set(id,{id,name:r.brand,en:r.en?.brand||r.brand});}return [...result.values()];}
 export function assessRecords(all,region){
  const priority=r=>r.researchStage?3:r.status==='announced'?2:r.match==='related'?1:0;
- const records=all.filter(r=>r.marketRegion===region).sort((a,b)=>priority(a)-priority(b)),provided=records.filter(r=>r.status==='provided'&&!r.researchStage),core=provided.filter(r=>r.match==='full'||r.match==='partial');
- const groups=group(core),fullGroups=group(core.filter(r=>r.match==='full')),partialGroups=group(core.filter(r=>r.match==='partial')).filter(g=>!fullGroups.some(f=>f.id===g.id));
+ const records=all.filter(r=>region==='de'?r.marketRegion==='global'&&r.country==='DE':r.marketRegion===region).sort((a,b)=>priority(a)-priority(b)),provided=records.filter(r=>r.status==='provided'&&!r.researchStage&&!r.historical),core=provided.filter(r=>r.match==='full'||r.match==='partial');
+ const historicalGroups=group(records.filter(r=>r.historical)),groups=group(core),fullGroups=group(core.filter(r=>r.match==='full')),partialGroups=group(core.filter(r=>r.match==='partial')).filter(g=>!fullGroups.some(f=>f.id===g.id));
  const relatedGroups=group(provided.filter(r=>r.match==='related')),pendingGroups=group(records.filter(r=>(r.status==='announced'||r.researchStage)&&r.match!=='related'));
- const status=groups.length>=5?'common':groups.length>=3?'multiple':groups.length?'few':pendingGroups.length?'announced':relatedGroups.length?'related':'none';
- return {status,records,groups,fullGroups,partialGroups,relatedGroups,pendingGroups,complete:fullGroups.length>0};
+ const status=groups.length>=5?'common':groups.length>=3?'multiple':groups.length?'few':pendingGroups.length?'announced':relatedGroups.length?'related':historicalGroups.length?'historical':'none';
+ return {status,records,historicalGroups,groups,fullGroups,partialGroups,relatedGroups,pendingGroups,complete:fullGroups.length>0};
 }
 export const assess=(id,region)=>assessRecords(evidence[id]||[],region);
 export const definitions=[
+ ['历史应用先例','历史车型官方资料记录过应用，当前销售和配置可用性尚未重新核实；不计入当前已应用数量。','Historical application precedents','Official historical models documented the feature; current sales/configuration availability has not been reverified, so it is excluded from current counts.'],
  ['开始普及','至少5家OEM已有该计数对象的完整或部分量产实现，表示开始跨OEM扩散；不是装车率或完整AI场景普及率。','Adoption broadening','At least five OEM groups have full/partial production implementations of the counted application. This is not an installation rate or full-AI-scenario penetration.'],
  ['逐步扩散','3—4家OEM已应用，超过个别品牌，但尚不能判定行业普遍应用。','Expanding adoption','Three or four adopting OEM groups; broader than isolated brands, without establishing industry-wide adoption.'],
  ['起步应用','1—2家OEM已应用，仍处于少量品牌/车型实现阶段。','Early adoption','One or two adopting OEM groups; implementation remains concentrated.'],

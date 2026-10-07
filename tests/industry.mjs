@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {assess,assessRecords,statusLabels,applicationScope} from '../src/industryResearch.js';
-import {top100} from '../src/top100.js';
+import {scenarios} from '../src/scenarios.js';
+import reviews from '../src/sceneIndustryReviews.json' with {type:'json'};
 import market from '../src/marketEvidence.json' with {type:'json'};
-for(const s of top100)for(const region of ['cn','global']){
+for(const s of scenarios)for(const region of ['cn','global']){
  const a=assess(s.id,region);assert.ok(statusLabels[a.status]);assert.ok(a.records.every(r=>r.marketRegion===region));
  assert.equal(a.groups.length,a.fullGroups.length+a.partialGroups.length);
  assert.ok(applicationScope(s).zh&&applicationScope(s).en);
@@ -27,4 +28,13 @@ for(const records of Object.values(market))for(const r of records){assert.ok(['c
 const main=readFileSync(new URL('../src/main.jsx',import.meta.url),'utf8'),dialog=readFileSync(new URL('../src/Industry.jsx',import.meta.url),'utf8');
 assert.ok(!main.includes('编辑我的版本'));assert.ok(!main.includes('marketFor(s.id)'));assert.ok(main.includes('<IndustrySummary'));
 assert.ok(!main.includes('行业全景'));assert.ok(!dialog.includes('coverage.groups'));assert.ok(!dialog.includes('主流OEM总体情况'));
-console.log('PASS: 100 scene-specific regional assessments; OEM deduplication; full/partial/related/pilot separation; evidence-based stage thresholds; no repeated industry tables');
+console.log('PASS: scene-specific regional assessments; OEM deduplication; full/partial/related/pilot separation; evidence-based stage thresholds; no repeated industry tables');
+
+for(const id of Object.keys(reviews))for(const region of ['cn','global'])assert.ok(reviews[id].regions[region].note&&reviews[id].regions[region].noteEn);
+assert.equal(assess('PAT-007','global').groups.length,5);
+assert.equal(assess('PAT-007','cn').groups.length,1);
+assert.equal(assess('PAT-003','cn').groups.length,0);
+assert.equal(assess('PAT-005','global').groups.length,0);
+assert.equal(assess('PAT-006','cn').status,'none');
+assert.equal(assess('PAT-008','global').status,'related');
+assert.ok(!main.includes('场景来源')&&!main.includes('专利新增'));

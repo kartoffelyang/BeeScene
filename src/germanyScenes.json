@@ -1,0 +1,1724 @@
+[
+  {
+    "id": "DE-001",
+    "rank": 109,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "路边停车收费与许可管家",
+    "summary": "停驻后核对现场标牌、分区和用户许可，整理可停时段、费用与截止时间，经确认调用支持的支付服务并核验凭证。例如到柏林朋友家，发现居民许可不适用当前分区，改按访客方式缴费。",
+    "outcome": "减少分区误付、许可误用与超时返回。",
+    "baseline": "自行读标牌，再用停车机或手机应用缴费。",
+    "question": "与现有替代比较，分区与许可判断正确率、错付次数、总操作时间是否改善，标牌与地图分区冲突、支付超时但实际扣款是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "城市路边停车与居民许可并存；手机缴费不能自动证明标牌理解。",
+        "Curbside charges and resident permits coexist; mobile payment does not establish sign interpretation."
+      ],
+      "visualTargets": [
+        "收费分区、许可覆盖与附加标牌",
+        "Payment zone, permit coverage and supplementary signs"
+      ],
+      "dependencies": [
+        "支持城市的实时收费接口、用户许可资料与支付回执",
+        "Live supported-city tariffs, permit details and payment receipts"
+      ],
+      "failureBoundary": [
+        "标牌与地图分区冲突、支付超时但实际扣款",
+        "Sign/map disagreement and timeouts after an actual payment"
+      ],
+      "audience": [
+        "城市访客、租车用户与持有居民许可但跨区停车的车主",
+        "City visitors, rental drivers and resident-permit holders parking in other zones"
+      ],
+      "aiContribution": [
+        "将收费分区、许可覆盖与附加标牌与可信资料及用户目标关联，解释标牌与地图分区冲突、支付超时但实际扣款中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link payment zone, permit coverage and supplementary signs to reliable data and user goals, explaining uncertainty around sign/map disagreement and timeouts after an actual payment; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖标牌与地图分区冲突、支付超时但实际扣款，记录分区与许可判断正确率、错付次数、总操作时间；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include sign/map disagreement and timeouts after an actual payment, measure zone/permit accuracy, incorrect payments and total task time, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入支持城市的实时收费接口、用户许可资料与支付回执；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of live supported-city tariffs, permit details and payment receipts. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：日常进城或跨区拜访时重复出现。收益假设：减少分区误付、许可误用与超时返回。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Recurring city visits or trips across parking zones. Benefit hypothesis: Reduce wrong-zone payments, permit misuse and late returns. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对自行读标牌，再用停车机或手机应用缴费。改善分区与许可判断正确率、错付次数、总操作时间且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if zone/permit accuracy, incorrect payments and total task time improve over read signs and pay through a meter or app. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验收费分区、许可覆盖与附加标牌及其适用条件，结合支持城市的实时收费接口、用户许可资料与支付回执形成可核对的具体结果。",
+        "The local task requires assessing payment zone, permit coverage and supplementary signs and applicable conditions, using live supported-city tariffs, permit details and payment receipts to produce a verifiable result."
+      ],
+      "patentReview": [
+        "关联美国授权US12073723B2的停车标牌与限制判断机制；不代表德国授权、电子停车盘认证或离车后自动发现全部新标牌。",
+        "Linked to US grant US12073723B2 for parking-sign/restriction assessment; not proof of German grant status, parking-disc certification or detecting every newly placed sign after departure."
+      ],
+      "sources": [
+        {
+          "title": "柏林中区停车收费与居民许可",
+          "titleEn": "Berlin Mitte parking charges and resident permits",
+          "url": "https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/ordnungsamt/parkraumbewirtschaftung/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-002",
+    "rank": 110,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "perception",
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "停车盘设置与返车提醒",
+    "summary": "识别停车盘要求，说明到达时间设置与允许停留时长，结合用户办事安排提醒返车。例如超市车位要求停车盘，停好后提醒正确放置并在截止前返回；车机屏幕不能代替合规停车盘。",
+    "outcome": "减少漏放停车盘和超过允许停留时间。",
+    "baseline": "手动阅读标牌、放置停车盘并设置手机闹钟。",
+    "question": "与现有替代比较，规则识别、设置错误率与按时返车比例是否改善，把收费停车误认成停车盘停车，或提醒送达失败是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国停车盘要求包含设置方式；允许时长仍取决于现场标牌。",
+        "German parking-disc rules include how arrival is set; local signs determine duration."
+      ],
+      "visualTargets": [
+        "停车盘标志、适用时段及到达时间",
+        "Disc requirement, active hours and arrival time"
+      ],
+      "dependencies": [
+        "清晰标牌、可靠时钟与合规实体停车盘",
+        "Readable signs, a reliable clock and a compliant physical disc"
+      ],
+      "failureBoundary": [
+        "把收费停车误认成停车盘停车，或提醒送达失败",
+        "Confusing payment with disc parking or failing to deliver a reminder"
+      ],
+      "audience": [
+        "超市、诊所和短时办事停车的车主及租车用户",
+        "Drivers and renters making short supermarket, clinic or errand stops"
+      ],
+      "aiContribution": [
+        "将停车盘标志、适用时段及到达时间与可信资料及用户目标关联，解释把收费停车误认成停车盘停车，或提醒送达失败中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link disc requirement, active hours and arrival time to reliable data and user goals, explaining uncertainty around confusing payment with disc parking or failing to deliver a reminder; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖把收费停车误认成停车盘停车，或提醒送达失败，记录规则识别、设置错误率与按时返车比例；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include confusing payment with disc parking or failing to deliver a reminder, measure rule recognition, setup errors and timely returns, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入清晰标牌、可靠时钟与合规实体停车盘；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of readable signs, a reliable clock and a compliant physical disc. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：短时限时停车中反复出现。收益假设：减少漏放停车盘和超过允许停留时间。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Recurring short stays with time-limited parking. Benefit hypothesis: Reduce missing discs and overstays. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对手动阅读标牌、放置停车盘并设置手机闹钟。改善规则识别、设置错误率与按时返车比例且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if rule recognition, setup errors and timely returns improve over read signs, place a disc and set a phone alarm. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验停车盘标志、适用时段及到达时间及其适用条件，结合清晰标牌、可靠时钟与合规实体停车盘形成可核对的具体结果。",
+        "The local task requires assessing disc requirement, active hours and arrival time and applicable conditions, using readable signs, a reliable clock and a compliant physical disc to produce a verifiable result."
+      ],
+      "patentReview": [
+        "关联美国授权US12073723B2的停车标牌与限制判断机制；不代表德国授权、电子停车盘认证或离车后自动发现全部新标牌。",
+        "Linked to US grant US12073723B2 for parking-sign/restriction assessment; not proof of German grant status, parking-disc certification or detecting every newly placed sign after departure."
+      ],
+      "sources": [
+        {
+          "title": "德国道路交通条例 §13：停车盘",
+          "titleEn": "German StVO §13: parking discs",
+          "url": "https://www.gesetze-im-internet.de/stvo_2013/__13.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-003",
+    "rank": 111,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "临时禁停生效前的挪车安排",
+    "summary": "用户拍摄移动禁停标牌或提供可核实通知，系统提取时间、箭头和适用范围，对照停车位置组织提前挪车。例如周五停好车，标牌显示周一搬家禁停，提醒周日晚处理备用车位。",
+    "outcome": "减少长期路边停车后错过新设禁停的风险。",
+    "baseline": "车主定期到停车处检查并自行安排挪车。",
+    "question": "与现有替代比较，有效禁停识别、通知提前量和漏提醒率是否改善，标牌在离车后新增、通知过期或范围不清是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国搬家、施工等临时禁停可影响原先已停车辆；需识别生效范围。",
+        "Moving and construction restrictions can affect previously parked vehicles; effective extent matters."
+      ],
+      "visualTargets": [
+        "移动禁停标牌、日期时间、方向与停车位置",
+        "Temporary signs, date/time, direction and parked location"
+      ],
+      "dependencies": [
+        "用户主动提供的新标牌或有覆盖的更新数据；不能假定车外摄像头总能看到",
+        "Fresh user photos or a covered update feed; exterior cameras cannot be assumed to see every sign"
+      ],
+      "failureBoundary": [
+        "标牌在离车后新增、通知过期或范围不清",
+        "Signs added after departure, stale notices or unclear extent"
+      ],
+      "audience": [
+        "长期路边停放、出差或搬家期间的城市车主",
+        "City owners leaving cars on streets during trips or moves"
+      ],
+      "aiContribution": [
+        "将移动禁停标牌、日期时间、方向与停车位置与可信资料及用户目标关联，解释标牌在离车后新增、通知过期或范围不清中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link temporary signs, date/time, direction and parked location to reliable data and user goals, explaining uncertainty around signs added after departure, stale notices or unclear extent; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖标牌在离车后新增、通知过期或范围不清，记录有效禁停识别、通知提前量和漏提醒率；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include signs added after departure, stale notices or unclear extent, measure restriction accuracy, useful notice lead time and missed reminders, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入用户主动提供的新标牌或有覆盖的更新数据；不能假定车外摄像头总能看到；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of fresh user photos or a covered update feed; exterior cameras cannot be assumed to see every sign. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：临时施工、搬家禁停或离车数日时出现。收益假设：减少长期路边停车后错过新设禁停的风险。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Temporary construction/moving restrictions or multi-day absence. Benefit hypothesis: Reduce missed temporary restrictions during extended curbside parking. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对车主定期到停车处检查并自行安排挪车。改善有效禁停识别、通知提前量和漏提醒率且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if restriction accuracy, useful notice lead time and missed reminders improve over revisit the parked car and arrange relocation manually. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验移动禁停标牌、日期时间、方向与停车位置及其适用条件，结合用户主动提供的新标牌或有覆盖的更新数据；不能假定车外摄像头总能看到形成可核对的具体结果。",
+        "The local task requires assessing temporary signs, date/time, direction and parked location and applicable conditions, using fresh user photos or a covered update feed; exterior cameras cannot be assumed to see every sign to produce a verifiable result."
+      ],
+      "patentReview": [
+        "关联美国授权US12073723B2的停车标牌与限制判断机制；不代表德国授权、电子停车盘认证或离车后自动发现全部新标牌。",
+        "Linked to US grant US12073723B2 for parking-sign/restriction assessment; not proof of German grant status, parking-disc certification or detecting every newly placed sign after departure."
+      ],
+      "sources": [
+        {
+          "title": "柏林警方：临时禁停申请与规定",
+          "titleEn": "Berlin police: temporary parking restrictions",
+          "url": "https://www.berlin.de/polizei/aufgaben/bussgeldstelle/kfz-umsetzung/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-004",
+    "rank": 112,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "街边充电的停车期限与占位费协调",
+    "summary": "分别读取车位规则与充电账户计费条件，结合实际充电进度和返车时间，说明最早需要处理的期限。例如工作中充电，车位限时先于充满，提醒停止充电并由用户安排换位。",
+    "outcome": "减少把充电可用时间误当成合法停车时长造成的额外费用。",
+    "baseline": "分别查看充电应用、现场标牌和手机闹钟。",
+    "question": "与现有替代比较，截止判断错误、额外费用和返车干扰次数是否改善，规则和服务费期限不同、状态延迟或远程停止未成功是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国充电车位条件与服务商占位费分别核对，不把任一收费上限当停车许可。",
+        "German charging-bay restrictions and provider idle fees are checked separately; a fee cap is not parking permission."
+      ],
+      "visualTargets": [
+        "充电专用标牌、限时与实时充电状态",
+        "Charging-bay signs, time limits and live charging state"
+      ],
+      "dependencies": [
+        "服务商账户费率、停车规则与充电接口的时间戳",
+        "Account tariff, parking rules and timestamped charging telemetry"
+      ],
+      "failureBoundary": [
+        "规则和服务费期限不同、状态延迟或远程停止未成功",
+        "Different legal/fee deadlines, delayed telemetry or failed remote stop"
+      ],
+      "audience": [
+        "使用城市路边公共充电位的电动车用户",
+        "EV drivers using curbside public chargers"
+      ],
+      "aiContribution": [
+        "将充电专用标牌、限时与实时充电状态与可信资料及用户目标关联，解释规则和服务费期限不同、状态延迟或远程停止未成功中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link charging-bay signs, time limits and live charging state to reliable data and user goals, explaining uncertainty around different legal/fee deadlines, delayed telemetry or failed remote stop; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖规则和服务费期限不同、状态延迟或远程停止未成功，记录截止判断错误、额外费用和返车干扰次数；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include different legal/fee deadlines, delayed telemetry or failed remote stop, measure deadline errors, additional fees and return interruptions, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入服务商账户费率、停车规则与充电接口的时间戳；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of account tariff, parking rules and timestamped charging telemetry. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：路边补能且需离车办事时出现。收益假设：减少把充电可用时间误当成合法停车时长造成的额外费用。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Curbside charging while away on errands. Benefit hypothesis: Reduce extra costs from confusing charging availability with permitted parking time. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对分别查看充电应用、现场标牌和手机闹钟。改善截止判断错误、额外费用和返车干扰次数且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if deadline errors, additional fees and return interruptions improve over check the charging app, signs and an alarm separately. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验充电专用标牌、限时与实时充电状态及其适用条件，结合服务商账户费率、停车规则与充电接口的时间戳形成可核对的具体结果。",
+        "The local task requires assessing charging-bay signs, time limits and live charging state and applicable conditions, using account tariff, parking rules and timestamped charging telemetry to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "EnBW：充电占位费规则",
+          "titleEn": "EnBW: charging idle-fee rules",
+          "url": "https://www.enbw.com/service/faq/e-mobilitaet/blockiergebuehr/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-005",
+    "rank": 113,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "冬季路况与当前轮胎匹配检查",
+    "summary": "出发前结合路线天气与用户确认的当前轮胎资料，说明准备缺口并组织换胎或替代出行。例如秋季去巴伐利亚山区，存在冰雪条件但仍装夏季胎，先确认轮胎再决定出发。",
+    "outcome": "减少季节习惯与实际路况不匹配的出发安排。",
+    "baseline": "查看天气、人工确认轮胎，再预约换胎。",
+    "question": "与现有替代比较，胎种确认错误、遗漏准备、额外询问与替代出行接受度是否改善，标识不可见、天气不确定或数据库仍保存上一次胎组是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国冬季轮胎义务对应实际冰雪等条件；本场景只组织准备，不认证道路安全。",
+        "German winter-tire obligations relate to actual winter conditions; this workflow coordinates preparation rather than certifying safety."
+      ],
+      "visualTargets": [
+        "可读轮胎标识与路线天气；胎种不能靠外形猜测",
+        "Readable tire markings and route weather; appearance alone cannot identify tire type"
+      ],
+      "dependencies": [
+        "用户确认的胎种或清晰标识、带时效的天气与车型手册",
+        "Confirmed tire type or readable markings, current weather and vehicle manual"
+      ],
+      "failureBoundary": [
+        "标识不可见、天气不确定或数据库仍保存上一次胎组",
+        "Unreadable markings, uncertain weather or stale tire-set data"
+      ],
+      "audience": [
+        "需换季轮胎、跨地区出行或租车的德国用户",
+        "German seasonal-tyre, cross-region and rental drivers"
+      ],
+      "aiContribution": [
+        "将可读轮胎标识与路线天气；胎种不能靠外形猜测与可信资料及用户目标关联，解释标识不可见、天气不确定或数据库仍保存上一次胎组中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link readable tire markings and route weather; appearance alone cannot identify tire type to reliable data and user goals, explaining uncertainty around unreadable markings, uncertain weather or stale tire-set data; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖标识不可见、天气不确定或数据库仍保存上一次胎组，记录胎种确认错误、遗漏准备、额外询问与替代出行接受度；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include unreadable markings, uncertain weather or stale tire-set data, measure tire identification errors, missed preparation, questions and acceptance of alternatives, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入用户确认的胎种或清晰标识、带时效的天气与车型手册；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of confirmed tire type or readable markings, current weather and vehicle manual. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：换季、租车或遇到冬季路况时出现。收益假设：减少季节习惯与实际路况不匹配的出发安排。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Seasonal changes, rentals or winter road conditions. Benefit hypothesis: Reduce departure plans based on calendar habits instead of actual conditions. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对查看天气、人工确认轮胎，再预约换胎。改善胎种确认错误、遗漏准备、额外询问与替代出行接受度且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if tire identification errors, missed preparation, questions and acceptance of alternatives improve over check weather, inspect tires and book a change manually. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验可读轮胎标识与路线天气；胎种不能靠外形猜测及其适用条件，结合用户确认的胎种或清晰标识、带时效的天气与车型手册形成可核对的具体结果。",
+        "The local task requires assessing readable tire markings and route weather; appearance alone cannot identify tire type and applicable conditions, using confirmed tire type or readable markings, current weather and vehicle manual to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "德国道路交通条例 §2：冬季道路条件",
+          "titleEn": "German StVO §2: winter road conditions",
+          "url": "https://www.gesetze-im-internet.de/stvo_2013/__2.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-006",
+    "rank": 114,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "高速拥堵中的救援通道协作",
+    "summary": "结合道路类型、当前车道与拥堵状态，解释形成救援通道的方向；支持时交接专用驾驶辅助系统并核验状态。例如三车道高速缓行时，提示本车应让出的空间，不等待救护车已到车后才介入。",
+    "outcome": "减少拥堵中让行方向混淆并保持专用系统交接清楚。",
+    "baseline": "驾驶员凭记忆让行，或使用车型已有救援通道辅助。",
+    "question": "与现有替代比较，让行理解正确率、提示时机与交接状态误解是否改善，匝道混淆、施工改道、车道感知不足或交接未接收是否被清楚处理？",
+    "domainReason": "需要现场道路感知、驾驶状态门控与专用驾驶系统协同；座舱只解释和交接，不直接控制转向制动。",
+    "domainReasonEn": "Coordinates road perception, driving-state gating and a dedicated controller; the cabin explains and hands off without steering or braking.",
+    "research": {
+      "localContext": [
+        "德国道路规则明确救援通道条件与位置；驾驶动作由驾驶员或专用系统承担。",
+        "German rules specify corridor conditions and position; a driver or dedicated controller performs motion."
+      ],
+      "visualTargets": [
+        "道路类型、车道拓扑、交通速度与已形成的通道",
+        "Road class, lane topology, traffic speed and the existing gap"
+      ],
+      "dependencies": [
+        "可信车道感知、车速与专用驾驶系统适用范围；语言模型只解释",
+        "Validated lane perception, speed and controller operating domain; the language model explains only"
+      ],
+      "failureBoundary": [
+        "匝道混淆、施工改道、车道感知不足或交接未接收",
+        "Ramp confusion, construction diversions, weak perception or unaccepted handoff"
+      ],
+      "audience": [
+        "德国高速公路拥堵中的驾驶员及赴德自驾者",
+        "Drivers in German motorway congestion, including visiting motorists"
+      ],
+      "aiContribution": [
+        "将道路类型、车道拓扑、交通速度与已形成的通道与可信资料及用户目标关联，解释匝道混淆、施工改道、车道感知不足或交接未接收中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link road class, lane topology, traffic speed and the existing gap to reliable data and user goals, explaining uncertainty around ramp confusion, construction diversions, weak perception or unaccepted handoff; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖匝道混淆、施工改道、车道感知不足或交接未接收，记录让行理解正确率、提示时机与交接状态误解；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include ramp confusion, construction diversions, weak perception or unaccepted handoff, measure direction comprehension, timing and handoff misunderstanding, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "连续画面由专用感知、跟踪和低延时安全逻辑处理；视觉语言模型用于离线回放研究与受限解释，向驾驶域交接结构化状态，不由语言模型直接产生转向或制动指令。",
+        "Dedicated perception, tracking and low-latency safety logic process image sequences. Vision-language models support offline replay research and constrained explanations, handing structured state to driving systems rather than issuing steering/braking commands."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入可信车道感知、车速与专用驾驶系统适用范围；语言模型只解释；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of validated lane perception, speed and controller operating domain; the language model explains only. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：高速拥堵事件触发，频率依实际路线。收益假设：减少拥堵中让行方向混淆并保持专用系统交接清楚。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Triggered by motorway congestion; frequency depends on routes. Benefit hypothesis: Reduce confusion over corridor direction and clarify controller handoff. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对驾驶员凭记忆让行，或使用车型已有救援通道辅助。改善让行理解正确率、提示时机与交接状态误解且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if direction comprehension, timing and handoff misunderstanding improve over driver recall or existing emergency-corridor assistance. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验道路类型、车道拓扑、交通速度与已形成的通道及其适用条件，结合可信车道感知、车速与专用驾驶系统适用范围；语言模型只解释形成可核对的具体结果。",
+        "The local task requires assessing road class, lane topology, traffic speed and the existing gap and applicable conditions, using validated lane perception, speed and controller operating domain; the language model explains only to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "德国道路交通条例 §11：救援通道",
+          "titleEn": "German StVO §11: emergency corridors",
+          "url": "https://www.gesetze-im-internet.de/stvo_2013/__11.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-007",
+    "rank": 115,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "自行车街道的通行资格与让行协作",
+    "summary": "识别自行车街道及附加许可标牌，结合到访目的解释是否可进入，并观察骑行者以组织让行提示。例如去朋友家，先核对到访者许可，再选择进入或绕行；如连接驾驶系统，执行由专用控制器负责。",
+    "outcome": "减少误入和把道路许可误当成对骑行者的优先权。",
+    "baseline": "自行阅读标牌、询问住户和操作导航。",
+    "question": "与现有替代比较，资格解释错误、绕行负担与驾驶分心是否改善，附加文字被遮挡、目的不明或把骑行者行为猜成让行是否被清楚处理？",
+    "domainReason": "需要现场道路感知、驾驶状态门控与专用驾驶系统协同；座舱只解释和交接，不直接控制转向制动。",
+    "domainReasonEn": "Coordinates road perception, driving-state gating and a dedicated controller; the cabin explains and hands off without steering or braking.",
+    "research": {
+      "localContext": [
+        "德国自行车街道机动车准入需看附加标牌；准入不等于骑行者应让路。",
+        "Motor access to German bicycle streets depends on supplementary signs; access does not imply cyclist yielding."
+      ],
+      "visualTargets": [
+        "自行车街道标志、附加许可和骑行者位置",
+        "Bicycle-street signs, supplementary permissions and cyclist positions"
+      ],
+      "dependencies": [
+        "现场附加标牌、用户目的与驾驶状态门控",
+        "Supplementary signs, stated purpose and driving-state gating"
+      ],
+      "failureBoundary": [
+        "附加文字被遮挡、目的不明或把骑行者行为猜成让行",
+        "Obscured conditions, unclear purpose or assuming a cyclist will yield"
+      ],
+      "audience": [
+        "进入自行车街道的城市驾驶员与配送车用户",
+        "Urban and delivery drivers entering bicycle-priority streets"
+      ],
+      "aiContribution": [
+        "将自行车街道标志、附加许可和骑行者位置与可信资料及用户目标关联，解释附加文字被遮挡、目的不明或把骑行者行为猜成让行中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link bicycle-street signs, supplementary permissions and cyclist positions to reliable data and user goals, explaining uncertainty around obscured conditions, unclear purpose or assuming a cyclist will yield; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖附加文字被遮挡、目的不明或把骑行者行为猜成让行，记录资格解释错误、绕行负担与驾驶分心；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include obscured conditions, unclear purpose or assuming a cyclist will yield, measure access errors, rerouting burden and driver distraction, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "连续画面由专用感知、跟踪和低延时安全逻辑处理；视觉语言模型用于离线回放研究与受限解释，向驾驶域交接结构化状态，不由语言模型直接产生转向或制动指令。",
+        "Dedicated perception, tracking and low-latency safety logic process image sequences. Vision-language models support offline replay research and constrained explanations, handing structured state to driving systems rather than issuing steering/braking commands."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入现场附加标牌、用户目的与驾驶状态门控；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of supplementary signs, stated purpose and driving-state gating. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：经过相应城市街道时出现。收益假设：减少误入和把道路许可误当成对骑行者的优先权。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: When entering relevant urban streets. Benefit hypothesis: Reduce invalid entry and confusion between access permission and priority. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对自行阅读标牌、询问住户和操作导航。改善资格解释错误、绕行负担与驾驶分心且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if access errors, rerouting burden and driver distraction improve over read signs, ask the resident and operate navigation. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验自行车街道标志、附加许可和骑行者位置及其适用条件，结合现场附加标牌、用户目的与驾驶状态门控形成可核对的具体结果。",
+        "The local task requires assessing bicycle-street signs, supplementary permissions and cyclist positions and applicable conditions, using supplementary signs, stated purpose and driving-state gating to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "德国道路交通条例附件2：自行车街道",
+          "titleEn": "German StVO Annex 2: bicycle-priority streets",
+          "url": "https://www.gesetze-im-internet.de/stvo_2013/anlage_2.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-008",
+    "rank": 116,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "房车停驻、过夜与露营边界确认",
+    "summary": "先澄清短时恢复驾驶能力还是开展露营，再结合车辆类型、现场标牌和场地许可选择停驻点。例如湖边允许停车但未核实露营许可，改选明确允许房车过夜的场地，不默认可以展开桌椅。",
+    "outcome": "减少把普通停车许可扩展为露营许可的误解。",
+    "baseline": "分别查营地、读现场规则并电话询问。",
+    "question": "与现有替代比较，许可理解、无效到访和找到可用场地时间是否改善，地方差异、满位、未更新的过夜许可是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国需区分休息停车与露营活动，地方和场地要求分别核实。",
+        "Rest parking and camping must be distinguished with local and site-specific checks."
+      ],
+      "visualTargets": [
+        "车型限制、场地标牌与计划的停驻活动",
+        "Vehicle restrictions, site signs and intended activities"
+      ],
+      "dependencies": [
+        "地方规则、场地运营说明及营业状态；许可不明时人工核实",
+        "Local rules, site terms and opening state; ambiguous permission needs human checking"
+      ],
+      "failureBoundary": [
+        "地方差异、满位、未更新的过夜许可",
+        "Local variation, full sites or stale overnight permission"
+      ],
+      "audience": [
+        "房车旅行、周末露营及首次赴德房车租用者",
+        "Motorhome travellers, weekend campers and first-time renters in Germany"
+      ],
+      "aiContribution": [
+        "将车型限制、场地标牌与计划的停驻活动与可信资料及用户目标关联，解释地方差异、满位、未更新的过夜许可中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link vehicle restrictions, site signs and intended activities to reliable data and user goals, explaining uncertainty around local variation, full sites or stale overnight permission; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖地方差异、满位、未更新的过夜许可，记录许可理解、无效到访和找到可用场地时间；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include local variation, full sites or stale overnight permission, measure permission comprehension, failed visits and time to find a usable site, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入地方规则、场地运营说明及营业状态；许可不明时人工核实；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of local rules, site terms and opening state; ambiguous permission needs human checking. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：房车旅行的过夜或补给停驻触发。收益假设：减少把普通停车许可扩展为露营许可的误解。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Triggered by overnight or service stops on motorhome trips. Benefit hypothesis: Reduce confusion between parking and camping permission. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对分别查营地、读现场规则并电话询问。改善许可理解、无效到访和找到可用场地时间且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if permission comprehension, failed visits and time to find a usable site improve over search sites, read rules and call operators separately. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验车型限制、场地标牌与计划的停驻活动及其适用条件，结合地方规则、场地运营说明及营业状态；许可不明时人工核实形成可核对的具体结果。",
+        "The local task requires assessing vehicle restrictions, site signs and intended activities and applicable conditions, using local rules, site terms and opening state; ambiguous permission needs human checking to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "ADAC：房车在德国的停车与过夜",
+          "titleEn": "ADAC: motorhome parking and overnight stays in Germany",
+          "url": "https://www.adac.de/reise-freizeit/reiseplanung/reiseziele/deutschland/fahrzeug/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-009",
+    "rank": 117,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "季节性牌照的启用与封存交接",
+    "summary": "读取用户确认的季节性牌照有效月份，安排有效期结束前转入合适存放地点，并组织下一季启用准备。例如房车使用季结束前，提醒从公共车位转入私人存放点并保存交接事项。",
+    "outcome": "减少过期后仍在公共道路使用或停放的遗漏。",
+    "baseline": "人工记忆牌照有效期、联系存放场地。",
+    "question": "与现有替代比较，日期错误、按时存放与重复协调步骤是否改善，OCR读错月份、存放地无资格或有效期外误安排驾车是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国季节性牌照有效期外不得在公共道路驾驶或停放。",
+        "German seasonal-registration vehicles cannot be driven or parked on public roads outside their period."
+      ],
+      "visualTargets": [
+        "牌照有效月份、存放位置和交接凭证",
+        "Registration months, storage location and handoff evidence"
+      ],
+      "dependencies": [
+        "经用户核对的牌照信息、私人存放点与预约服务",
+        "Confirmed registration, suitable private storage and booking service"
+      ],
+      "failureBoundary": [
+        "OCR读错月份、存放地无资格或有效期外误安排驾车",
+        "Wrong OCR months, unsuitable storage or a drive scheduled outside the season"
+      ],
+      "audience": [
+        "持季节性牌照的房车、敞篷车与休闲车辆用户",
+        "Owners of seasonal-plate motorhomes, convertibles and leisure vehicles"
+      ],
+      "aiContribution": [
+        "将牌照有效月份、存放位置和交接凭证与可信资料及用户目标关联，解释OCR读错月份、存放地无资格或有效期外误安排驾车中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link registration months, storage location and handoff evidence to reliable data and user goals, explaining uncertainty around wrong ocr months, unsuitable storage or a drive scheduled outside the season; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖OCR读错月份、存放地无资格或有效期外误安排驾车，记录日期错误、按时存放与重复协调步骤；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include wrong ocr months, unsuitable storage or a drive scheduled outside the season, measure date errors, timely storage and coordination steps, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入经用户核对的牌照信息、私人存放点与预约服务；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of confirmed registration, suitable private storage and booking service. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：每年有效月份开始与结束前集中出现。收益假设：减少过期后仍在公共道路使用或停放的遗漏。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Concentrated near annual registration-season start/end. Benefit hypothesis: Reduce missed expiry during public-road use or parking. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对人工记忆牌照有效期、联系存放场地。改善日期错误、按时存放与重复协调步骤且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if date errors, timely storage and coordination steps improve over remember the season and contact storage sites manually. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验牌照有效月份、存放位置和交接凭证及其适用条件，结合经用户核对的牌照信息、私人存放点与预约服务形成可核对的具体结果。",
+        "The local task requires assessing registration months, storage location and handoff evidence and applicable conditions, using confirmed registration, suitable private storage and booking service to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "柏林服务门户：季节性牌照",
+          "titleEn": "Berlin service portal: seasonal registration plates",
+          "url": "https://service.berlin.de/dienstleistung/121480/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-010",
+    "rank": 118,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "intent",
+      "memory",
+      "execution"
+    ],
+    "vehicle": [
+      "continuity",
+      "integration",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "公司车行程账本的口述补录",
+    "summary": "到达后结合真实行程与里程，接收用户口述的公务目的和业务对象，形成待核对记录并通过支持的账本系统保存。例如拜访客户后说这段是技术评审，助手补齐缺项，不凭目的地推断公务性质。",
+    "outcome": "减少公司车账本遗漏与事后回忆补录负担。",
+    "baseline": "在电子账本中手动分类和填写。",
+    "question": "与现有替代比较，补录时长、缺项、纠错次数与记录完整性是否改善，私人与公务分类混淆、语音姓名误写、保存未成功是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国公司车电子账本有记录要求；产品功能不能自动保证个案税务认可。",
+        "German company-car electronic logs have documentation requirements; product features do not guarantee individual tax acceptance."
+      ],
+      "visualTargets": [
+        "行程和里程回执；用途需用户声明而非视觉推断",
+        "Trip/mileage receipts; purpose must be declared rather than visually inferred"
+      ],
+      "dependencies": [
+        "连续可信里程、账户身份、可追溯账本与记录更改机制",
+        "Reliable mileage, account identity, auditable logbook and change history"
+      ],
+      "failureBoundary": [
+        "私人与公务分类混淆、语音姓名误写、保存未成功",
+        "Wrong private/business classification, transcription errors or failed saving"
+      ],
+      "audience": [
+        "需记录公务行程的公司车用户与车队管理员",
+        "Company-car users and fleet administrators maintaining business trip logs"
+      ],
+      "aiContribution": [
+        "将行程和里程回执；用途需用户声明而非视觉推断与可信资料及用户目标关联，解释私人与公务分类混淆、语音姓名误写、保存未成功中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link trip/mileage receipts; purpose must be declared rather than visually inferred to reliable data and user goals, explaining uncertainty around wrong private/business classification, transcription errors or failed saving; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖私人与公务分类混淆、语音姓名误写、保存未成功，记录补录时长、缺项、纠错次数与记录完整性；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include wrong private/business classification, transcription errors or failed saving, measure entry time, missing fields, corrections and completeness, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先用语音识别和语言模型将口述整理为账本字段；真实里程与行程从授权接口读取，确定性校验缺项，经用户确认再写入，保留修改记录。",
+        "Use speech recognition and a language model to structure spoken notes into logbook fields. Read actual mileage/trips through authorized interfaces, validate required fields deterministically, confirm before saving and retain an edit trail."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入连续可信里程、账户身份、可追溯账本与记录更改机制；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of reliable mileage, account identity, auditable logbook and change history. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：公务行程结束后反复出现。收益假设：减少公司车账本遗漏与事后回忆补录负担。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Recurring at the end of business trips. Benefit hypothesis: Reduce missing company-car entries and retrospective reconstruction. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对在电子账本中手动分类和填写。改善补录时长、缺项、纠错次数与记录完整性且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if entry time, missing fields, corrections and completeness improve over categorise and fill entries in an electronic logbook. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验行程和里程回执；用途需用户声明而非视觉推断及其适用条件，结合连续可信里程、账户身份、可追溯账本与记录更改机制形成可核对的具体结果。",
+        "The local task requires assessing trip/mileage receipts; purpose must be declared rather than visually inferred and applicable conditions, using reliable mileage, account identity, auditable logbook and change history to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "德国联邦财政部：公司车与行程账本规定",
+          "titleEn": "German Federal Finance Ministry: company cars and trip logs",
+          "url": "https://ksth.bundesfinanzministerium.de/lsth/2026/B-Anhaenge/Anhang-24/IV/IV-1/anhang-24-IV-1.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-011",
+    "rank": 119,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "环保区进入资格与停车换乘",
+    "summary": "结合实时城市规则、车辆资料与用户确认的环保标贴，解释进入资格或资料缺口，组织区外停车换乘。例如驾驶租用车进城，未确认标贴时先核查并提供区外衔接。",
+    "outcome": "减少把车辆排放能力误当成已满足全部进入条件。",
+    "baseline": "查询城市环保区和车辆资料，再自行找换乘点。",
+    "question": "与现有替代比较，资格错误、数据过期与换乘总耗时是否改善，环保区已取消或边界变化、租用车信息缺失是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国部分城市环保区调整或取消，需按当前城市核查。",
+        "German city zones can change or be removed; current local verification matters."
+      ],
+      "visualTargets": [
+        "环保区入口标牌与可读标贴；车辆资格以资料核验",
+        "Zone signs and readable sticker; vehicle eligibility needs document verification"
+      ],
+      "dependencies": [
+        "更新的地方规则与车籍资料；不靠标贴照片单独认证",
+        "Current local rules and registration details; a sticker photo alone cannot certify eligibility"
+      ],
+      "failureBoundary": [
+        "环保区已取消或边界变化、租用车信息缺失",
+        "Removed zones, changed boundaries or missing rental documents"
+      ],
+      "audience": [
+        "驾车进入环保区的租车用户、外地访客和资料不完整车主",
+        "Renters, visitors and owners with incomplete documentation entering environmental zones"
+      ],
+      "aiContribution": [
+        "将环保区入口标牌与可读标贴；车辆资格以资料核验与可信资料及用户目标关联，解释环保区已取消或边界变化、租用车信息缺失中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link zone signs and readable sticker; vehicle eligibility needs document verification to reliable data and user goals, explaining uncertainty around removed zones, changed boundaries or missing rental documents; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖环保区已取消或边界变化、租用车信息缺失，记录资格错误、数据过期与换乘总耗时；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include removed zones, changed boundaries or missing rental documents, measure eligibility errors, stale data and door-to-door transfer time, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入更新的地方规则与车籍资料；不靠标贴照片单独认证；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of current local rules and registration details; a sticker photo alone cannot certify eligibility. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：进入指定城市区域或换车时出现。收益假设：减少把车辆排放能力误当成已满足全部进入条件。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: When entering designated city zones or changing vehicles. Benefit hypothesis: Reduce confusion between emissions capability and fulfilled entry requirements. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对查询城市环保区和车辆资料，再自行找换乘点。改善资格错误、数据过期与换乘总耗时且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if eligibility errors, stale data and door-to-door transfer time improve over look up city zones, documents and transfer parking manually. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验环保区入口标牌与可读标贴；车辆资格以资料核验及其适用条件，结合更新的地方规则与车籍资料；不靠标贴照片单独认证形成可核对的具体结果。",
+        "The local task requires assessing zone signs and readable sticker; vehicle eligibility needs document verification and applicable conditions, using current local rules and registration details; a sticker photo alone cannot certify eligibility to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "德国联邦环境局：环保区",
+          "titleEn": "German Environment Agency: environmental zones",
+          "url": "https://www.umweltbundesamt.de/themen/luft/luftschadstoffe/feinstaub/umweltzonen-in-deutschland"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-012",
+    "rank": 120,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "高速施工窄车道适配助手",
+    "summary": "结合施工限宽标牌、临时车道与含后视镜的本车宽度，解释可用车道并支持专用系统核对；不凭画面估宽自动保证通过。例如左侧限宽小于本车宽度，进入施工区前提示保留右侧车道。",
+    "outcome": "减少忽略后视镜宽度和临时限宽造成的车道误选。",
+    "baseline": "驾驶员读标牌并凭经验选择车道。",
+    "question": "与现有替代比较，限宽解读错误、车道误选与驾驶工作负荷是否改善，标牌遮挡、施工改道与相邻车压线；保留尺寸误差是否被清楚处理？",
+    "domainReason": "需要现场道路感知、驾驶状态门控与专用驾驶系统协同；座舱只解释和交接，不直接控制转向制动。",
+    "domainReasonEn": "Coordinates road perception, driving-state gating and a dedicated controller; the cabin explains and hands off without steering or braking.",
+    "research": {
+      "localContext": [
+        "德国高速施工区存在窄车道限制；标牌限宽与实际间隙需分开核对。",
+        "German motorway construction can have narrow-lane limits; posted limits and actual clearance are distinct."
+      ],
+      "visualTargets": [
+        "临时限宽标牌、车道边界、隔离设施与邻车",
+        "Width signs, temporary boundaries, barriers and adjacent vehicles"
+      ],
+      "dependencies": [
+        "厂商含镜宽度、经过验证的车道感知与驾驶域接口",
+        "Manufacturer mirror-inclusive width, validated perception and driving-domain interface"
+      ],
+      "failureBoundary": [
+        "标牌遮挡、施工改道与相邻车压线；保留尺寸误差",
+        "Obscured signs, diversions and encroaching traffic; preserve dimensional uncertainty"
+      ],
+      "audience": [
+        "高速施工路段的宽车、SUV、厢式车驾驶员",
+        "Drivers of wide cars, SUVs and vans through motorway roadworks"
+      ],
+      "aiContribution": [
+        "将临时限宽标牌、车道边界、隔离设施与邻车与可信资料及用户目标关联，解释标牌遮挡、施工改道与相邻车压线；保留尺寸误差中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link width signs, temporary boundaries, barriers and adjacent vehicles to reliable data and user goals, explaining uncertainty around obscured signs, diversions and encroaching traffic; preserve dimensional uncertainty; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖标牌遮挡、施工改道与相邻车压线；保留尺寸误差，记录限宽解读错误、车道误选与驾驶工作负荷；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include obscured signs, diversions and encroaching traffic; preserve dimensional uncertainty, measure limit interpretation, lane errors and driver workload, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "连续画面由专用感知、跟踪和低延时安全逻辑处理；视觉语言模型用于离线回放研究与受限解释，向驾驶域交接结构化状态，不由语言模型直接产生转向或制动指令。",
+        "Dedicated perception, tracking and low-latency safety logic process image sequences. Vision-language models support offline replay research and constrained explanations, handing structured state to driving systems rather than issuing steering/braking commands."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入厂商含镜宽度、经过验证的车道感知与驾驶域接口；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of manufacturer mirror-inclusive width, validated perception and driving-domain interface. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：临时限宽与窄车道出现时触发。收益假设：减少忽略后视镜宽度和临时限宽造成的车道误选。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Triggered by temporary width limits and narrow lanes. Benefit hypothesis: Reduce wrong lane choices from ignoring mirrors or temporary limits. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对驾驶员读标牌并凭经验选择车道。改善限宽解读错误、车道误选与驾驶工作负荷且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if limit interpretation, lane errors and driver workload improve over read signs and choose a lane from experience. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验临时限宽标牌、车道边界、隔离设施与邻车及其适用条件，结合厂商含镜宽度、经过验证的车道感知与驾驶域接口形成可核对的具体结果。",
+        "The local task requires assessing width signs, temporary boundaries, barriers and adjacent vehicles and applicable conditions, using manufacturer mirror-inclusive width, validated perception and driving-domain interface to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "ADAC：施工路段车道与车宽",
+          "titleEn": "ADAC: roadworks lanes and vehicle width",
+          "url": "https://presse.adac.de/meldungen/adac-ev/verkehr/sicher-durch-die-baustelle.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-013",
+    "rank": 121,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "公交与校车停靠状态理解",
+    "summary": "结合公交或校车身份、警示灯、接近或停靠状态与乘客动向，给出当前场景提示，必要时交接专用系统。例如校车开警示灯驶向站点时解释禁止超越，停靠后继续关注车前儿童；普通转向灯不等于警示灯。",
+    "outcome": "减少把车辆状态变化误读为始终可正常超越。",
+    "baseline": "驾驶员自行观察灯光与乘客并记忆规则。",
+    "question": "与现有替代比较，状态分类混淆、漏提示与高负荷下分心是否改善，灯光反光、单侧遮挡、站点外停车与儿童遮挡是否被清楚处理？",
+    "domainReason": "需要现场道路感知、驾驶状态门控与专用驾驶系统协同；座舱只解释和交接，不直接控制转向制动。",
+    "domainReasonEn": "Coordinates road perception, driving-state gating and a dedicated controller; the cabin explains and hands off without steering or braking.",
+    "research": {
+      "localContext": [
+        "德国对接近与停靠的警示灯公交规定不同，需要时间序列理解。",
+        "German rules differ for approaching and stopped hazard-lit buses, requiring temporal interpretation."
+      ],
+      "visualTargets": [
+        "公交身份、双侧灯光时间序列、速度与乘客活动",
+        "Bus identity, bilateral flashing over time, speed and passenger activity"
+      ],
+      "dependencies": [
+        "连续多帧视频、地图站点线索与专用驾驶接口；不能单帧判断闪烁",
+        "Temporal video, stop context and dedicated driving interface; a frame cannot establish flashing"
+      ],
+      "failureBoundary": [
+        "灯光反光、单侧遮挡、站点外停车与儿童遮挡",
+        "Reflections, one-side occlusion, off-stop parking and hidden children"
+      ],
+      "audience": [
+        "学校、乡镇和城市公交站附近的驾驶员",
+        "Drivers near school, town and city bus stops"
+      ],
+      "aiContribution": [
+        "将公交身份、双侧灯光时间序列、速度与乘客活动与可信资料及用户目标关联，解释灯光反光、单侧遮挡、站点外停车与儿童遮挡中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link bus identity, bilateral flashing over time, speed and passenger activity to reliable data and user goals, explaining uncertainty around reflections, one-side occlusion, off-stop parking and hidden children; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖灯光反光、单侧遮挡、站点外停车与儿童遮挡，记录状态分类混淆、漏提示与高负荷下分心；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include reflections, one-side occlusion, off-stop parking and hidden children, measure state confusion, missed prompts and distraction under load, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "连续画面由专用感知、跟踪和低延时安全逻辑处理；视觉语言模型用于离线回放研究与受限解释，向驾驶域交接结构化状态，不由语言模型直接产生转向或制动指令。",
+        "Dedicated perception, tracking and low-latency safety logic process image sequences. Vision-language models support offline replay research and constrained explanations, handing structured state to driving systems rather than issuing steering/braking commands."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入连续多帧视频、地图站点线索与专用驾驶接口；不能单帧判断闪烁；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of temporal video, stop context and dedicated driving interface; a frame cannot establish flashing. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：公交或校车接近、停靠及乘客变化时触发。收益假设：减少把车辆状态变化误读为始终可正常超越。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Triggered by bus approach, stopping and passenger movement. Benefit hypothesis: Reduce misreading bus-state changes as unrestricted passing. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对驾驶员自行观察灯光与乘客并记忆规则。改善状态分类混淆、漏提示与高负荷下分心且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if state confusion, missed prompts and distraction under load improve over observe lights/passengers and recall rules manually. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验公交身份、双侧灯光时间序列、速度与乘客活动及其适用条件，结合连续多帧视频、地图站点线索与专用驾驶接口；不能单帧判断闪烁形成可核对的具体结果。",
+        "The local task requires assessing bus identity, bilateral flashing over time, speed and passenger activity and applicable conditions, using temporal video, stop context and dedicated driving interface; a frame cannot establish flashing to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "德国道路交通条例 §20：公交与校车",
+          "titleEn": "German StVO §20: buses and school buses",
+          "url": "https://www.gesetze-im-internet.de/stvo_2013/__20.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-014",
+    "rank": 122,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "有轨电车上下客通道观察",
+    "summary": "识别停靠电车、开启车门、站台结构与乘客路径，解释本车道是否与上下客通道交叉，交接专用系统执行等待。例如电车在道路中央停靠，乘客需跨过车道，及时提示等待并核验状态。",
+    "outcome": "减少只识别电车而忽略乘客穿越路径的遗漏。",
+    "baseline": "驾驶员观察车门与人群，自行判断等待。",
+    "question": "与现有替代比较，冲突路径识别、等待解释与误提示是否改善，站台隔离被误读、车门状态不明或乘客被车辆遮挡是否被清楚处理？",
+    "domainReason": "需要现场道路感知、驾驶状态门控与专用驾驶系统协同；座舱只解释和交接，不直接控制转向制动。",
+    "domainReasonEn": "Coordinates road perception, driving-state gating and a dedicated controller; the cabin explains and hands off without steering or braking.",
+    "research": {
+      "localContext": [
+        "德国电车站点结构不同，不能把所有停靠都解释为乘客会跨越车道。",
+        "German tram stops differ; not every stop implies passengers crossing a vehicle lane."
+      ],
+      "visualTargets": [
+        "电车车门、站台隔离、乘客路径与遮挡区域",
+        "Tram doors, platform separation, passenger paths and occlusion"
+      ],
+      "dependencies": [
+        "时序摄像、站点结构与专用驾驶系统；人群穿越以可见证据为准",
+        "Temporal cameras, stop layout and dedicated controller; crossings require observable evidence"
+      ],
+      "failureBoundary": [
+        "站台隔离被误读、车门状态不明或乘客被车辆遮挡",
+        "Misread separation, unknown door state or passengers hidden by vehicles"
+      ],
+      "audience": [
+        "有轨电车城市的驾驶员及不熟悉站台结构的访客",
+        "Drivers in tram cities and visitors unfamiliar with stop layouts"
+      ],
+      "aiContribution": [
+        "将电车车门、站台隔离、乘客路径与遮挡区域与可信资料及用户目标关联，解释站台隔离被误读、车门状态不明或乘客被车辆遮挡中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link tram doors, platform separation, passenger paths and occlusion to reliable data and user goals, explaining uncertainty around misread separation, unknown door state or passengers hidden by vehicles; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖站台隔离被误读、车门状态不明或乘客被车辆遮挡，记录冲突路径识别、等待解释与误提示；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include misread separation, unknown door state or passengers hidden by vehicles, measure conflict-path detection, waiting comprehension and false prompts, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "连续画面由专用感知、跟踪和低延时安全逻辑处理；视觉语言模型用于离线回放研究与受限解释，向驾驶域交接结构化状态，不由语言模型直接产生转向或制动指令。",
+        "Dedicated perception, tracking and low-latency safety logic process image sequences. Vision-language models support offline replay research and constrained explanations, handing structured state to driving systems rather than issuing steering/braking commands."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入时序摄像、站点结构与专用驾驶系统；人群穿越以可见证据为准；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of temporal cameras, stop layout and dedicated controller; crossings require observable evidence. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：电车停靠且上下客路径交叉时触发。收益假设：减少只识别电车而忽略乘客穿越路径的遗漏。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Triggered when a stopped tram creates intersecting passenger paths. Benefit hypothesis: Reduce missed passenger paths when recognising only the tram. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对驾驶员观察车门与人群，自行判断等待。改善冲突路径识别、等待解释与误提示且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if conflict-path detection, waiting comprehension and false prompts improve over observe doors and passengers and decide whether to wait. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验电车车门、站台隔离、乘客路径与遮挡区域及其适用条件，结合时序摄像、站点结构与专用驾驶系统；人群穿越以可见证据为准形成可核对的具体结果。",
+        "The local task requires assessing tram doors, platform separation, passenger paths and occlusion and applicable conditions, using temporal cameras, stop layout and dedicated controller; crossings require observable evidence to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "德国道路交通条例 §20：公共交通上下客",
+          "titleEn": "German StVO §20: public-transport boarding",
+          "url": "https://www.gesetze-im-internet.de/stvo_2013/__20.html"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-015",
+    "rank": 123,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "住宅共享街区的儿童活动理解",
+    "summary": "结合交通缓和区域标牌、儿童活动和遮挡变化，解释共享空间并向专用系统提供受限提示。例如球从停放车辆间滚出时，提示关注可能出现的儿童；不能把看不到儿童解释为没有风险。",
+    "outcome": "减少把住宅共享道路当成普通通行车道的误解。",
+    "baseline": "驾驶员观察儿童并记忆交通缓和规则。",
+    "question": "与现有替代比较，可解释线索、误报、漏提示与重复干扰是否改善，玩具误识别、完全遮挡与提示过密是否被清楚处理？",
+    "domainReason": "需要现场道路感知、驾驶状态门控与专用驾驶系统协同；座舱只解释和交接，不直接控制转向制动。",
+    "domainReasonEn": "Coordinates road perception, driving-state gating and a dedicated controller; the cabin explains and hands off without steering or braking.",
+    "research": {
+      "localContext": [
+        "德国交通缓和区域允许儿童活动，行人使用空间与普通道路不同。",
+        "German traffic-calmed areas allow child activity and differ from ordinary road space."
+      ],
+      "visualTargets": [
+        "区域标牌、儿童、球、遮挡车辆与可见变化",
+        "Area signs, children, balls, parked occluders and visible changes"
+      ],
+      "dependencies": [
+        "经过验证的时序感知、驾驶负荷门控与专用驾驶系统",
+        "Validated temporal perception, workload gating and dedicated controller"
+      ],
+      "failureBoundary": [
+        "玩具误识别、完全遮挡与提示过密",
+        "Toy misclassification, complete occlusion and excessive prompts"
+      ],
+      "audience": [
+        "驶入住宅交通缓和街区的居民、访客与配送人员",
+        "Residents, visitors and delivery drivers in traffic-calmed residential streets"
+      ],
+      "aiContribution": [
+        "将区域标牌、儿童、球、遮挡车辆与可见变化与可信资料及用户目标关联，解释玩具误识别、完全遮挡与提示过密中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link area signs, children, balls, parked occluders and visible changes to reliable data and user goals, explaining uncertainty around toy misclassification, complete occlusion and excessive prompts; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖玩具误识别、完全遮挡与提示过密，记录可解释线索、误报、漏提示与重复干扰；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include toy misclassification, complete occlusion and excessive prompts, measure explainable cues, false/missed prompts and repeated interruptions, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "连续画面由专用感知、跟踪和低延时安全逻辑处理；视觉语言模型用于离线回放研究与受限解释，向驾驶域交接结构化状态，不由语言模型直接产生转向或制动指令。",
+        "Dedicated perception, tracking and low-latency safety logic process image sequences. Vision-language models support offline replay research and constrained explanations, handing structured state to driving systems rather than issuing steering/braking commands."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入经过验证的时序感知、驾驶负荷门控与专用驾驶系统；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of validated temporal perception, workload gating and dedicated controller. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：进入共享街道及遮挡发生变化时触发。收益假设：减少把住宅共享道路当成普通通行车道的误解。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: On entering shared streets or changing occlusions. Benefit hypothesis: Reduce treating a residential shared street as an ordinary vehicle lane. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对驾驶员观察儿童并记忆交通缓和规则。改善可解释线索、误报、漏提示与重复干扰且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if explainable cues, false/missed prompts and repeated interruptions improve over observe children and recall traffic-calmed rules. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验区域标牌、儿童、球、遮挡车辆与可见变化及其适用条件，结合经过验证的时序感知、驾驶负荷门控与专用驾驶系统形成可核对的具体结果。",
+        "The local task requires assessing area signs, children, balls, parked occluders and visible changes and applicable conditions, using validated temporal perception, workload gating and dedicated controller to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "ADAC：交通缓和区域规则",
+          "titleEn": "ADAC: traffic-calmed areas",
+          "url": "https://www.adac.de/verkehr/recht/verkehrsvorschriften-deutschland/spielstrasse/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-016",
+    "rank": 124,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "林缘野生动物与连续穿越提示",
+    "summary": "结合林缘可见动物和连续运动线索，提示持续关注，并与专用检测系统核对；不预测被完全遮挡的动物。例如一只鹿过路后，林缘仍有动物活动，提示该方向还需观察。",
+    "outcome": "减少把一只动物已经经过误认为风险结束。",
+    "baseline": "驾驶员持续观察，或使用车型已有动物夜视提醒。",
+    "question": "与现有替代比较，分条件检测率、误报、延迟与提示负担是否改善，小动物、遮挡、低对比、快速运动与热源误识别是否被清楚处理？",
+    "domainReason": "需要现场道路感知、驾驶状态门控与专用驾驶系统协同；座舱只解释和交接，不直接控制转向制动。",
+    "domainReasonEn": "Coordinates road perception, driving-state gating and a dedicated controller; the cabin explains and hands off without steering or braking.",
+    "research": {
+      "localContext": [
+        "德国乡村林缘与晨昏存在野生动物穿越场景；热成像是候选硬件而非默认配置。",
+        "German rural forest edges and twilight create wildlife-crossing contexts; thermal imaging is optional research hardware."
+      ],
+      "visualTargets": [
+        "动物形态、路侧位置、连续运动与检测质量",
+        "Animal shape, roadside position, temporal motion and detector quality"
+      ],
+      "dependencies": [
+        "夜间可能需要热成像或雷达；通用RGB模型不能保证黑暗检测",
+        "Night operation may require thermal imaging or radar; generic RGB cannot guarantee dark detection"
+      ],
+      "failureBoundary": [
+        "小动物、遮挡、低对比、快速运动与热源误识别",
+        "Small animals, occlusion, low contrast, rapid motion and false heat targets"
+      ],
+      "audience": [
+        "经常驶经森林边缘和乡村道路的通勤或旅行驾驶员",
+        "Commuters and travellers on forest-edge and rural roads"
+      ],
+      "aiContribution": [
+        "将动物形态、路侧位置、连续运动与检测质量与可信资料及用户目标关联，解释小动物、遮挡、低对比、快速运动与热源误识别中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link animal shape, roadside position, temporal motion and detector quality to reliable data and user goals, explaining uncertainty around small animals, occlusion, low contrast, rapid motion and false heat targets; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖小动物、遮挡、低对比、快速运动与热源误识别，记录分条件检测率、误报、延迟与提示负担；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include small animals, occlusion, low contrast, rapid motion and false heat targets, measure condition-specific detection, false alerts, latency and prompt burden, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "连续画面由专用感知、跟踪和低延时安全逻辑处理；视觉语言模型用于离线回放研究与受限解释，向驾驶域交接结构化状态，不由语言模型直接产生转向或制动指令。",
+        "Dedicated perception, tracking and low-latency safety logic process image sequences. Vision-language models support offline replay research and constrained explanations, handing structured state to driving systems rather than issuing steering/braking commands."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入夜间可能需要热成像或雷达；通用RGB模型不能保证黑暗检测；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of night operation may require thermal imaging or radar; generic rgb cannot guarantee dark detection. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：野生动物出现时触发，低频但潜在损失较大。收益假设：减少把一只动物已经经过误认为风险结束。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: Triggered by wildlife presence; infrequent with potentially large consequences. Benefit hypothesis: Reduce assuming risk ends after one animal crosses. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对驾驶员持续观察，或使用车型已有动物夜视提醒。改善分条件检测率、误报、延迟与提示负担且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if condition-specific detection, false alerts, latency and prompt burden improve over watch continuously or use existing night-vision animal alerts. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验动物形态、路侧位置、连续运动与检测质量及其适用条件，结合夜间可能需要热成像或雷达；通用RGB模型不能保证黑暗检测形成可核对的具体结果。",
+        "The local task requires assessing animal shape, roadside position, temporal motion and detector quality and applicable conditions, using night operation may require thermal imaging or radar; generic rgb cannot guarantee dark detection to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "ADAC：野生动物穿越与事故预防",
+          "titleEn": "ADAC: wildlife crossings and collision prevention",
+          "url": "https://www.adac.de/verkehr/verkehrssicherheit/tiere/wildunfaelle/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-017",
+    "rank": 125,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "自行车出游装载的可见问题核验",
+    "summary": "出发前引导用户拍摄后部自行车架，检查号牌和灯具遮挡、悬垂绑带等可见问题，并要求人工确认固定与重量。例如带两辆电助力自行车出游，提示重复号牌被挡住；视觉不认证夹具扭矩。",
+    "outcome": "减少可见装载遗漏和出发后返工。",
+    "baseline": "人工绕车检查与逐项阅读安装说明。",
+    "question": "与现有替代比较，可见问题召回、误报、检查时长和漏做人工项是否改善，拍摄角度遮挡、不可见夹具或用户漏做人工固定检查是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国自行车运输需注意号牌和照明遮挡；图像只支持可见项核验。",
+        "German bicycle transport requires attention to plate/light visibility; images cover only visible checks."
+      ],
+      "visualTargets": [
+        "自行车架、重复号牌、灯具与外露绑带",
+        "Bike carrier, repeat plate, lights and exposed straps"
+      ],
+      "dependencies": [
+        "车外拍摄指引、设备说明和用户实测重量；车内摄像头覆盖通常不足",
+        "Guided exterior photos, instructions and measured weight; cabin cameras usually lack coverage"
+      ],
+      "failureBoundary": [
+        "拍摄角度遮挡、不可见夹具或用户漏做人工固定检查",
+        "Poor view, hidden clamps or omitted manual fastening checks"
+      ],
+      "audience": [
+        "用后部车架运送自行车、尤其电助力自行车的家庭",
+        "Households transporting bicycles, especially e-bikes, on rear carriers"
+      ],
+      "aiContribution": [
+        "将自行车架、重复号牌、灯具与外露绑带与可信资料及用户目标关联，解释拍摄角度遮挡、不可见夹具或用户漏做人工固定检查中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link bike carrier, repeat plate, lights and exposed straps to reliable data and user goals, explaining uncertainty around poor view, hidden clamps or omitted manual fastening checks; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖拍摄角度遮挡、不可见夹具或用户漏做人工固定检查，记录可见问题召回、误报、检查时长和漏做人工项；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include poor view, hidden clamps or omitted manual fastening checks, measure visible-defect recall, false alerts, check time and missed manual items, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入车外拍摄指引、设备说明和用户实测重量；车内摄像头覆盖通常不足；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of guided exterior photos, instructions and measured weight; cabin cameras usually lack coverage. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：每次装载、重新固定或休息后复检时出现。收益假设：减少可见装载遗漏和出发后返工。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: At loading, refastening or rechecks after breaks. Benefit hypothesis: Reduce visible loading omissions and post-departure rework. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对人工绕车检查与逐项阅读安装说明。改善可见问题召回、误报、检查时长和漏做人工项且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if visible-defect recall, false alerts, check time and missed manual items improve over walk around the car and consult mounting instructions. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验自行车架、重复号牌、灯具与外露绑带及其适用条件，结合车外拍摄指引、设备说明和用户实测重量；车内摄像头覆盖通常不足形成可核对的具体结果。",
+        "The local task requires assessing bike carrier, repeat plate, lights and exposed straps and applicable conditions, using guided exterior photos, instructions and measured weight; cabin cameras usually lack coverage to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "ADAC：自行车后部车架与装载",
+          "titleEn": "ADAC: rear bicycle carriers and loading",
+          "url": "https://www.adac.de/rund-ums-fahrzeug/ausstattung-technik-zubehoer/zubehoer/fahrradhecktraeger/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-018",
+    "rank": 126,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "车顶装载后的低入口匹配",
+    "summary": "读取限高标牌并对照经用户或设备资料确认的装载总高，说明不匹配并组织替代入口。例如车顶装着自行车到地下车库，提示当前总高不适合；照片不能独立认证精确高度。",
+    "outcome": "减少忘记车顶装载导致的错误入口选择。",
+    "baseline": "驾驶员记住总高、看标牌并临时找替代停车处。",
+    "question": "与现有替代比较，总高记录完整性、错误放行与替代入口耗时是否改善，旧总高未更新、坡道变化、标牌不可读或测量误差是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国自行车和车顶箱出游可遇地下车库低入口；场景可迁移到其他市场。",
+        "German bicycle/roof-box outings can meet low garages; the task is transferable to other markets."
+      ],
+      "visualTargets": [
+        "限高标牌、横梁与已确认的车顶装载状态",
+        "Clearance signs, barriers and confirmed roof-load state"
+      ],
+      "dependencies": [
+        "实测或可靠设备尺寸、装载变更记录与入口资料",
+        "Measured/reliable dimensions, load-change records and entrance data"
+      ],
+      "failureBoundary": [
+        "旧总高未更新、坡道变化、标牌不可读或测量误差",
+        "Stale height, ramp geometry, unreadable signs or measurement error"
+      ],
+      "audience": [
+        "车顶运载自行车、行李箱或运动装备的旅行者",
+        "Travellers carrying rooftop bikes, boxes or sports equipment"
+      ],
+      "aiContribution": [
+        "将限高标牌、横梁与已确认的车顶装载状态与可信资料及用户目标关联，解释旧总高未更新、坡道变化、标牌不可读或测量误差中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link clearance signs, barriers and confirmed roof-load state to reliable data and user goals, explaining uncertainty around stale height, ramp geometry, unreadable signs or measurement error; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖旧总高未更新、坡道变化、标牌不可读或测量误差，记录总高记录完整性、错误放行与替代入口耗时；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include stale height, ramp geometry, unreadable signs or measurement error, measure height-record completeness, false clearance and alternative-entry time, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入实测或可靠设备尺寸、装载变更记录与入口资料；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of measured/reliable dimensions, load-change records and entrance data. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：装载状态改变或到达低入口时出现。收益假设：减少忘记车顶装载导致的错误入口选择。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: When loads change or a low entrance is reached. Benefit hypothesis: Reduce wrong entrances caused by forgotten roof loads. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对驾驶员记住总高、看标牌并临时找替代停车处。改善总高记录完整性、错误放行与替代入口耗时且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if height-record completeness, false clearance and alternative-entry time improve over remember total height, read signs and find alternative parking. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验限高标牌、横梁与已确认的车顶装载状态及其适用条件，结合实测或可靠设备尺寸、装载变更记录与入口资料形成可核对的具体结果。",
+        "The local task requires assessing clearance signs, barriers and confirmed roof-load state and applicable conditions, using measured/reliable dimensions, load-change records and entrance data to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "ADAC：自行车车顶运输",
+          "titleEn": "ADAC: rooftop bicycle transport",
+          "url": "https://www.adac.de/rund-ums-fahrzeug/zweirad/fahrrad-ebike-pedelec/kauf-ausruestung/fahrrad-transport/"
+        }
+      ]
+    }
+  },
+  {
+    "id": "DE-019",
+    "rank": 127,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "perception",
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "ecosystem"
+    ],
+    "sceneDomain": "cabin",
+    "country": "DE",
+    "sourceType": "market",
+    "horizon": "近期试验",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "双层机械车位的本车适配检查",
+    "summary": "识别机械车位型号、层位及限高限重说明，对照可靠车辆尺寸和已知重量解释条件，未知时联系运营方。例如到访公寓获分下层车位，本车高度超出该层要求，联系住户换位；不自动控制举升。",
+    "outcome": "减少把可进入车库误认为可使用指定机械车位。",
+    "baseline": "人工读设备铭牌、查车身尺寸并联系住户。",
+    "question": "与现有替代比较，适配判断错误、未知项保留与现场求助耗时是否改善，型号不清、层位规则不同、重量未知或说明过期是否被清楚处理？",
+    "domainReason": "目标通过停驻检查、乘员交互或服务协调完成；路线与车辆资料是上下文，不要求驾驶域执行。",
+    "domainReasonEn": "Achieved through parked checks, occupant interaction or service coordination; route/vehicle context does not require driving-domain execution.",
+    "research": {
+      "localContext": [
+        "德国厂商提供双层机械停车设备，其限制随型号与层位不同，不以品牌名称推断适配。",
+        "German suppliers provide two-level parking equipment with model/level-specific limits; brand alone does not establish fit."
+      ],
+      "visualTargets": [
+        "设备型号、上下层、限高限重与操作状态",
+        "Lift model, level, height/load ratings and operating state"
+      ],
+      "dependencies": [
+        "准确车型数据、载荷资料与该设备说明；重量不能由视觉推断",
+        "Vehicle/load data and exact equipment instructions; weight cannot be inferred visually"
+      ],
+      "failureBoundary": [
+        "型号不清、层位规则不同、重量未知或说明过期",
+        "Unknown model, level-specific rules, missing weight or stale instructions"
+      ],
+      "audience": [
+        "使用公寓双层机械车位的居民、访客和租车用户",
+        "Residents, visitors and renters using apartment mechanical parking lifts"
+      ],
+      "aiContribution": [
+        "将设备型号、上下层、限高限重与操作状态与可信资料及用户目标关联，解释型号不清、层位规则不同、重量未知或说明过期中的不确定性；计时、资格和接口结果以确定性规则核验。",
+        "Link lift model, level, height/load ratings and operating state to reliable data and user goals, explaining uncertainty around unknown model, level-specific rules, missing weight or stale instructions; verify timing, eligibility and receipts deterministically."
+      ],
+      "validation": [
+        "先以真实记录回放比较人工处理、规则工具和AI协作；首轮8—12名目标用户用于发现问题，不估计市场比例。覆盖型号不清、层位规则不同、重量未知或说明过期，记录适配判断错误、未知项保留与现场求助耗时；道路动作先在回放或模拟器验证。",
+        "Compare manual work, rule tools and AI coordination using real recorded tasks; 8–12 target users initially discover issues rather than estimate market share. Include unknown model, level-specific rules, missing weight or stale instructions, measure fit errors, preserved unknowns and on-site assistance time, and test road actions in replay/simulation first."
+      ],
+      "deployment": [
+        "先在停驻条件下用OCR和视觉语言模型读取标牌或可见线索，再通过版本化德国规则、可靠车辆资料与轻量工具接口核对；模型只整理解释，不凭图像补造尺寸、重量或支付结果。",
+        "Use OCR and a vision-language model on signs or visible cues while parked, then verify through versioned German rules, reliable vehicle data and small tool interfaces. Models explain observations without inventing dimensions, weights or payment outcomes."
+      ],
+      "costs": [
+        "主要成本包括德语数据标注、规则与版本维护、异常测试和隐私管理，以及接入准确车型数据、载荷资料与该设备说明；重量不能由视觉推断；先复用现有设备。",
+        "Costs include German annotation, rule/version maintenance, exception tests and privacy controls, plus integration of vehicle/load data and exact equipment instructions; weight cannot be inferred visually. Reuse existing equipment first."
+      ],
+      "valueHypothesis": [
+        "使用机会：首次使用、换车或被分配不同层位时出现。收益假设：减少把可进入车库误认为可使用指定机械车位。 需比较现有替代中的耗时、错漏和重复使用意愿；标配、选装或订阅的付费价值尚无用户证据。",
+        "Use occasions: On first use, vehicle changes or assignment to another deck. Benefit hypothesis: Reduce confusing garage access with suitability for a particular lift bay. Compare baseline time, errors and repeated-use preference; willingness to pay for standard, optional or subscription provision has no user evidence yet."
+      ],
+      "decisionGates": [
+        "只有相对人工读设备铭牌、查车身尺寸并联系住户。改善适配判断错误、未知项保留与现场求助耗时且未知项不会被误报为确定结论时继续；规则工具效果相当则缩为规则方案，误导或负担更高则暂停。",
+        "Continue only if fit errors, preserved unknowns and on-site assistance time improve over read equipment plates, check car dimensions and contact the host. without turning unknowns into certainty; choose rules if equivalent, and pause if misleading or more burdensome."
+      ],
+      "differentiation": [
+        "德国本地任务要求同时核验设备型号、上下层、限高限重与操作状态及其适用条件，结合准确车型数据、载荷资料与该设备说明；重量不能由视觉推断形成可核对的具体结果。",
+        "The local task requires assessing lift model, level, height/load ratings and operating state and applicable conditions, using vehicle/load data and exact equipment instructions; weight cannot be inferred visually to produce a verifiable result."
+      ],
+      "patentReview": [
+        "仅显示已核实且机制匹配的公开专利；未关联不表示不存在相关专利，也未进行实施自由分析。",
+        "Only verified mechanism-matched patents are shown; no association does not prove absence and is not a freedom-to-operate assessment."
+      ],
+      "sources": [
+        {
+          "title": "WÖHR Parklift 450：设备规格",
+          "titleEn": "WÖHR Parklift 450: equipment specifications",
+          "url": "https://woehr.de/files/uploads/woehr/downloads/datasheets/parklift/de/WOEHR_450-32_DE.pdf"
+        }
+      ]
+    }
+  }
+]

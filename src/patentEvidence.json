@@ -470,5 +470,30 @@
       "summary": "An overhead carrier positions a flexible screen forward, rearward or above seats, including rear viewing with the liftgate open.",
       "scope": "Claims 1–5 concern display positioning; AI coordination of viewing arrangements is this library’s product hypothesis."
     }
+  },
+  {
+    "number": "US12073723B2",
+    "title": "视觉停车标牌解读与智能停车辅助",
+    "applicant": "通用汽车 Global Technology Operations LLC",
+    "summary": "利用连续图像和标牌关联判断停车限制，可结合基础设施信息、驾驶员输入及停车支付计时。",
+    "scope": "权利要求1、3、9、11涉及标牌、停车限制和计时。美国授权不代表德国授权、德国规则完整覆盖或这些场景已量产。",
+    "filingDate": "2023-01-05",
+    "publicationDate": "2024-08-27",
+    "documentType": "grant",
+    "source": "https://patents.google.com/patent/US12073723B2/en",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "search",
+    "sceneIds": [
+      "DE-001",
+      "DE-002",
+      "DE-003"
+    ],
+    "en": {
+      "title": "Visual parking-sign interpretation and intelligent parking assistance",
+      "applicant": "General Motors Global Technology Operations LLC",
+      "summary": "Uses image sequences and sign association to assess parking restrictions, with infrastructure data, driver inputs and payment timing.",
+      "scope": "Claims 1, 3, 9 and 11 concern signs, parking restrictions and timing. A US grant does not establish German grant status, complete German rule coverage or production implementations."
+    }
   }
 ]

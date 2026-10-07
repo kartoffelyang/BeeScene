@@ -4,3 +4,12 @@ export const sceneVisuals = Object.fromEntries(ranks.map(rank => {
   const number = String(rank).padStart(3, '0');
   return [`TOP-${number}`, {src: `${import.meta.env.BASE_URL}scenario-images/top-${number}-v1.webp`, caption: 'AI生成 · 场景概念示意'}];
 }));
+
+for (let number = 1; number <= 8; number += 1) {
+  sceneVisuals[`PAT-${String(number).padStart(3, '0')}`] = {src: `${import.meta.env.BASE_URL}scenario-images/scene-${100 + number}-v1.webp`, caption: 'AI生成 · 场景概念示意'};
+}
+
+for (let number = 1; number <= 19; number += 1) {
+  const id = `DE-${String(number).padStart(3, "0")}`;
+  sceneVisuals[id] = {src: `${import.meta.env.BASE_URL}scenario-images/${id.toLowerCase()}-v1.webp`, caption: "AI生成 · 场景概念示意"};
+}

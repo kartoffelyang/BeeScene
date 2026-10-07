@@ -7,7 +7,7 @@ import {t,setLanguage} from '../src/i18n.js';
 import {assess} from '../src/industryResearch.js';
 const additions=scenarios.filter(s=>s.sourceType==='patent');
 assert.equal(top100.length,100);
-assert.ok(additions.length>0);assert.equal(scenarios.length,top100.length+additions.length);
+assert.ok(additions.length>0);assert.equal(scenarios.length,top100.length+additions.length+scenarios.filter(s=>s.country==='DE').length);
 assert.equal(new Set(scenarios.map(s=>s.id)).size,scenarios.length);
 assert.deepEqual(scenarios.slice(0,100).map(s=>[s.id,s.rank,s.summary]),top100.map(s=>[s.id,s.rank,s.summary]));
 assert.equal(new Set(patentEvidence.map(p=>p.number)).size,patentEvidence.length);
@@ -27,7 +27,7 @@ for(const s of scenarios){
  const d=getHAIDesign(s);assert.equal(d.steps.length,5);assert.equal(d.branches.length,3);
  if(s.sourceType==='patent'){
   assert.ok(patentsFor(s.id).length);
-  assert.equal(assess(s.id,'cn').groups.length,0,'Patents must not create production adoption');
+  assert.ok(['cn','global'].every(region=>assess(s.id,region).records.every(r=>r.source&&!r.source.includes('patents.google')&&!r.source.includes('patsnap'))),'Patent records must not create production adoption');
   for(const text of [...d.steps,...d.branches].map(x=>x.design))assert.ok(!/[\u4e00-\u9fff]/.test(t(text)),`Missing HAI English ${s.id}: ${t(text)}`);
   const data=sceneExport([s]);assert.equal(data.scenarios.length,1);assert.ok(data.scenarios[0].patents.length);assert.equal(data.scenarios[0].sceneDomain,s.sceneDomain);
  }
@@ -37,6 +37,9 @@ assert.equal(scenarios.find(s=>s.id==='TOP-015').sceneDomain,'cabin','Game contr
 assert.equal(scenarios.find(s=>s.id==='PAT-007').sceneDomain,'cabinDriving');
 assert.equal(scenarios.find(s=>s.id==='PAT-006').sceneDomain,'cabin','A parked cabin robot is not a driving controller');
 const main=fs.readFileSync(new URL('../src/main.jsx',import.meta.url),'utf8');
+for(let number=101;number<=108;number++){
+ assert.ok(fs.statSync(new URL(`../public/scenario-images/scene-${number}-v1.webp`,import.meta.url)).size>20000,`Missing scene artwork ${number}`);
+}
 assert.ok(main.includes('PatentBadge')&&main.includes('PatentDialog')&&main.includes('setDomains'));
 assert.ok(!main.includes('filterScenes(top100'));
 setLanguage('zh');

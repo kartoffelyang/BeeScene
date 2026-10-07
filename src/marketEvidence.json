@@ -3233,5 +3233,723 @@
         "boundary": "Access-sharing building blocks only; preference handover and AI negotiation are unverified."
       }
     }
+  ],
+  "PAT-001": [
+    {
+      "brand": "长安 / 深蓝",
+      "model": "S05（2024年报所述车型）",
+      "feature": "原生摄影与投影交互",
+      "boundary": "企业年报核实车载摄影；驾驶状态门控、任意口述取景与配文流程未核实。",
+      "source": "https://static.cninfo.com.cn/finalpage/2025-04-11/1223057068.PDF",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "changan",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "Changan / Deepal",
+        "model": "S05 (2024 annual-report model)",
+        "feature": "Built-in photography and projection",
+        "boundary": "Corporate report confirms photography; safety gating, arbitrary spoken framing and captions remain unverified.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "6系GT / 支持Drive Recorder的车型",
+      "feature": "旅途风景录制与保存",
+      "boundary": "手动触发外部摄像头录制；不是任意目标识别与自动配文。",
+      "source": "https://www.bmw.co.uk/en/shop/ls/dp/Base_Drive_Recorder_gb",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "bmw",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "BMW",
+        "model": "6 Series GT / Drive Recorder compatible models",
+        "feature": "Scenic journey capture and storage",
+        "boundary": "Manually triggered exterior-camera recording; intent-led framing and captions are unverified.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    }
+  ],
+  "PAT-002": [
+    {
+      "brand": "赛力斯 / 问界",
+      "model": "2025款M9（历史官方产品页）",
+      "feature": "UWB生命体监测、预警与空调联动",
+      "boundary": "对应遗留乘员/宠物的状态与温控链；不证明连续生理监测或健康诊断。 历史产品信息；当前年款、配置与OTA需另核。",
+      "source": "https://aito.auto/model/m9/",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "seres",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "SERES / AITO",
+        "model": "2025 M9 (historical official product page)",
+        "feature": "UWB presence sensing, alerts and climate response",
+        "boundary": "Presence and climate-care chain; continuous physiology and diagnosis are not documented. Historical product information; current model year, configuration and OTA require separate confirmation.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "Volvo",
+      "model": "EX90（美国）",
+      "feature": "毫米级舱内雷达感知、遗留提醒与温控",
+      "boundary": "可感知微小运动并联动通知与空调；不是乘员疾病或压力评估。",
+      "source": "https://www.volvocars.com/us/cars/ex90-electric/features/",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "geely",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Volvo",
+        "model": "EX90 (US)",
+        "feature": "Interior radar, presence reminder and climate care",
+        "boundary": "Tiny-motion sensing supports alerts and climate care, not disease or stress evaluation.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    },
+    {
+      "brand": "Hyundai",
+      "model": "Santa Fe（官方区域页）",
+      "feature": "后排运动感知与遗留报警",
+      "boundary": "检测后排运动并提醒/报警；缺少完整生理状态分析与可选关怀。",
+      "source": "https://www.hyundai.com/csa/en/find-a-car/new-santa-fe/safety",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "hyundai",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Hyundai",
+        "model": "Santa Fe (regional specification)",
+        "feature": "Rear occupant motion sensing and alerts",
+        "boundary": "Motion sensing and alerts are partial care; physiology analysis and selectable interventions are unverified.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    }
+  ],
+  "PAT-003": [
+    {
+      "brand": "理想",
+      "model": "L6 Pro（X04手册）",
+      "feature": "可选按摩模式、强度与定时停止",
+      "boundary": "由用户选模式与强度；未列明体压/HRV闭环自适应。",
+      "source": "https://manuals.lixiang.com/zh-cn/X042024PRO/20251009151824/topic-2023-B1E9B457-001.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "lixiang",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "Li Auto",
+        "model": "L6 Pro (X04 manual)",
+        "feature": "Selectable massage modes, intensity and timer",
+        "boundary": "User-selected settings; pressure/HRV feedback adaptation is not documented.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "极氪",
+      "model": "009",
+      "feature": "深度按摩座椅",
+      "boundary": "官方页面列按摩；未核实体压状态闭环。",
+      "source": "https://www.zeekrlife.com/zh-cn/zeekr009",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "geely",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "Zeekr",
+        "model": "009",
+        "feature": "Deep massage seats",
+        "boundary": "Massage is listed; pressure-state closed-loop adaptation is unverified.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "S-Class（W223）",
+      "feature": "ENERGIZING按摩、座椅微调与可穿戴状态建议",
+      "boundary": "可穿戴数据非座椅体压；没有核实按体压分布实时选择按摩区域。",
+      "source": "https://media.mercedes-benz.com/article/c90b03ec-d0ed-423e-8632-f49e46ca6636",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "mercedes",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Mercedes-Benz",
+        "model": "S-Class (W223)",
+        "feature": "ENERGIZING massage, seat movement and wearable suggestions",
+        "boundary": "Wearable data is not a pressure map; pressure-driven massage-zone selection is unverified.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    },
+    {
+      "brand": "Bentley",
+      "model": "Bentayga / Bentayga EWB",
+      "feature": "Postural Adjust与Seat Auto Climate",
+      "boundary": "接触压力微调和温湿度调节已提供；并非已证实体压/HRV自适应按摩。",
+      "source": "https://www.bentleymotors.com/uk/en/models/technology.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "volkswagen",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Bentley",
+        "model": "Bentayga / Bentayga EWB",
+        "feature": "Postural Adjust and Seat Auto Climate",
+        "boundary": "Pressure redistribution and thermal sensing are available; pressure/HRV adaptive massage is not established.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    }
+  ],
+  "PAT-004": [
+    {
+      "brand": "蔚来",
+      "model": "ET9",
+      "feature": "动态空间音频上混与主动路噪消除",
+      "boundary": "属于内容处理和舱内声学能力；不证明按每首歌和跨车偏好自动校准。",
+      "source": "https://www.nio.io/et9",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "nio",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "NIO",
+        "model": "ET9",
+        "feature": "Spatial audio upmixing and active road-noise cancellation",
+        "boundary": "Content processing and cabin acoustics are related, not proof of per-song or cross-car preference calibration.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "Mazda",
+      "model": "CX-5 Carbon Edition（2025美国）",
+      "feature": "Bose AudioPilot噪声补偿",
+      "boundary": "随背景噪声调节音频；不证明歌曲语义识别或跨车偏好迁移。",
+      "source": "https://news.mazdausa.com/vehicles-2025-cx-5",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "mazda",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Mazda",
+        "model": "CX-5 Carbon Edition (2025 US)",
+        "feature": "Bose AudioPilot noise compensation",
+        "boundary": "Audio responds to noise; song understanding and cross-car preference transfer are unverified.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    },
+    {
+      "brand": "HARMAN（供应商）",
+      "model": "Ready Tune（方案，非指定量产车型）",
+      "feature": "个人EQ与按乘员座位调音",
+      "boundary": "供应商可用方案，尚未核实具体OEM搭载；不计入量产OEM数量。",
+      "source": "https://car.harman.com/Pages/ready-tune.aspx",
+      "status": "announced",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "harman",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "HARMAN (supplier)",
+        "model": "Ready Tune (solution, not a verified vehicle)",
+        "feature": "Personal EQ and seat-specific tuning",
+        "boundary": "Supplier offering; OEM installation is not established and excluded from production counts.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    }
+  ],
+  "PAT-005": [
+    {
+      "brand": "赛力斯 / 问界",
+      "model": "M9（投影选装车型）",
+      "feature": "升降幕布与投影光机联动",
+      "boundary": "投影面是专用幕布，非调光天幕；列为相关能力。",
+      "source": "https://aito.auto/dam/content/dam/aito/cn/service/pdf/m9-product-manual-20240918.pdf",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "seres",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "SERES / AITO",
+        "model": "M9 (optional projection)",
+        "feature": "Retractable projection screen and projector",
+        "boundary": "Dedicated screen rather than dimmable roof; related capability only.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "7 Series / i7",
+      "feature": "Theatre Screen、遮阳与座椅影院联动",
+      "boundary": "折叠显示屏，不是直接在天幕上投影。",
+      "source": "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0382793EN_GB/the-new-bmw-7-series",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "bmw",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "BMW",
+        "model": "7 Series / i7",
+        "feature": "Theatre Screen, blinds and theatre seating",
+        "boundary": "Fold-down display, not roof-surface projection.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    }
+  ],
+  "PAT-006": [],
+  "PAT-007": [
+    {
+      "brand": "小鹏",
+      "model": "2026款X9",
+      "feature": "高速辅助驾驶下失能提醒、无回应靠边与救援",
+      "boundary": "仅支持的高速辅助驾驶条件；疲劳原因判断与任意道路停靠不等同。",
+      "source": "https://bbs.xiaopeng.com/article/3806549?tidType=1",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "xpeng",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "XPENG",
+        "model": "2026 X9",
+        "feature": "Incapacitation warning, unresponsive-driver stop and rescue",
+        "boundary": "Restricted highway-assistance conditions; not arbitrary-road operation or medical cause detection.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "长安",
+      "model": "UNI-K（配置依版本）",
+      "feature": "DMS疲劳监测",
+      "boundary": "只核实疲劳监测；未核实持续无回应后自动停车链。",
+      "source": "https://www.changan.com.cn/3Dhall/UNI-K/",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "changan",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "Changan",
+        "model": "UNI-K (trim dependent)",
+        "feature": "Driver fatigue monitoring",
+        "boundary": "Fatigue warning only; unresponsive-driver stop is not documented.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "Honda",
+      "model": "Honda SENSING 360+（中国首搭计划）",
+      "feature": "状态检测与驾驶员异常停车方案",
+      "boundary": "2023官方发布含中国首搭计划；本次未找到对应交付车型证据，排除量产计数。",
+      "source": "https://www.honda.com.cn/news/20231117.html",
+      "status": "announced",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "honda",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "Honda",
+        "model": "Honda SENSING 360+ (China launch plan)",
+        "feature": "Driver sensing and emergency-stop system",
+        "boundary": "Official launch plan; verified delivered-model evidence is absent here, so production count excludes it.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "T-Roc",
+      "feature": "驾驶员无回应后的受控停车",
+      "boundary": "支持条件、提醒方式与停靠位置依车型；不代表完整AI健康判断或任意路况自动接管。",
+      "source": "https://www.volkswagen-newsroom.com/en/the-new-t-roc-international-media-drive-19983/assist-and-chassis-systems-19985",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "volkswagen",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Volkswagen",
+        "model": "T-Roc",
+        "feature": "Controlled stop after driver unresponsiveness",
+        "boundary": "Conditions, warning path and stopping location vary; full AI health assessment and arbitrary-road takeover are not established.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    },
+    {
+      "brand": "Toyota",
+      "model": "2026 bZ",
+      "feature": "驾驶员无回应后的受控停车",
+      "boundary": "支持条件、提醒方式与停靠位置依车型；不代表完整AI健康判断或任意路况自动接管。",
+      "source": "https://www.toyota.com/owners/warranty-owners-manuals/digital/article/bz/2026/om42j21u/ch05se040413/",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "toyota",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Toyota",
+        "model": "2026 bZ",
+        "feature": "Controlled stop after driver unresponsiveness",
+        "boundary": "Conditions, warning path and stopping location vary; full AI health assessment and arbitrary-road takeover are not established.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    },
+    {
+      "brand": "Volvo",
+      "model": "EX90",
+      "feature": "驾驶员无回应后的受控停车",
+      "boundary": "支持条件、提醒方式与停靠位置依车型；不代表完整AI健康判断或任意路况自动接管。",
+      "source": "https://www.volvocars.com/static/support-content/pdfs/uk_en-GB_ex90_2026_UM_5419c90e5c9565b950aa7048a75af275.pdf",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "geely",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Volvo",
+        "model": "EX90",
+        "feature": "Controlled stop after driver unresponsiveness",
+        "boundary": "Conditions, warning path and stopping location vary; full AI health assessment and arbitrary-road takeover are not established.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "6 Series GT",
+      "feature": "驾驶员无回应后的受控停车",
+      "boundary": "支持条件、提醒方式与停靠位置依车型；不代表完整AI健康判断或任意路况自动接管。",
+      "source": "https://www.press.bmwgroup.com/global/article/attachment/T0308711EN/463958",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "bmw",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "BMW",
+        "model": "6 Series GT",
+        "feature": "Controlled stop after driver unresponsiveness",
+        "boundary": "Conditions, warning path and stopping location vary; full AI health assessment and arbitrary-road takeover are not established.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "model": "S-Class (2024 V223)",
+      "feature": "驾驶员无回应后的受控停车",
+      "boundary": "支持条件、提醒方式与停靠位置依车型；不代表完整AI健康判断或任意路况自动接管。",
+      "source": "https://www.mercedes-benz.ca/en/owners/manuals/s-class-sedan-2024-09-v223-mbux/driving-and-driving-safety-systems/function-of-active-emergency-stop-assist",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "mercedes",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "Mercedes-Benz",
+        "model": "S-Class (2024 V223)",
+        "feature": "Controlled stop after driver unresponsiveness",
+        "boundary": "Conditions, warning path and stopping location vary; full AI health assessment and arbitrary-road takeover are not established.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    }
+  ],
+  "PAT-008": [
+    {
+      "brand": "赛力斯 / 问界",
+      "model": "2025款M9（历史官方产品页）",
+      "feature": "屏幕内容流转至车外投影",
+      "boundary": "可支持外部观看；是投影，并非柔性屏沿轨道移动到车尾。 历史产品信息；当前年款、配置与OTA需另核。",
+      "source": "https://aito.auto/model/m9/",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "cn",
+      "oemId": "seres",
+      "region": "中国；配置与OTA依车型",
+      "en": {
+        "brand": "SERES / AITO",
+        "model": "2025 M9 (historical official product page)",
+        "feature": "Media transfer to external projection",
+        "boundary": "External viewing through projection, not a flexible screen repositioned on rails. Historical product information; current model year, configuration and OTA require separate confirmation.",
+        "region": "China; model/configuration/OTA dependent"
+      }
+    },
+    {
+      "brand": "BMW",
+      "model": "7 Series / i7",
+      "feature": "车顶折叠下放的后排影院屏",
+      "boundary": "支持舱内屏幕部署；没有核实移至尾门供营地观看。",
+      "source": "https://www.press.bmwgroup.com/united-kingdom/article/detail/T0382793EN_GB/the-new-bmw-7-series",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "年款/官方发布时间见来源",
+      "marketRegion": "global",
+      "oemId": "bmw",
+      "region": "海外；国家、年款与配置依来源",
+      "en": {
+        "brand": "BMW",
+        "model": "7 Series / i7",
+        "feature": "Fold-down rear cinema display",
+        "boundary": "Interior deployment only; tailgate/campsite repositioning is unverified.",
+        "region": "Overseas; country/model year/configuration dependent"
+      }
+    }
+  ],
+  "DE-001": [
+    {
+      "brand": "宝马",
+      "model": "支持 BMW OS 8/8.5/9 的兼容车型",
+      "region": "德国",
+      "feature": "车内停车支付",
+      "boundary": "官方2024资料说明支持分区识别与缴费；未证明视觉理解复杂许可牌。支持城市、账户与车型资格需核实。",
+      "source": "https://www.bmwgroup.com/de/news/allgemein/2024/in-car-payment.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "2024-09-09",
+      "marketRegion": "global",
+      "country": "DE",
+      "oemId": "bmw",
+      "en": {
+        "brand": "BMW",
+        "model": "Compatible BMW OS 8/8.5/9 vehicles",
+        "feature": "In-car parking payments",
+        "boundary": "2024 documentation supports zone detection/payment, not visual interpretation of complex permit signs. Check supported cities, accounts and vehicle eligibility.",
+        "region": "Germany"
+      }
+    }
+  ],
+  "DE-006": [
+    {
+      "brand": "宝马",
+      "model": "5系轿车 / Touring（2020资料；选装 Driving Assistant Professional）",
+      "region": "德国",
+      "feature": "救援通道辅助",
+      "boundary": "已核实历史量产能力：拥堵时靠本车道边缘留出救援空间。现款配置另核；未证明任意施工或特殊交通中的完整AI协作。",
+      "source": "https://www.press.bmwgroup.com/deutschland/article/attachment/T0308529DE/464003",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "2020-05",
+      "marketRegion": "global",
+      "country": "DE",
+      "oemId": "bmw",
+      "en": {
+        "brand": "BMW",
+        "model": "5 Series Sedan / Touring (2020; optional Driving Assistant Professional)",
+        "feature": "Emergency corridor assistance",
+        "boundary": "Historical production feature moves towards the lane edge during congestion. Current availability requires checking; arbitrary construction/special traffic coordination is not established.",
+        "region": "Germany"
+      },
+      "historical": true
+    }
+  ],
+  "DE-010": [
+    {
+      "brand": "奔驰",
+      "model": "支持 Fahrtenbuch 数字服务的公司车（资格依 VIN、年款和配置）",
+      "region": "德国",
+      "feature": "电子行程账本",
+      "boundary": "自动记录行程，支持公务/私人等分类与PDF导出；没有证明任意口述自动分类或保证税务机关接受。",
+      "source": "https://www.mercedes-benz.de/passengercars/buy/digital-extras-overview/apps/fahrtenbuch.html",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "官方页面；资格依年款与配置",
+      "marketRegion": "global",
+      "country": "DE",
+      "oemId": "mercedes",
+      "en": {
+        "brand": "Mercedes-Benz",
+        "model": "Company vehicles eligible for the Fahrtenbuch service (VIN/year/configuration dependent)",
+        "feature": "Digital trip logbook",
+        "boundary": "Trips are recorded automatically with categorization and PDF export; arbitrary spoken classification and guaranteed tax acceptance are not established.",
+        "region": "Germany"
+      }
+    }
+  ],
+  "DE-012": [
+    {
+      "brand": "奥迪",
+      "model": "A6 C8（官方历史车型档案，德国配置）",
+      "region": "德国",
+      "feature": "施工窄道辅助",
+      "boundary": "官方记录说明接近道路边缘时修正转向、与侵入车辆保持距离；未证明测量含后视镜车宽、读取宽度标牌并确认是否可通行。",
+      "source": "https://www.audi.com/de/der-audi-a6-bis-2025-das-multitalent-in-der-business-class-10240/komfort-10254",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "历史车型档案；页面2025-03-04",
+      "marketRegion": "global",
+      "country": "DE",
+      "oemId": "vw",
+      "en": {
+        "brand": "Audi",
+        "model": "A6 C8 (German historical model archive)",
+        "feature": "Narrow-passage assistance",
+        "boundary": "Documented steering correction near lane edges and clearance from encroaching vehicles; mirror-inclusive width measurement and sign-based fit verification are unproven.",
+        "region": "Germany"
+      }
+    }
+  ],
+  "DE-016": [
+    {
+      "brand": "保时捷",
+      "model": "Taycan（2023年款起；选装夜视辅助）",
+      "region": "德国",
+      "feature": "夜视大型动物识别",
+      "boundary": "红外识别行人和大型动物并提醒；未证明动物连续横穿判断、小型动物覆盖或任意条件下可靠识别。",
+      "source": "https://ask.porsche.com/de/de-DE/night-vision-assist-taycan/",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "官方页面；资格依年款与配置",
+      "marketRegion": "global",
+      "country": "DE",
+      "oemId": "vw",
+      "en": {
+        "brand": "Porsche",
+        "model": "Taycan (MY2023 onward; optional Night Vision Assist)",
+        "feature": "Night-time large-animal detection",
+        "boundary": "Infrared detection/warnings cover people and large animals; herd-following inference, small animals and all-condition reliability are unproven.",
+        "region": "Germany"
+      }
+    },
+    {
+      "brand": "宝马",
+      "model": "5系 / 6系 / 7系（2013年资料，选装）",
+      "region": "德国",
+      "feature": "Night Vision 动物识别",
+      "boundary": "已核实历史车型功能；不能推断现款仍提供，且不证明连续穿越推理。",
+      "source": "https://www.press.bmwgroup.com/deutschland/article/detail/T0141144DE/bmw-modellpflege-massnahmen-zum-sommer-2013",
+      "status": "provided",
+      "match": "partial",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "2013年夏季历史量产功能",
+      "marketRegion": "global",
+      "country": "DE",
+      "oemId": "bmw",
+      "en": {
+        "brand": "BMW",
+        "model": "5 / 6 / 7 Series (2013; optional)",
+        "feature": "Night Vision animal detection",
+        "boundary": "Historical model feature, not proof of current availability or sequential wildlife-crossing inference.",
+        "region": "Germany"
+      },
+      "historical": true
+    }
+  ],
+  "DE-018": [
+    {
+      "brand": "奔驰",
+      "model": "支持相应 MBUX 数字服务的厢式车（车型资格需核查）",
+      "region": "德国",
+      "feature": "按车长、车宽、车高和总质量规划路线",
+      "boundary": "输入尺寸后的导航基础能力；未证明视觉测量车顶载物高度或实时辨识车库净空。",
+      "source": "https://www.mercedes-benz.de/vans/buy/digital-extras/navigation/navigation-for-trailers-and-oversized-vehicles.html",
+      "status": "provided",
+      "match": "related",
+      "origin": "research",
+      "checkedAt": "2026-10-07",
+      "sourceDate": "官方页面；资格依年款与配置",
+      "marketRegion": "global",
+      "country": "DE",
+      "oemId": "mercedes",
+      "en": {
+        "brand": "Mercedes-Benz",
+        "model": "Eligible MBUX-equipped vans (vehicle eligibility must be checked)",
+        "feature": "Dimension-aware route planning",
+        "boundary": "Route planning uses entered dimensions; visual roof-load measurement and live garage-clearance interpretation are not established.",
+        "region": "Germany"
+      }
+    }
   ]
 }

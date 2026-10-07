@@ -1,5 +1,6 @@
 import {top100,exportPayload} from './top100.js';
 import additions from './patentScenes.json' with {type:'json'};
+import germany from './germanyScenes.json' with {type:'json'};
 import patents from './patentEvidence.json' with {type:'json'};
 
 export const domainLabels={cabin:['座舱场景','Cabin scenario'],cabinDriving:['舱驾融合场景','Cabin–driving integration']};
@@ -20,7 +21,9 @@ const fusion={
  'TOP-100':['车辆自主返回约定位置，需要专用运动系统及状态回执。','Autonomous return needs a dedicated motion system and state receipts.']
 };
 const cabinReason=['当前定义以舱内交互、体验或服务协作为主，未要求驾驶域、底盘或自主移动执行；分类随场景定义评审。','The current definition focuses on cabin interaction, experiences or services, without requiring driving, chassis or autonomous-motion execution. Classification follows the scenario definition.'];
-export const scenarios=[...top100.map(s=>({...s,sourceType:'original',sceneDomain:fusion[s.id]?'cabinDriving':'cabin',domainReason:(fusion[s.id]||cabinReason)[0],domainReasonEn:(fusion[s.id]||cabinReason)[1]})),...additions];
+export const countryLabels={DE:['德国','Germany']};
+export const filterCountries=(items,countries=[])=>items.filter(s=>!countries.length||countries.includes(s.country));
+export const scenarios=[...top100.map(s=>({...s,sourceType:'original',sceneDomain:fusion[s.id]?'cabinDriving':'cabin',domainReason:(fusion[s.id]||cabinReason)[0],domainReasonEn:(fusion[s.id]||cabinReason)[1]})),...additions,...germany];
 export const patentEvidence=patents;
 export const patentsFor=id=>patents.filter(p=>p.sceneIds.includes(id));
-export function sceneExport(items,saved=[]){const payload=exportPayload(items,saved);return {...payload,schemaVersion:7,framework:'用户需求 × AI能力 × 车用理由 × 场景领域',domainLabels,domainDefinitions,scenarios:payload.scenarios.map(s=>({...s,patents:patentsFor(s.id)}))};}
+export function sceneExport(items,saved=[]){const payload=exportPayload(items,saved);return {...payload,schemaVersion:8,framework:'用户需求 × AI能力 × 车用理由 × 场景领域 × 所在国家',domainLabels,domainDefinitions,countryLabels,scenarios:payload.scenarios.map(s=>({...s,patents:patentsFor(s.id)}))};}
