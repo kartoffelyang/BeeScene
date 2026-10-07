@@ -1,6 +1,6 @@
 # BeeScene
 
-AI × Vehicle scenario explorer with 100 research-defined candidates, Chinese/English switching, need and capability filters, an opportunity map, HAI interaction designs, and three investment decision case studies.
+AI × Vehicle scenario explorer with the original TOP100 and additional patent-inspired candidates, Chinese/English switching, need and capability filters, an opportunity map, HAI interaction designs, and three investment decision case studies.
 
 Website: https://kartoffelyang.github.io/BeeScene/
 
@@ -20,6 +20,7 @@ node tests/top100.mjs
 node tests/hai.mjs
 node tests/decision-evidence.mjs
 node tests/i18n.mjs
+node tests/patents.mjs
 npm run test:industry
 npm run test:backend
 npm run build
@@ -33,7 +34,7 @@ Pushes to `main` run validation, build the site for `/BeeScene/`, and publish to
 
 Rankings and research horizons express research judgments. User value, implementation feasibility and commercial outcomes remain unvalidated. AI-generated scene images illustrate concepts and do not establish implementation or validation evidence. HAI flows are reference designs, not a connected runtime executor.
 
-The active scenario data is `src/top100.js`. Scenario IDs stay stable across filtering and language changes. Bulk TOP100 export controls have been removed; single-scenario and decision/evidence backup exports remain available.
+The full public library is `src/scenarios.js`, combining the original `src/top100.js` and expandable `src/patentScenes.json`. Scenario IDs stay stable across filtering and language changes. Bulk TOP100 export controls have been removed; single-scenario and decision/evidence backup exports remain available.
 
 Language preference, research shortlist and investment decision-card evidence remain browser-local. Custom personal scenarios and their market records are saved to the authenticated backend database. User-entered records are not uploaded to GitHub.
 
@@ -71,3 +72,13 @@ GitHub Pages仅能提供静态公共浏览，注册/保存需同域后台。服�
 按集团去重：1—2家起步应用，3—4家逐步扩散，5家及以上开始普及。数量是已找到官方证据的下限，不是市场总量、销量或装车率。完整匹配和部分核心实现分别列出；只有聊天、一般导航等相关能力以及试点、原型、官方发布均不计入已应用OEM数。各场景注明具体计数对象，基础实现扩散不能证明完整AI场景普及。地区、历史年款、配置、联网、订阅及OTA条件必须保留。
 
 目前150条匹配证据涉及50个场景；其余50个保留未发现证据状态，不能判定市场零应用。自主补能明确区分蔚来的监督式辅助泊入/自动换电、现代示范项目、大众机器人原型和Tesla预约充电。休息、露营、守护、宠物、遥控泊车及出发准备等按场景补查，所有100个场景分别计算两地状态。
+
+## 专利与场景领域（2026-10-07）
+
+公共库现为108项：原始TOP100保持编号与排序，8项专利启发候选使用PAT编号，不参与TOP排名。以后按新增数据继续扩展，首页和筛选没有100项上限。19件相关专利记录在`src/patentEvidence.json`，按摘要及相关权利要求对应场景；首页“相关专利”打开申请人、申请/公开日期、方案概括、匹配边界及公开文本入口。14件来自报告线索，5件来自额外行业检索（包括Stellantis与Ford）。不包含附件全文或专利全文转载。
+
+申请公开文本与授权公告文本分开显示；公开日期按照专利检索页核对，未沿用报告中混为公开日的申请月份。法律有效性、权利覆盖和实施自由未作判定。专利不计入行业量产应用OEM数。新增候选的车型应用未完成核查，明确标为“应用待核查”，不解释为市场零应用。
+
+第四个筛选维度为座舱场景/舱驾融合场景，每项有分类依据。需要驾驶状态、底盘能力或专用车辆移动系统协同完成目标时列为融合；仅读取位置、路线背景或停驻条件不自动列为融合。当前为96项座舱、12项融合，属于对当前场景定义的分析。个人场景支持同一维度，GPT草稿要求中英文分类依据；旧私人记录缺失字段时暂列座舱并标记依据待明确。保存延续用户隔离、管理员可见、公共场景不可编辑的规则。
+
+`tests/patents.mjs`验证扩展数量、关联完整性、双语及HAI、领域分析、原始TOP100保持不变和专利不产生量产应用计数；后台测试验证领域字段持久化与模型请求约束。

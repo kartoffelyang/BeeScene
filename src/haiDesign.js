@@ -18,5 +18,5 @@ export function getHAIDesign(s){
  {node:'分支 · 用户停止、纠正或接管',design:`用户能停止本次安排、修改局部目标或接管。先停止新的提交，检查已提交部分的可取消状态，再回报哪些停下、哪些仍需处理。${experience?'停止效果与停止原内容分开，恢复本体验修改的设置时保留用户另行调整。':creative?'保留用户选定的草稿或进度，丢弃、保存和公开分别决定。':physical?'车辆当前阶段的停止与安全处置由专用系统完成，座舱Agent核验接收和最终状态。':''}`,mechanisms:[m('P13','停止意图不等于取消成功；已不可逆的部分如实说明，不保证回滚。')]},
  {node:'分支 · 主动建议被拒绝或时机不合适',design:'非紧急建议在负荷高或时机未知时暂不打断，时机变化后重新判断价值；用户拒绝按明确的本次、行程或持续范围处理。延后播报不应暂停已提交任务的内部核实与恢复。',mechanisms:[m('P08','延后的是用户可见的非紧急建议，过期建议不补发。'),m('P15','明确拒绝范围内保持安静，不推断永久偏好。')]}
  ];
- return {version:haiVersion,status:'候选交互设计，待场景评审与用户验证',kind,example:example?`例如${example}`:s.summary,conditions:f.conditions,scope:physical?'扩展研究：移动和补能执行需专用系统及交接契约，现有示范R01不直接覆盖。':'当前为文本设计方案，范式编号沿用HAI候选库；具体能力、许可与界面仍需项目核对。',steps,branches,validation:s.question};
+ return {version:haiVersion,status:'候选交互设计，待场景评审与用户验证',kind,example:example?`例如${example}`:s.summary,conditions:f.conditions,scope:physical?'扩展研究：车辆运动执行需专用系统及交接契约，现有示范R01不直接覆盖。':'当前为文本设计方案，范式编号沿用HAI候选库；具体能力、许可与界面仍需项目核对。',steps,branches,validation:s.question};
 }

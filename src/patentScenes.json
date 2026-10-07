@@ -1,0 +1,222 @@
+[
+  {
+    "id": "PAT-001",
+    "rank": 101,
+    "primaryNeed": "expression",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "intent",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "movement",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "安全门控的沿途风景拍摄",
+    "summary": "乘员指明沿途风景，系统先读取驾驶状态与拍摄条件，再组织车载取景、配文草稿与私人保存；分享需另行确认。例如经过彩虹，用一句话留下画面，到达后核对配文。",
+    "outcome": "减少拍照与整理步骤，让短暂风景有可核对的留存。",
+    "baseline": "乘客手机拍照，或行车记录仪片段手工整理。",
+    "question": "与乘客拍照相比，捕捉成功率和后期负担是否改善，门控误判会损失多少机会？",
+    "domainReason": "需要外部摄像数据、驾驶员状态与驾驶风险门控协同；不向驾驶域下达转向或制动动作。"
+  },
+  {
+    "id": "PAT-002",
+    "rank": 102,
+    "primaryNeed": "security",
+    "secondaryNeed": "comfort",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "space",
+      "integration"
+    ],
+    "sceneDomain": "cabin",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "无接触乘员状态关怀",
+    "summary": "在乘员授权下观察可用生理与环境线索，说明不确定性，提供通风、休息或联系人的可选关怀；不输出疾病诊断。例如后排乘员主动开启关怀，收到异常线索时先询问需要何种帮助。",
+    "outcome": "让乘员状态变化能进入可选择、可追踪的关怀流程。",
+    "baseline": "乘员自己察觉并求助，或只显示传感器读数。",
+    "question": "是否及时提供有用帮助，误报、隐私负担与对健康判断的误解是否可接受？",
+    "domainReason": "当前候选仅连接乘员感知、舱内环境与联系人服务；未定义驾驶系统接管。"
+  },
+  {
+    "id": "PAT-003",
+    "rank": 103,
+    "primaryNeed": "comfort",
+    "secondaryNeed": null,
+    "ai": [
+      "perception",
+      "memory",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "space",
+      "continuity"
+    ],
+    "sceneDomain": "cabin",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "体压与状态自适应按摩",
+    "summary": "停驻时，结合用户选择、体压分布与允许读取的状态线索，组织作用区域和强度；用户修正后可选择保存偏好。例如腰部感到不适，选择轻度按摩并随时降低或停止。",
+    "outcome": "减少寻找合适按摩部位与强度的反复设置。",
+    "baseline": "固定按摩程序与手动强度设置。",
+    "question": "是否比固定程序更舒适，传感误差、身体差异与停止响应如何影响体验？",
+    "domainReason": "仅协调座椅按摩执行与乘员反馈；停驻条件是使用门槛，不涉及驾驶控制。"
+  },
+  {
+    "id": "PAT-004",
+    "rank": 104,
+    "primaryNeed": "comfort",
+    "secondaryNeed": "expression",
+    "ai": [
+      "perception",
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "continuity",
+      "integration"
+    ],
+    "sceneDomain": "cabin",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "歌曲与座舱变化的听音校准",
+    "summary": "根据歌曲特征、本车声学信息和用户选择的偏好，提出可比较的调音；换车后重新校准，保留原始版本。例如换一辆车听熟悉的歌，比较标准与迁移偏好的两个声音方案。",
+    "outcome": "减少不同歌曲与车辆之间重复调音的负担。",
+    "baseline": "固定均衡器、音效预设与人工调音。",
+    "question": "盲听比较是否持续偏好校准版本，跨车迁移会不会破坏原本喜欢的声音？",
+    "domainReason": "围绕音频链路、舱内声学与偏好服务协同，不调整车辆运动。"
+  },
+  {
+    "id": "PAT-005",
+    "rank": 105,
+    "primaryNeed": "delight",
+    "secondaryNeed": "comfort",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "presence",
+      "integration"
+    ],
+    "sceneDomain": "cabin",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "调光天幕停驻影院",
+    "summary": "安全停驻时，用户选择内容与观看成员，系统协调天幕遮光、投影、座椅姿态和音量，并在结束后恢复本次设置。例如充电等待时两人仰躺看片，随时退出并恢复座椅。",
+    "outcome": "把天幕转为共享观看空间，减少多项设置的准备负担。",
+    "baseline": "中控或后排屏幕看片，手动调整遮光与座椅。",
+    "question": "与现有屏幕相比，观看姿势、亮度和准备成本是否值得新增硬件？",
+    "domainReason": "仅协调显示、天幕、座椅与音响；不复用驾驶执行或自主移动。"
+  },
+  {
+    "id": "PAT-006",
+    "rank": 106,
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "perception",
+      "integration"
+    ],
+    "sceneDomain": "cabin",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "停驻物品取放机械臂助手",
+    "summary": "停驻条件下，乘员指定允许取放的轻小物品，机械臂执行受限抓取与递送，座舱助手显示目标、进度与停止入口。例如取后排纸巾，先核对物品和收取人再递送。注视与脑电控制仅作为另行验证的输入候选。",
+    "outcome": "减少在有限座舱内起身或伸手寻找物品的负担。",
+    "baseline": "乘员手动取放或请其他人帮忙。",
+    "question": "高频物品任务是否有净收益，误识别、碰撞、收纳空间与交接负担是否可控？",
+    "domainReason": "机械臂属于舱内专用执行系统；当前仅研究停驻取放，不连接驾驶或底盘控制。"
+  },
+  {
+    "id": "PAT-007",
+    "rank": 107,
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "ai": [
+      "perception",
+      "planning",
+      "execution",
+      "embodiment"
+    ],
+    "vehicle": [
+      "perception",
+      "motion",
+      "integration"
+    ],
+    "sceneDomain": "cabinDriving",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "疲劳无回应的舱驾交接",
+    "summary": "驾驶员状态检测触发休息提示；持续无回应时，按明确适用范围交接给具有相应能力的驾驶系统。座舱侧负责解释、状态回报和联系，不直接控制转向制动。例如提醒后仍无回应，由专用系统判断能否执行停靠。",
+    "outcome": "把状态提醒衔接为有回执、可追踪的专用系统交接。",
+    "baseline": "疲劳告警后由驾驶员自行选择休息。",
+    "question": "误报、无回应判定与交接失败如何处理，是否有适用范围和专用执行证据？",
+    "domainReason": "乘员状态感知与驾驶系统接收、停靠执行和状态回报共同完成目标，是舱驾融合候选。"
+  },
+  {
+    "id": "PAT-008",
+    "rank": 108,
+    "primaryNeed": "delight",
+    "secondaryNeed": "ease",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "presence",
+      "integration"
+    ],
+    "sceneDomain": "cabin",
+    "sourceType": "patent",
+    "horizon": "条件预研",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "evidence": "价值待验证",
+    "name": "座舱与营地的可移动观影屏",
+    "summary": "安全停驻时，根据前排、后排或车外观看目标，把可移动柔性屏幕调整到约定位置，并协调声音和尾门条件。例如露营时把屏幕移到后方，成员确认观看区域后播放。",
+    "outcome": "让同一显示设备支持不同停驻观看位置与共同参与。",
+    "baseline": "固定车内屏幕或另带便携投影与幕布。",
+    "question": "移动显示是否减少准备负担，空间占用、机械可靠性和车外视听效果是否值得？",
+    "domainReason": "当前仅联动显示机构、声音和停驻车身条件，不参与驾驶决策或车辆运动。"
+  }
+]

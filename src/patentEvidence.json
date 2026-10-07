@@ -1,0 +1,474 @@
+[
+  {
+    "number": "CN122211318A",
+    "title": "出行日程与物联网驱动的座舱预调节",
+    "applicant": "小米汽车",
+    "summary": "按出发日程提前读取物联网设备信息，以人数、行李等特征组织座椅及座舱预调节。",
+    "scope": "权利要求1—3；预调节相关，不包含自主行驶、进站或补能。",
+    "filingDate": "2026-03-26",
+    "publicationDate": "2026-06-16",
+    "documentType": "application",
+    "source": "https://eureka.patsnap.com/patent/CN122211318A",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-038",
+      "TOP-035",
+      "TOP-042"
+    ],
+    "en": {
+      "title": "Schedule and IoT based cabin preparation",
+      "applicant": "Xiaomi EV",
+      "summary": "Uses departure schedules and IoT observations to prepare cabin settings for the party and luggage.",
+      "scope": "Claims 1–3 concern preparation, not autonomous driving or replenishment."
+    }
+  },
+  {
+    "number": "CN120743112A",
+    "title": "多AI Agent跨域协同超脑",
+    "applicant": "隽初科技（北京）",
+    "summary": "中央Agent融合状态并仲裁优先级，座舱、动力、车身、底盘、自动驾驶域分别执行功能。",
+    "scope": "权利要求1、3—5；是跨域编排机制，未证明整个场景已量产或性能已达标。",
+    "filingDate": "2025-07-04",
+    "publicationDate": "2025-10-03",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/CN120743112A/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-010",
+      "TOP-026",
+      "TOP-027",
+      "TOP-048",
+      "TOP-096"
+    ],
+    "en": {
+      "title": "Cross-domain multi-agent coordination",
+      "applicant": "Junchu Technology (Beijing)",
+      "summary": "A central agent combines state and priorities while five vehicle domains handle their own functions.",
+      "scope": "Claims 1 and 3–5 describe coordination; they do not establish production availability or validated performance."
+    }
+  },
+  {
+    "number": "CN121734433A",
+    "title": "置信度门控的座舱自适应交互",
+    "applicant": "的卢技术",
+    "summary": "对乘员、环境和车辆数据做时间对齐，过滤低置信度场景，再编排可用原子服务并监测反馈。",
+    "scope": "权利要求1；门控与编排相关，模型置信度不能代替用户授权或安全论证。",
+    "filingDate": "2025-12-22",
+    "publicationDate": "2026-03-27",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/CN121734433A/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-010",
+      "TOP-026",
+      "TOP-027",
+      "TOP-096"
+    ],
+    "en": {
+      "title": "Confidence-gated adaptive cabin interaction",
+      "applicant": "Dilu Technology",
+      "summary": "Aligns occupant, environment and vehicle observations; filters uncertain scenes before orchestrating services and monitoring feedback.",
+      "scope": "Claim 1 concerns gating and orchestration; confidence is not authorization or a safety case."
+    }
+  },
+  {
+    "number": "CN122513650A",
+    "title": "AI Agent行车风景自动拍摄",
+    "applicant": "广汽本田（含研究开发主体）",
+    "summary": "先检查驾驶员与车辆运行状态，再识别拍摄意图、调用车载摄像头、生成配文并保存或分享。",
+    "scope": "权利要求1—3；拍摄与安全校验链相关；公开分享在本库候选中另行确认。",
+    "filingDate": "2026-06-26",
+    "publicationDate": "2026-08-04",
+    "documentType": "application",
+    "source": "https://eureka.patsnap.com/patent/CN122513650A",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-017",
+      "TOP-053",
+      "PAT-001"
+    ],
+    "en": {
+      "title": "Safety-gated scenic capture",
+      "applicant": "GAC Honda",
+      "summary": "Checks driver and vehicle state before interpreting capture intent, controlling a camera and preparing text and storage or sharing.",
+      "scope": "Claims 1–3 concern the capture chain and gating; public sharing needs separate approval in this candidate design."
+    }
+  },
+  {
+    "number": "CN121387063A",
+    "title": "车载AI与用户的双向养成",
+    "applicant": "一汽集团 / 一汽北京软件技术",
+    "summary": "初始化人格参数，根据行为事件或周期更新语言、推荐和交互策略。",
+    "scope": "权利要求1；交互风格演化相关，不证明情绪理解准确或记忆服务完整实现。",
+    "filingDate": "2025-09-05",
+    "publicationDate": "2026-01-23",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/CN121387063A/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-009",
+      "TOP-036",
+      "TOP-065",
+      "TOP-097"
+    ],
+    "en": {
+      "title": "Adaptive in-vehicle assistant personality",
+      "applicant": "FAW Group / FAW Beijing Software Technology",
+      "summary": "Updates language, recommendation and interaction policies from a personality vector and user behavior events.",
+      "scope": "Claim 1 concerns interaction style evolution, not verified emotion understanding or a complete memory service."
+    }
+  },
+  {
+    "number": "CN122133070A",
+    "title": "适老化座舱交互",
+    "applicant": "广汽本田（含研究开发主体）",
+    "summary": "识别老年乘员后切换交互模式，用语音、面部、动作与年龄段信息理解需求。",
+    "scope": "权利要求1；适老交互相关，不包含完整接送安排；年龄识别与身份判断可纠正。",
+    "filingDate": "2026-02-28",
+    "publicationDate": "2026-06-02",
+    "documentType": "application",
+    "source": "https://eureka.patsnap.com/patent/CN122133070A",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-035",
+      "TOP-044"
+    ],
+    "en": {
+      "title": "Elder-friendly cabin interaction",
+      "applicant": "GAC Honda",
+      "summary": "Switches to an elder-oriented interaction mode and combines speech, facial, motion and age-range information.",
+      "scope": "Claim 1 concerns elder-oriented interaction, not a complete pickup service; age and identity inferences must be correctable."
+    }
+  },
+  {
+    "number": "CN122494091A",
+    "title": "无接触监测的健康座舱服务闭环",
+    "applicant": "东风汽车集团",
+    "summary": "感知、健康分析、场景决策与服务执行四层联动，观察状态并调整环境或发出提醒。",
+    "scope": "权利要求1及摘要；监测与关怀相关，风险输出不是临床诊断或疗效证据。",
+    "filingDate": "2026-05-22",
+    "publicationDate": "2026-07-31",
+    "documentType": "application",
+    "source": "https://eureka.patsnap.com/patent/CN122494091A",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-044",
+      "PAT-002"
+    ],
+    "en": {
+      "title": "Non-contact occupant monitoring and care",
+      "applicant": "Dongfeng Motor Group",
+      "summary": "Connects sensing, health analysis, scene decisions and service execution to adapt the environment or notify people.",
+      "scope": "Claim 1 and the abstract concern monitoring and care; risk estimates are not clinical diagnoses or efficacy evidence."
+    }
+  },
+  {
+    "number": "CN120902673B",
+    "title": "分级唤醒的低功耗车辆安防",
+    "applicant": "北斗智联（含共同申请主体）",
+    "summary": "熄火后先以雷达和IMU监测，事件触发摄像与音频采集，再形成车端与云端协作分析。",
+    "scope": "授权文本权利要求1；低功耗安防相关，不是儿童遗留监测或无人移车的直接证据。",
+    "filingDate": "2025-09-15",
+    "publicationDate": "2026-07-21",
+    "documentType": "grant",
+    "source": "https://eureka.patsnap.com/patent/CN120902673B",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-005",
+      "TOP-020",
+      "TOP-071",
+      "TOP-083"
+    ],
+    "en": {
+      "title": "Tiered low-power vehicle guarding",
+      "applicant": "Beidou Zhilian",
+      "summary": "Uses radar and IMU monitoring after shutdown, wakes camera/audio sensing on events, and combines local and cloud analysis.",
+      "scope": "Granted-text claim 1 concerns low-power guarding, not direct evidence of child presence detection or unattended relocation."
+    }
+  },
+  {
+    "number": "CN121716630A",
+    "title": "乘员晕动反馈与多系统调节",
+    "applicant": "东风汽车集团",
+    "summary": "融合生理、行为与环境线索，调整空调、座椅、声学和显示，并根据反馈更换策略。",
+    "scope": "权利要求1及摘要；舱内缓解反馈相关，不直接证明底盘控制或医学效果。",
+    "filingDate": "2025-11-27",
+    "publicationDate": "2026-03-24",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/CN121716630A/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-026",
+      "TOP-010"
+    ],
+    "en": {
+      "title": "Motion-discomfort feedback and cabin adaptation",
+      "applicant": "Dongfeng Motor Group",
+      "summary": "Combines physiological, behavioral and environmental signals to adjust HVAC, seats, audio and displays and revise strategies from feedback.",
+      "scope": "Claim 1 and the abstract concern cabin feedback; they do not establish chassis control or medical effectiveness."
+    }
+  },
+  {
+    "number": "CN122354326A",
+    "title": "AI自适应座椅按摩",
+    "applicant": "奇瑞汽车",
+    "summary": "结合体压与心率信息确定作用部位，动态调整按摩参数，并记录用户手工修正。",
+    "scope": "权利要求1—3；与自适应按摩机制相关，效果、安全性和传感误差需单独验证。",
+    "filingDate": "2026-03-31",
+    "publicationDate": "2026-07-10",
+    "documentType": "application",
+    "source": "https://eureka.patsnap.com/patent/CN122354326A",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-010",
+      "PAT-003"
+    ],
+    "en": {
+      "title": "Adaptive seat massage",
+      "applicant": "Chery Automobile",
+      "summary": "Combines pressure and heart-rate observations to select massage areas, adapt parameters and remember manual corrections.",
+      "scope": "Claims 1–3 concern adaptive massage; comfort, safety and sensing errors need independent validation."
+    }
+  },
+  {
+    "number": "CN121734277A",
+    "title": "多模态感知与香氛环境协同",
+    "applicant": "香谷智慧（北京） / 宁波旷世智源",
+    "summary": "把感知线索与大模型策略连接到香氛、灯光、音乐和反馈更新。",
+    "scope": "权利要求1及摘要；情绪环境机制相关；本库不沿用“疗愈”的疗效承诺。",
+    "filingDate": "2025-12-11",
+    "publicationDate": "2026-03-27",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/CN121734277A/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-004",
+      "TOP-010",
+      "TOP-087",
+      "TOP-096"
+    ],
+    "en": {
+      "title": "Multimodal aroma and environment coordination",
+      "applicant": "Xianggu Wisdom / Ningbo Kuangshi Zhiyuan",
+      "summary": "Connects multimodal observations and model policies to aroma, light, music and feedback updates.",
+      "scope": "Claim 1 and the abstract concern an environment mechanism; this library makes no therapeutic promise."
+    }
+  },
+  {
+    "number": "CN122424566A",
+    "title": "车载原生按钮的游戏复用",
+    "applicant": "岚图汽车科技",
+    "summary": "将原生按钮切换到游戏模式，把姿态、力度、时长或旋转数据映射为游戏输入。",
+    "scope": "权利要求1；输入设备机制相关，不等于3A游戏、AI伴演或车辆运动效果已实现。",
+    "filingDate": "2026-06-11",
+    "publicationDate": "2026-07-21",
+    "documentType": "application",
+    "source": "https://eureka.patsnap.com/patent/CN122424566A",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-015",
+      "TOP-033",
+      "TOP-094"
+    ],
+    "en": {
+      "title": "Native vehicle controls reused for games",
+      "applicant": "Voyah Automobile Technology",
+      "summary": "Maps multidimensional input from native vehicle controls to game commands in a dedicated game mode.",
+      "scope": "Claim 1 concerns game input, not proof of AAA content, AI performance or vehicle motion effects."
+    }
+  },
+  {
+    "number": "CN122454939A",
+    "title": "歌曲、座舱声学与偏好联合调音",
+    "applicant": "重庆华玮旭电子",
+    "summary": "结合歌曲风格、车辆声学特征与偏好记忆生成调音参数，换车时转换偏好。",
+    "scope": "权利要求1；调音与偏好迁移相关，不是实时剧情理解或共同创作的完整实现。",
+    "filingDate": "2026-05-13",
+    "publicationDate": "2026-07-24",
+    "documentType": "application",
+    "source": "https://eureka.patsnap.com/patent/CN122454939A",
+    "sourceName": "公开专利文本（Patsnap Text Reader）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-043",
+      "PAT-004"
+    ],
+    "en": {
+      "title": "Song, cabin acoustics and preference based tuning",
+      "applicant": "Chongqing Huaweixu Electronics",
+      "summary": "Uses song features, cabin acoustics and remembered preferences to tune audio and adapt preferences across vehicles.",
+      "scope": "Claim 1 concerns tuning and preference transfer, not complete story understanding or joint creation."
+    }
+  },
+  {
+    "number": "CN121822085A",
+    "title": "调光天幕与投影联动",
+    "applicant": "比亚迪",
+    "summary": "投影模式下让调光天幕转为不透明，配合投影装置；部分实施方式还联动座椅。",
+    "scope": "权利要求1—3；显示载体相关，未证明AI选片、内容权利或量产车型配置。",
+    "filingDate": "2025-09-25",
+    "publicationDate": "2026-04-10",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/CN121822085A/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "report",
+    "sceneIds": [
+      "TOP-051",
+      "TOP-022",
+      "PAT-005"
+    ],
+    "en": {
+      "title": "Dimmable roof and projection coordination",
+      "applicant": "BYD",
+      "summary": "Makes a dimmable roof opaque during projection, with seat coordination in some embodiments.",
+      "scope": "Claims 1–3 concern the display surface; they do not establish AI selection, content rights or production specifications."
+    }
+  },
+  {
+    "number": "WO2025172782A1",
+    "title": "停驻座舱的多感官游戏空间",
+    "applicant": "Stellantis Europe",
+    "summary": "停驻状态启用游戏，将玻璃投影、液压座椅及车内输入联动；实施例扩展至悬架、空调和香氛。",
+    "scope": "权利要求1及说明书；沉浸机制相关，不能据此认定某品牌车型已提供该完整体验。",
+    "filingDate": "2025-01-22",
+    "publicationDate": "2025-08-21",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/WO2025172782A1/en",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "search",
+    "sceneIds": [
+      "TOP-015",
+      "TOP-022",
+      "TOP-094"
+    ],
+    "en": {
+      "title": "Parked multisensory gaming cabin",
+      "applicant": "Stellantis Europe",
+      "summary": "Combines parked-only game activation, glass projection, actuated seats and native controls, with optional suspension and environmental effects.",
+      "scope": "Claim 1 and the description concern immersive mechanisms, not availability of the complete experience on a particular model."
+    }
+  },
+  {
+    "number": "CN121696991B",
+    "title": "注视与脑电协作的座舱机械臂",
+    "applicant": "Beijing Yingzhi Technology Co Ltd",
+    "summary": "以注视门控脑电意图判断，根据疲劳状态调节机械臂阻抗，检测碰撞并控制收纳。",
+    "scope": "授权文本权利要求1；机械臂辅助相关。停驻取放是本库提出的受限扩展，尚未实车验证。",
+    "filingDate": "2026-02-13",
+    "publicationDate": "2026-04-17",
+    "documentType": "grant",
+    "source": "https://patents.google.com/patent/CN121696991B/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "search",
+    "sceneIds": [
+      "PAT-006"
+    ],
+    "en": {
+      "title": "Gaze and EEG assisted cabin robotic arm",
+      "applicant": "Beijing Yingzhi Technology",
+      "summary": "Combines gaze-gated EEG intent with fatigue-aware impedance, collision detection and arm stowage.",
+      "scope": "Granted-text claim 1 concerns robotic assistance. Parked object handling is a bounded extension proposed by this library, not a vehicle-tested result."
+    }
+  },
+  {
+    "number": "CN116279511A",
+    "title": "疲劳检测与辅助驾驶停靠交接",
+    "applicant": "Jintu Computing Technology (Shenzhen) Co Ltd",
+    "summary": "检测疲劳后提示休息停靠点，在无回应条件下交给驾驶系统执行后续动作。",
+    "scope": "权利要求1、5；舱驾交接机制相关，不能把座舱大模型直接作为驾驶执行器。",
+    "filingDate": "2022-09-07",
+    "publicationDate": "2023-06-23",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/CN116279511A/zh",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "search",
+    "sceneIds": [
+      "PAT-007"
+    ],
+    "en": {
+      "title": "Fatigue detection and driving-system handoff",
+      "applicant": "Jintu Computing Technology (Shenzhen)",
+      "summary": "Connects fatigue detection to rest-stop prompts and a driving-system handoff when there is no response.",
+      "scope": "Claims 1 and 5 concern a handoff mechanism; a cabin language model is not a driving controller."
+    }
+  },
+  {
+    "number": "US11787290B2",
+    "title": "面向车外人员的车窗投影",
+    "applicant": "Ford Global Technologies",
+    "summary": "车外摄像头检测人员后，车窗投影呈现舱内人物图像；部分权利要求联动对外音频。",
+    "scope": "授权文本权利要求1—6；对外表达载体相关，不表示完整移车协商或服务代理已实现。",
+    "filingDate": "2021-08-03",
+    "publicationDate": "2023-10-17",
+    "documentType": "grant",
+    "source": "https://patents.google.com/patent/US11787290B2/en",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "search",
+    "sceneIds": [
+      "TOP-034",
+      "TOP-041",
+      "TOP-093"
+    ],
+    "en": {
+      "title": "Window projection for people outside a vehicle",
+      "applicant": "Ford Global Technologies",
+      "summary": "Uses external person detection to present an interior-person image on a window, with external audio in some claims.",
+      "scope": "Granted-text claims 1–6 concern an expression surface, not a complete relocation negotiation or service agent."
+    }
+  },
+  {
+    "number": "US20250376121A1",
+    "title": "可移动柔性座舱显示系统",
+    "applicant": "Ford Global Technologies",
+    "summary": "顶棚附近的电动机构将柔性显示屏移至前方、后方或顶上，部分实施方式供打开尾门后观看。",
+    "scope": "权利要求1—5；屏幕位置机制相关。AI协调观看位置是本库新增的产品假设。",
+    "filingDate": "2024-06-05",
+    "publicationDate": "2025-12-11",
+    "documentType": "application",
+    "source": "https://patents.google.com/patent/US20250376121A1/en",
+    "sourceName": "公开专利文本（Google Patents）",
+    "checkedAt": "2026-10-07",
+    "discovery": "search",
+    "sceneIds": [
+      "TOP-051",
+      "TOP-086",
+      "PAT-008"
+    ],
+    "en": {
+      "title": "Repositionable flexible cabin display",
+      "applicant": "Ford Global Technologies",
+      "summary": "An overhead carrier positions a flexible screen forward, rearward or above seats, including rear viewing with the liftgate open.",
+      "scope": "Claims 1–5 concern display positioning; AI coordination of viewing arrangements is this library’s product hypothesis."
+    }
+  }
+]
