@@ -1,0 +1,289 @@
+Recognize people, objects, events and surroundings from images, audio and vehicle state. Check perception against evidence.
+Understand ambiguous requests, references, context and actual goals.
+Retrieve correctable experiences and preferences to support later services. Long-term storage requires separate permission.
+Compare constraints, propose plans, break down tasks and replan as conditions change.
+Generate or edit text, images, music, video and interactive content.
+Respond to emotional cues with consistent personality and natural speech. Natural speech does not prove emotion understanding.
+Call apps, services and vehicle interfaces; verify permission and actual execution receipts.
+Connect perception, planning, action and feedback in a physical environment. Dedicated execution systems are required; embodiment does not imply autonomous authority.
+People share one space and can participate together.
+Routes, surroundings and events change along the journey.
+Authorized local images, sounds and state provide evidence.
+Screens, audio, lights, seats and controlled inputs create a physical experience.
+Connect experiences across dates and shared memories that users permit retaining.
+Move the vehicle to carry out physical tasks.
+Receive external requests and communicate or negotiate outside the vehicle.
+Coordinate vehicle systems around a shared goal.
+Connect services, devices, parking and charging infrastructure.
+Could not read the shortlist. Check browser storage and any existing backup.
+/ 100 · Value unvalidated
+Close
+Expected benefit
+Current alternative
+Validation question
+Related needs
+Primary need ·
+Secondary need ·
+Rationale:
+This is a research hypothesis. Need intensity and actual improvement still require validation.
+What AI enables
+Why this suits vehicle use
+Why it is in the TOP100
+Research horizon
+· A working hypothesis, not a technology readiness certification.
+Required conditions
+Vehicle motion capability, site conditions and compatible infrastructure must all be available. Finding a location or planning a route does not complete a physical task.
+Usable content or event inputs and coordinated outputs are required. Compare against fixed effects; evaluate parked experiences separately from driving.
+Target users, permitted data and available services are required. Compare net benefits with existing alternatives first.
+Level of autonomy
+Behavior boundaries
+Agreed
+Autonomous behavior stays within agreed goals, permissions and operating limits. Unknown states or task failures require handover.
+Understanding a goal does not authorize execution. Confirm consequential orders, payments, sharing and vehicle operations according to the agreement.
+Users may reject, modify or end an experience. Relevant users choose memory, capture and sharing boundaries.
+Remove from shortlist
+Add to shortlist
+Export this scenario
+Could not save the shortlist. Check browser storage.
+BeeScene_TOP100.json
+Generated
+scenario export file.
+BeeScene bee logo
+Scenario research
+TOP100 scenarios
+Opportunity map
+Research shortlist
+Ranking & method
+Redefined candidate scenarios
+5 need categories
+× 8 AI capabilities
+× 9 vehicle-use reasons
+BeeScene Research / AI & vehicle scenarios
+Research judgment · Value unvalidated
+Export current results
+Complete TOP100
+Discover possibilities at the intersections.
+Keep the scenarios worth validating first.
+Ranking expresses judgment. Evidence establishes value.
+AI and vehicles open new possibilities.
+Explore needs, AI capabilities and vehicle-use reasons. Rankings express research priority and include future opportunities.
+Candidate scenarios
+Why these 100 scenarios
+BeeScene selected and ranked 100 candidates using research judgment about user benefits, vehicle suitability, AI gains and validation value. No real user scores, market forecasts or weighted scores are used. Rankings do not establish value or rollout order.
+Three dimensions, combined filters
+Multiple selections within one dimension use OR; different dimensions use AND. Each scenario has one primary need and at most one secondary need; filters match either. AI capabilities and vehicle-use reasons may overlap. Embodiment and autonomy are separate; autonomy is described in scenario details. Filtering preserves original TOP numbers.
+Study core benefits in the first 20; expand validation for 21–50; retain 51–100 as exploration candidates. Investment order also depends on project capability and evidence. Ranking a future autonomous-movement concept does not establish feasibility.
+Coverage is not exhaustive discovery
+The 8-by-9 map counts associations across 100 candidates; one scenario can occupy multiple cells. Filled cells do not mean all needs have been found, and empty cells do not prove no need exists. This version checks coverage of current concepts without claiming exhaustiveness.
+Validate outcomes before deepening the product
+Each entry records its concept, expected benefit, alternative, validation question and research horizon. Compare outcomes, total effort, correction and confirmation costs, and voluntary repeat choice.
+Near-term trial, conditional research and future exploration are working hypotheses, not performance, safety or production certifications. Study games, cinema and complex spatial experiences in safely parked conditions first. Vehicle movement depends on dedicated systems and site conditions.
+Three filter dimensions
+Collapse filters
+Expand filters
+Reset
+OR within a dimension; AND across dimensions.
+User needs
+Matches primary or secondary needs. Associations remain unvalidated hypotheses.
+Search TOP100
+Search charging, external interaction, games, personality…
+Clear search
+items
+AI capabilities × Vehicle-use reasons
+Coverage of current results. Select an intersection to see candidates. Zero means this version has no matching concept.
+AI / Vehicle
+Multi-label counts cannot be added to count unique scenarios. Numbers are not value scores.
+Unsave
+Save
+Expected value
+Scenario needs
+Fit
+Value unvalidated
+Ranking & validation
+HAI interaction design:
+HAI interaction design
+Investment decision card:
+Investment decision card
+Show next
+The shortlist is empty
+No candidates for this combination yet
+Save scenarios to build your research shortlist.
+Broaden the three filters, or use this gap as an exploration direction.
+Back to TOP100
+All 100 entries are research-defined candidates. Rankings and horizons are judgments; user value and implementation conditions remain unvalidated.
+Export complete TOP100
+Dismiss message
+Initiative
+Decision authority
+Execution authority
+Correction authority
+Pattern conditions and four authorities
+Applicable conditions:
+Constraints:
+Decision point
+Interaction design
+Mechanism & explanation
+· Design draft
+· HAI interaction design
+Close HAI interaction design
+C: Analyze conditions → P: Arrange collaboration → R: Constrain behavior → T: Progress through responses and receipts
+A scenario can switch between multiple patterns. This reference path selects a pattern at each step according to current conditions; not every branch is mandatory, and no runtime rule engine is connected.
+Main flow: goal to outcome
+Required branches: exceptions, rejection and exit
+What this interaction still needs to validate
+Also check whether users understand the state, can revise goals and can effectively stop. Record context, permission, actions and receipts. Pattern suitability and rule consistency do not replace user-value validation.
+Back to scenarios
+Could not read evidence. Existing storage was preserved. Check browser storage or a previous backup.
+User research
+Inconclusive
+Unvalidated
+Evidence saved in this browser.
+Save failed. The record was not saved. Check browser storage and retry.
+Record deleted.
+Deletion failed. The original record is preserved.
+-decision-evidence.json
+· Decision card v0.2.1
+· Investment decision card
+Close investment decision card
+Vehicle positioning, price, target users and deployment are project inputs and have not been specified. The following are research questions and candidate approaches, not fit or investment conclusions.
+Latest recorded judgment ·
+Initial hypothesis · No evidence recorded
+Applies to:
+records; full history below
+Evidence & history
+Accumulate by source and applicable conditions; retain both supporting and contradicting evidence.
+Collapse form
+Add evidence
+Decision dimension
+Evidence type
+Record date
+Source / recorder
+Interview reference, researcher or demo record
+Applicable conditions
+Users, vehicle, model / hardware version, context and sample
+Direction relative to the hypothesis
+Supports
+Contradicts
+Mixed
+Judgment for this record
+Positive
+Limited / Conditional
+Negative
+Observations & evidence
+Record behavior, measurements or quotes; state conclusions and limits. Model size can be recorded here.
+Reference link (optional)
+https://… Interview, video or measurement report
+One record addresses one dimension. The latest judgment represents that record only; it does not overwrite history or automatically become a final conclusion.
+Save evidence
+Cancel
+No evidence recorded yet. Start with user research, expert interviews or an in-vehicle demo. Initial hypotheses are not evidence.
+· Source:
+View reference ↗
+Delete this record?
+Confirm deletion
+Keep
+Delete record
+Records are stored only in this browser. No shared database or CyberEdge is connected.
+Reference research plan & conditional judgments
+Comparison baseline
+Phased validation
+Conditional judgments to validate for a project
+Export decision & evidence
+View scenario image:
+— scenario concept image
+Scenario concept image
+View full image
+· Scenario visualization
+Close scenario image
+— full scenario concept image
+, illustrating an experience concept.
+Save image
+For example,
+01 · Entry and conditions
+An authorized party first defines goals, limits and validity. A valid delegation may trigger action; without one, only propose a suggestion.
+The user explicitly initiates. For a proactive suggestion, first check facts, capability and timing. Inferred interest alone does not start the task.
+Ask only for information needed for the next step; do not ask again for reliable information already available.
+This explanation relies on local evidence. Verify the object and sources first.
+Clarify missing goals or parameters, then recheck capability and permission.
+Without delegation, propose specific candidates only. Continuing an authorized task retains the P03 context.
+02 · Form an editable collaboration plan
+Explain verified facts; let the user challenge or correct the object.
+Resolve authority and conflicting needs among affected people first. Independently resolved zone settings may proceed separately.
+The human chooses creative goals and material boundaries; the Agent organizes generation within that scope. This applies bounded delegation rather than defining a new co-creation pattern.
+The human sets channels and limits for this session. The Agent orchestrates effects within scope without frame-by-frame confirmation.
+The human sets goals and limits. The Agent organizes permitted steps; the user may revise parts of the plan.
+03 · Check action scope and permission
+Verify access for reading, retrieval and export. Explaining material already available does not require an extra operational confirmation.
+Distinguish personal, zoned and shared actions. The authorized person confirms each; one person's agreement does not mean everyone agrees.
+Specify location, movement task, cost and handover parties. The cockpit Agent only submits a bounded task to a dedicated execution system.
+Bind channels, intensity and duration to permission. Recheck when adding channels or affecting other occupants.
+Specify the proposed action, object and impact. Check orders, payments, sharing and device adjustments separately.
+Long-term memory requires separate agreement on content, purpose, person and retention. A query does not authorize permanent storage.
+Do not reconfirm actions already covered by valid permission. Confirm missing or changed scope.
+Request confirmation only for missing permission that can be supplied within the domain. Do not expand an ambiguous reply into new authorization.
+Long-term memory scope and write permission are separate from this task. Verify modification and deletion results too.
+The current R01 research rule does not cover vehicle safety control. A dedicated-system handover contract is an extension still required; unclear acceptance is not a completed handover.
+04 · Progress while remaining steerable
+Present the verified object, sources and uncertainty. Let users change the object or provide facts.
+Show an editable draft or current branch; support retry, rewrite, keep and discard. Generating a work does not mean it was accepted.
+Run agreed effects and keep intensity, channel and stop controls available. User changes must affect actual outputs.
+Distinguish submitted, accepted by the dedicated system, in progress and complete. Update each phase from handover and state evidence.
+Progress authorized subtasks, show complete, pending and incomplete items, and support queries, local edits and stopping.
+Recheck permission for every new action. Do not resubmit successful actions while waiting.
+Reverify after a user corrects facts. Model confidence alone cannot establish a conclusion.
+Retain the delegation context while individual steps switch to clarification, verification or recovery.
+Monitor a submitted request while its result is unknown. Report a reliable result directly once available; no forced waiting step is needed.
+05 · Report from evidence
+Mark pending or unknown when evidence is absent, and separate partial successes. Completing an action neither establishes user value nor authorizes a new goal.
+Report completion only when reliable results match the action and object. Users may inspect and challenge sources.
+Verify unknown or stale results. A sent request or generated draft does not prove an external task succeeded.
+Branch · Exceptions and capability gaps
+Verify evidence gaps first. Preserve uncertainty when no judgment is possible.
+After failure, verify completed parts first; recover within an explicit retry scope, then negotiate if capability remains insufficient.
+Explain alternatives and differences when capability is insufficient. Execute only the user's selected, permitted alternative.
+Branch · Stop, correction or handover
+Stopping effects and stopping source content are separate. Restore settings changed by this experience while preserving independent user changes.
+Keep drafts or progress selected by the user. Discarding, saving and publishing are separate decisions.
+The dedicated system handles stopping and safe disposition at the current vehicle phase. The cockpit Agent verifies acceptance and final state.
+Users can stop, revise part of the goal or take over. Stop new submissions first, check cancellation status of submitted parts, then report what stopped and what still needs handling.
+A stop request does not prove cancellation. Explain irreversible actions honestly; do not promise rollback.
+Branch · Rejected suggestion or unsuitable timing
+Do not interrupt with nonurgent suggestions during high workload or when timing is unknown. Reassess when timing changes. Respect rejection for the specified session, journey or ongoing scope. Delayed speech must not pause internal verification or recovery of submitted tasks.
+Delay user-facing nonurgent suggestions only; do not replay expired suggestions.
+Stay quiet within the explicit rejection scope. Do not infer a permanent preference.
+Candidate interaction design awaiting scenario review and user validation
+Extended research: movement and charging execution require dedicated systems and handover contracts; the R01 example does not directly cover them.
+This is a text design proposal using HAI candidate pattern IDs. Project-specific capabilities, permission and interfaces still require review.
+User acceptance
+Usage frequency
+Experience gain
+Commercial contribution
+AI capability requirements
+Implementation cost
+Expert interview
+In-vehicle demo
+In-vehicle measurement
+Repeat-use observation
+Actual transaction
+Other
+Invalid evidence record format
+Enter the date, applicable conditions, source and observations.
+Use an http:// or https:// reference link.
+Unvalidated. Allow users to reduce intensity or switch off; observe adults and children separately.
+Opportunity-based: do charging, waiting or camping provide time for shared entertainment?
+Compare no linkage, fixed ambience and content-driven linkage; distinguish repeat value from first-time surprise.
+A memorable purchase experience is plausible. Extra willingness to pay is unknown; test priced trade-offs.
+Content-event understanding and light/audio mapping. Use rules or event interfaces as a baseline; multimodal models are candidates. Measure model size on hardware rather than presuming 7B.
+Start with lights and audio. Check synchronization, rights and maintenance costs. Safely parked use only.
+Unvalidated. Watch false alarms, privacy settings and whether users understand uncertainty.
+Events are occasional; guarding can stay enabled. Enabled time is not proof of value.
+Compare search time and judgment accuracy with ordinary alert playback.
+Peace of mind may affect purchase. Standard inclusion and paid subscription remain unvalidated.
+Event recognition, evidence summaries and follow-up questions. Rules with a language model and optional vision model. Measure size, latency and energy on parked hardware.
+Camera access, parked wake-up, storage and thermal management. Validate offline playback first.
+Unvalidated. Observe each occupant's acceptance, rejection and edits.
+Used when multiple occupants have conflicting comfort needs. Measure frequency against real conflict opportunities.
+Compare manual zoned climate control. Does comfort improvement exceed confirmation and correction effort?
+Purchase contribution and extra payment remain unvalidated. Standard, optional or subscription packaging depends on project conditions and evidence.
+Speech recognition, intent understanding and tool execution. Start with rule-based negotiation; a small language model is a candidate. Validate perception enhancements separately and measure parameter size.
+Controllable zoned climate and execution receipts are required. Start with explicit input, without assuming extra cameras or a Box.

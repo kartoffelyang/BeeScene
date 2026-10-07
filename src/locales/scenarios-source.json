@@ -1,0 +1,2350 @@
+[
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-001",
+    "rank": 1,
+    "name": "自主补能管家",
+    "ai": [
+      "planning",
+      "execution",
+      "embodiment"
+    ],
+    "vehicle": [
+      "motion",
+      "integration",
+      "ecosystem"
+    ],
+    "summary": "车辆在约定的电量与出行准备目标内发现补能需要，组织找站、泊入和补能，向车主交代完成状态。例如夜间电量不足时，调用移动与自动补能设施，完成后返回待命。",
+    "outcome": "减少无人用车时的补能安排和等待负担。",
+    "baseline": "车主查站、开车补能并人工确认。",
+    "question": "是否真的减少照料时间，物理充电连接能否闭环？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-002",
+    "rank": 2,
+    "name": "接送与晚餐一并安排",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "ecosystem"
+    ],
+    "summary": "用户交代接人、吃饭再回家，AI统筹到达变化、人数、餐厅约束与路线，并提交关键选择。例如航班延误时，询问是否保留晚餐，再调整餐位与接人时间。",
+    "outcome": "减少跨应用协调和临时重做计划。",
+    "baseline": "航班、导航与餐饮应用分别操作。",
+    "question": "总协调时间是否下降，确认负担是否抵消收益？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-003",
+    "rank": 3,
+    "name": "可追问的车窗世界",
+    "ai": [
+      "perception",
+      "intent"
+    ],
+    "vehicle": [
+      "movement",
+      "perception"
+    ],
+    "summary": "乘客可围绕刚才路过的建筑、标识或景物连续追问，车辆利用短时现场线索定位对象并解释。例如问“刚才那座塔”，找到画面并支持追问历史。",
+    "outcome": "把难描述、稍纵即逝的对象变成可探索的知识。",
+    "baseline": "拍照识别或事后地图搜索。",
+    "question": "对象定位是否准确，用户是否主动继续探索？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-004",
+    "rank": 4,
+    "name": "内容扩散的沉浸座舱",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "integration"
+    ],
+    "summary": "理解电影或游戏的场景与节奏，将内容映射为协调的灯光、声音、触觉和气流体验。例如雨林画面出现时，联动声光与气流，可调低强度。",
+    "outcome": "让座舱提供屏幕以外的沉浸感。",
+    "baseline": "固定灯光效果和独立音响。",
+    "question": "是否比简单颜色同步更沉浸，是否出现不适？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-005",
+    "rank": 5,
+    "name": "会解释的车辆守护",
+    "ai": [
+      "perception",
+      "planning",
+      "creation"
+    ],
+    "vehicle": [
+      "perception",
+      "external",
+      "continuity"
+    ],
+    "summary": "车辆持续观察约定的车外事件，把发生过程整理成有证据的摘要，并区分值得通知与可忽略事件。例如有人多次靠近车门，推送关键片段供车主判断是否处理。",
+    "outcome": "少翻看长录像，减少无用警报。",
+    "baseline": "传统哨兵录像与事件通知。",
+    "question": "漏报、误报和查阅时间能否同时改善？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-006",
+    "rank": 6,
+    "name": "多乘员舒适协商",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "perception",
+      "space"
+    ],
+    "summary": "不同席位表达冷热、日晒和声音诉求，AI整理分歧并提出可确认的共同舒适方案。例如前排冷、后排热，询问可接受范围后分区调节。",
+    "outcome": "减少反复调节和乘员之间的争执。",
+    "baseline": "逐项操作与口头协调。",
+    "question": "满意配置是否更快达成，少数乘员是否被忽略？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-007",
+    "rank": 7,
+    "name": "家庭旅行共同规划",
+    "ai": [
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "presence",
+      "movement",
+      "ecosystem"
+    ],
+    "summary": "成员各自提出兴趣和限制，AI呈现共同点与取舍，组织一家人认可的路线和活动。例如孩子想看动物、长辈怕走路，共同选择折中方案。",
+    "outcome": "减少一个人包办计划的负担。",
+    "baseline": "群聊讨论后由一人整理路线。",
+    "question": "参与是否更均衡，计划返工是否减少？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-008",
+    "rank": 8,
+    "name": "车外诉求与移车协商",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "embodiment"
+    ],
+    "vehicle": [
+      "external",
+      "motion",
+      "perception"
+    ],
+    "summary": "车外人员提出停放诉求后，车辆核对现场线索与行动权限，组织回应及可接受的挪车安排。例如收到“不能停车”，澄清后在允许范围确认新位置并移车。",
+    "outcome": "减少临停冲突和车主往返处理。",
+    "baseline": "打电话联系车主或现场等待。",
+    "question": "能否识别正当诉求与恶意指令，移车结果能否确认？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-009",
+    "rank": 9,
+    "name": "稳定人格的车辆伙伴",
+    "ai": [
+      "memory",
+      "emotion"
+    ],
+    "vehicle": [
+      "continuity",
+      "space"
+    ],
+    "summary": "车主选择可修改的人格、表达习惯和声音风格，车辆在不同任务中保持一致，同时根据语境调节语气、节奏和接话方式。例如幽默旅伴遇到紧急或复杂任务时切回清晰简洁，用户可随时打断或换风格。",
+    "outcome": "降低重复设定，建立可辨识的陪伴体验。",
+    "baseline": "通用语音助手与一次性角色扮演。",
+    "question": "是否持续选择该人格，风格是否妨碍任务清晰度？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-010",
+    "rank": 10,
+    "name": "驾乘舒适整体编排",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "integration",
+      "perception",
+      "movement"
+    ],
+    "summary": "围绕用户明确的平稳与舒适目标，协同考虑路线、座舱内容和车型允许的底盘舒适配置。例如乘客抱怨颠簸，解释可选调整，确认后联动设置。",
+    "outcome": "把分散功能组织为整体驾乘结果。",
+    "baseline": "分别调整模式、空调和导航。",
+    "question": "乘员主观舒适是否改善，哪项协同真正有贡献？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-011",
+    "rank": 11,
+    "name": "沿途合作冒险游戏",
+    "ai": [
+      "perception",
+      "creation",
+      "intent"
+    ],
+    "vehicle": [
+      "presence",
+      "movement",
+      "perception"
+    ],
+    "summary": "沿途见闻与成员选择成为可暂停的合作剧情，让乘客共同完成观察、推理与故事任务。例如看到桥便生成故事分支，成员口述选择推进剧情。",
+    "outcome": "增加共享参与，减少各自刷屏。",
+    "baseline": "固定故事或手机小游戏。",
+    "question": "是否有自发参与和重复选择，途中暂停是否自然？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-012",
+    "rank": 12,
+    "name": "停车与接驳委托",
+    "ai": [
+      "planning",
+      "execution",
+      "embodiment"
+    ],
+    "vehicle": [
+      "motion",
+      "ecosystem",
+      "movement"
+    ],
+    "summary": "围绕用户到达与返回目标，统筹允许的停放位置、步行接驳和车辆取回安排。例如商场下车后，在支持场地停放并按时到接回点。",
+    "outcome": "减少找车位和绕行的精力。",
+    "baseline": "驾驶者自己找位、步行和找车。",
+    "question": "是否节省门到门时间，设施覆盖不足时如何结束任务？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-013",
+    "rank": 13,
+    "name": "预算内的餐饮委托",
+    "ai": [
+      "intent",
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "movement",
+      "continuity"
+    ],
+    "summary": "用户给出人数、忌口、预算与到达时间，AI组织菜单和取餐安排，确认后完成订单。例如说“点三人晚饭”，修改菜单后确认费用与取餐。",
+    "outcome": "减少车内多人点餐协调。",
+    "baseline": "分别查看菜单、汇总与下单。",
+    "question": "错单是否下降，总操作和确认次数是否减少？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-014",
+    "rank": 14,
+    "name": "车内物品证据回溯",
+    "ai": [
+      "perception",
+      "memory"
+    ],
+    "vehicle": [
+      "perception",
+      "continuity",
+      "space"
+    ],
+    "summary": "用户问某件物品在哪，AI从允许留存的车内片段找到最后可见位置，并说明线索时间。例如问眼镜在哪，展示最后出现的位置及对应画面。",
+    "outcome": "减少翻找与回家后才发现遗漏。",
+    "baseline": "凭记忆寻找或逐段查看录像。",
+    "question": "寻找时间是否下降，过时线索是否误导？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-015",
+    "rank": 15,
+    "name": "方向盘赛车体验",
+    "ai": [
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "integration",
+      "presence"
+    ],
+    "summary": "安全停驻时，将可隔离的方向盘等设备作为游戏输入，结合声音与舒适触觉形成赛车体验。例如转动方向盘控制虚拟赛车，触觉响应赛道变化。",
+    "outcome": "利用座舱实体设备获得手机没有的参与感。",
+    "baseline": "手柄游戏或专用赛车模拟器。",
+    "question": "隔离条件成立时，设备体验是否值得用户重复使用？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-016",
+    "rank": 16,
+    "name": "航班变化接送重排",
+    "ai": [
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "ecosystem"
+    ],
+    "summary": "航班或接人时间发生变化时，AI说明影响并重新组织出发、等待与后续活动。例如航班提前到达，确认新出发时间后重排接送。",
+    "outcome": "减少无效等待和手动通知。",
+    "baseline": "航班提示加人工调整路线。",
+    "question": "是否减少等待与遗漏，信息过期如何被发现？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-017",
+    "rank": 17,
+    "name": "私人旅行记忆伙伴",
+    "ai": [
+      "memory",
+      "creation"
+    ],
+    "vehicle": [
+      "continuity",
+      "movement",
+      "perception"
+    ],
+    "summary": "将用户选定的地点、留言与素材连接成可回顾的经历，并用于下次旅程建议。例如问上次湖边在哪，找回地点和留言供回顾。",
+    "outcome": "让记忆减少重复说明并产生可留存作品。",
+    "baseline": "相册、笔记与人工总结。",
+    "question": "记忆是否比无记忆版本更有用，纠正成本多大？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-018",
+    "rank": 18,
+    "name": "可转换的休息空间",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "integration"
+    ],
+    "summary": "用户提出休息目标后，车辆组织环境、内容、时间与结束方式，形成可恢复原状的停驻体验。例如说“休息二十分钟”，调整环境，到时唤醒并恢复。",
+    "outcome": "降低临时休息准备负担。",
+    "baseline": "手动调温、遮阳和闹钟。",
+    "question": "是否更容易进入和结束休息，准备时间是否缩短？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-019",
+    "rank": 19,
+    "name": "动态行程任务插入",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "ecosystem"
+    ],
+    "summary": "途中临时加入取件、购物或接人目标，AI比较插入位置与对原计划的影响。例如临时取快递，比较绕行时间，选定后更新路线。",
+    "outcome": "减少重复查路线和检查预约。",
+    "baseline": "手动增加途经点并逐个核对。",
+    "question": "计划遗漏和重排耗时能否减少？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-020",
+    "rank": 20,
+    "name": "异常停车事件远程处置",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "external",
+      "perception",
+      "ecosystem"
+    ],
+    "summary": "对碰擦、阻挡或异常接近事件整理证据，辅助车主选择联系、留档或服务处理。例如疑似碰擦，先看片段，再选留档或联系服务。",
+    "outcome": "缩短远程了解与处理事件的时间。",
+    "baseline": "看录像、打电话、人工整理材料。",
+    "question": "是否提高证据可用性，是否避免过度反应？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-021",
+    "rank": 21,
+    "name": "家庭共享车辆交接",
+    "ai": [
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "continuity",
+      "ecosystem",
+      "integration"
+    ],
+    "summary": "把借用期限、偏好配置、使用说明和归还事项组织为双方可核对的交接任务。例如借车半天，双方确认时段，并汇总归还待办。",
+    "outcome": "减少追问、错配与授权遗漏。",
+    "baseline": "消息交代与分别设置钥匙。",
+    "question": "双方交接耗时和权限错误是否减少？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-022",
+    "rank": 22,
+    "name": "端侧5D互动剧场",
+    "ai": [
+      "perception",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "perception",
+      "integration"
+    ],
+    "summary": "停驻时理解成员动作和内容进展，让灯光、声音、气流与舒适触觉形成可参与的剧情反馈。例如成员举手选故事分支，感知动作后联动声光触觉。",
+    "outcome": "把被动观影变成实体空间中的共同活动。",
+    "baseline": "观影加固定环境特效。",
+    "question": "参与感是否超过固定特效，反馈是否造成不适？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-023",
+    "rank": 23,
+    "name": "车辆健康证据解释",
+    "ai": [
+      "perception",
+      "memory",
+      "intent"
+    ],
+    "vehicle": [
+      "integration",
+      "perception",
+      "continuity"
+    ],
+    "summary": "把官方可读取状态、异常记录和用户感受连接成可理解的健康线索，辅助服务沟通。例如描述异响，关联记录并整理线索供预约时展示。",
+    "outcome": "减少不明提示带来的困惑与重复描述。",
+    "baseline": "仪表提示和人工描述故障。",
+    "question": "解释是否忠于证据，服务人员是否更易理解问题？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-024",
+    "rank": 24,
+    "name": "活动与票务一并安排",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "movement"
+    ],
+    "summary": "用户描述想参加的活动，AI比较场次、票种、同行条件与往返安排，确认后组织购票。例如周末看演出，选定交通与座位后确认费用购票。",
+    "outcome": "减少活动选择和出行安排之间的反复切换。",
+    "baseline": "票务平台与地图分别使用。",
+    "question": "遗漏条件是否减少，退改规则是否被正确理解？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-025",
+    "rank": 25,
+    "name": "临停结束自主接回",
+    "ai": [
+      "planning",
+      "execution",
+      "embodiment"
+    ],
+    "vehicle": [
+      "motion",
+      "ecosystem",
+      "external"
+    ],
+    "summary": "在允许的服务范围内，根据用户明确的返回安排组织车辆从停放位置接回。例如用户在入口请求接回，车辆在支持场地驶来。",
+    "outcome": "减少雨天、带物或行动不便时的步行负担。",
+    "baseline": "步行找车或另行联系接送。",
+    "question": "实际接回时间、失约与现场沟通成本如何？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-026",
+    "rank": 26,
+    "name": "乘客晕动反馈闭环",
+    "ai": [
+      "perception",
+      "memory",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "integration",
+      "movement"
+    ],
+    "summary": "乘客主动反馈不适时，AI连接路段、视觉内容与舒适设置，组织休息和可选择的改善方案。例如看屏幕发晕，询问感受并调整，之后追问是否好转。",
+    "outcome": "形成可学习、可比较的舒适支持。",
+    "baseline": "临时停车与凭感觉调整设置。",
+    "question": "主观不适是否降低，提醒是否增加负担？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-027",
+    "rank": 27,
+    "name": "口述目标的整车配方",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "integration"
+    ],
+    "summary": "用户表达想要的活动或感受，AI给出跨座舱与车身设置的可检查配方。例如说“凉快又安静”，确认组合设置后执行。",
+    "outcome": "减少寻找分散入口与多次操作。",
+    "baseline": "逐项调节各个设置。",
+    "question": "目标达成是否更快，撤回和纠正是否容易？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-028",
+    "rank": 28,
+    "name": "弱网络旅途助手",
+    "ai": [
+      "memory",
+      "intent"
+    ],
+    "vehicle": [
+      "continuity",
+      "movement"
+    ],
+    "summary": "为用户选择的旅程保存可用资料与上下文，在弱网络环境说明哪些信息仍有效。例如进山前保存行程，断网后仍可查询已存资料。",
+    "outcome": "降低旅途中断与重复解释。",
+    "baseline": "手动截图、离线地图和笔记。",
+    "question": "离线任务成功率与过时信息风险如何？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-029",
+    "rank": 29,
+    "name": "多人旅程共同导演",
+    "ai": [
+      "creation",
+      "intent"
+    ],
+    "vehicle": [
+      "presence",
+      "movement",
+      "continuity"
+    ],
+    "summary": "成员挑选照片、声音与故事重点，AI在停驻时组织大家认可的短片草稿。例如出游结束，成员选片段，修改草稿后分享。",
+    "outcome": "减少剪辑工作，保留共同讲述权。",
+    "baseline": "手机剪辑工具与群聊收集素材。",
+    "question": "作品是否被编辑保留，相比手机是否确实省力？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-030",
+    "rank": 30,
+    "name": "儿童旅途陪伴世界",
+    "ai": [
+      "memory",
+      "creation",
+      "emotion"
+    ],
+    "vehicle": [
+      "presence",
+      "continuity",
+      "movement"
+    ],
+    "summary": "将孩子主动选择的角色与旅行见闻连接成可持续、可暂停的共同故事，角色以适合当前语境的声音与表达回应。例如孩子把今天的桥加入昨天的故事，角色接续讲述并邀请家人参与，可暂停或切换普通讲解。",
+    "outcome": "形成与家庭旅程有关的陪伴与探索。",
+    "baseline": "固定故事播放器。",
+    "question": "是否带来共同对话，还是增加独自沉浸？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-031",
+    "rank": 31,
+    "name": "自管理的停驻能源",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "integration",
+      "ecosystem",
+      "space"
+    ],
+    "summary": "在约定能源预算内跟踪停驻设备使用，提出或执行已授权的节能安排。例如露营耗电超预期，说明余量后询问保留哪些设备。",
+    "outcome": "减少露营或长时间停驻的能源照料。",
+    "baseline": "查看电量并手动关闭设备。",
+    "question": "是否减少意外耗尽，自动调整是否打断活动？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-032",
+    "rank": 32,
+    "name": "家庭日常出行秘书",
+    "ai": [
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "continuity",
+      "ecosystem",
+      "movement"
+    ],
+    "summary": "围绕家庭主动共享的日程和接送责任组织出行任务，提示冲突并支持临时交接。例如接送时间冲突，提出分工，相关成员确认后调整。",
+    "outcome": "减少重复协调和遗漏接送。",
+    "baseline": "共享日历与群聊。",
+    "question": "是否减少协调消息，授权数据是否足够准确？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-033",
+    "rank": 33,
+    "name": "座舱3A游戏伴演",
+    "ai": [
+      "perception",
+      "creation",
+      "emotion",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "presence"
+    ],
+    "summary": "理解允许接入的游戏状态，为停驻玩家提供可关闭的解说、共同挑战和空间反馈。例如雨天赛道中，提供可选提示与空间反馈，能关闭。",
+    "outcome": "让车内游戏形成独特的共同体验。",
+    "baseline": "原游戏与普通显示音响。",
+    "question": "AI伴演是否增益而非打扰，平台接入能否成立？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-034",
+    "rank": 34,
+    "name": "车外可理解的意图表达",
+    "ai": [
+      "intent",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "external",
+      "perception"
+    ],
+    "summary": "将用户允许的停放、等待或接送意图转化为车外可理解的信息与回应。例如临停接人，车外展示等待信息并回应询问。",
+    "outcome": "减少车外人员猜测和沟通冲突。",
+    "baseline": "手势、电话与固定提示牌。",
+    "question": "对方是否理解，是否产生新的误解？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-035",
+    "rank": 35,
+    "name": "接送长辈的全程准备",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "ecosystem",
+      "movement"
+    ],
+    "summary": "围绕用户明确的行动需求组织上下车、入口、停靠与随行用品安排。例如接长辈前，确认入口与协助人，再汇总准备事项。",
+    "outcome": "减少长辈出行的准备与交接负担。",
+    "baseline": "人工电话沟通和分别查入口。",
+    "question": "关键需要是否被覆盖，实际门到门体验是否改善？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-036",
+    "rank": 36,
+    "name": "持续适应的个人车书",
+    "ai": [
+      "memory",
+      "intent"
+    ],
+    "vehicle": [
+      "continuity",
+      "integration"
+    ],
+    "summary": "围绕用户近期真实困惑，选择有用的解释和小范围练习，保留可纠正的学习记录。例如反复询问除雾，结合现场讲解，可请求操作演示。",
+    "outcome": "减少重复困惑和一次读整本手册的负担。",
+    "baseline": "通用教程与手册搜索。",
+    "question": "重复求助是否减少，提示是否过多？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-037",
+    "rank": 37,
+    "name": "跨车连续的个人伙伴",
+    "ai": [
+      "memory",
+      "emotion"
+    ],
+    "vehicle": [
+      "continuity",
+      "ecosystem"
+    ],
+    "summary": "在用户选择的共享范围内，让个人偏好、记忆和互动风格在允许使用的车辆间连续。例如换租用车，先预览迁移内容，再沿用偏好与声音风格；不迁移私人记录，也可以重新选择人格。",
+    "outcome": "减少换车后重复设置与重新建立上下文。",
+    "baseline": "各车独立配置。",
+    "question": "跨车收益是否明显，错误迁移是否易发现？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-038",
+    "rank": 38,
+    "name": "自主待命的车辆准备",
+    "ai": [
+      "perception",
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "integration",
+      "continuity",
+      "ecosystem"
+    ],
+    "summary": "在约定出发目标内检查电量与准备状态，组织允许的补能和环境准备并报告未完成事项。例如约定早上出发，提前检查并报告补能或预热进度。",
+    "outcome": "减少临出门才发现车辆未准备好的情况。",
+    "baseline": "定时设置与人工检查。",
+    "question": "准备失败是否更少，不必要动作是否增加？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-039",
+    "rank": 39,
+    "name": "停车后的步行交接",
+    "ai": [
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "ecosystem"
+    ],
+    "summary": "车辆把停车位置、入口和后续任务交给用户手机，并在计划改变时衔接返回车辆。例如停车看展，手机接续入口与票务，返程找到车辆。",
+    "outcome": "减少车与手机之间的任务断点。",
+    "baseline": "截图、发地址和重新搜索。",
+    "question": "交接信息是否被用到，是否减少重复输入？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-040",
+    "rank": 40,
+    "name": "车内即兴音乐合演",
+    "ai": [
+      "creation",
+      "intent",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "space"
+    ],
+    "summary": "停驻成员以哼唱、节奏和选择共同续写音乐，并把作品与空间反馈联动。例如一人哼唱、一人打拍，边听AI伴奏边改写。",
+    "outcome": "降低音乐创作门槛并增加共同参与。",
+    "baseline": "音乐生成应用与分开播放。",
+    "question": "等待和纠错是否打断合演，是否重复参与？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-041",
+    "rank": 41,
+    "name": "自解释的车外交往",
+    "ai": [
+      "perception",
+      "intent",
+      "creation"
+    ],
+    "vehicle": [
+      "external",
+      "perception"
+    ],
+    "summary": "车辆以一致、可理解的方式回应车外查询，并明确哪些请求需要车主处理。例如有人问车主何时回来，按可公开范围回答或转交。",
+    "outcome": "减少陌生人员与无人车辆的沟通阻力。",
+    "baseline": "固定语音和车主电话。",
+    "question": "是否正确理解请求和拒绝边界？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-042",
+    "rank": 42,
+    "name": "归家准备任务链",
+    "ai": [
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "movement",
+      "continuity"
+    ],
+    "summary": "按用户选择，在接近家时组织家中设备准备、购物取件与车辆停放衔接。例如说“回家吃饭”，确认取件与家中准备后执行。",
+    "outcome": "减少到家前后的分散操作。",
+    "baseline": "多个应用分别操作。",
+    "question": "净操作负担是否下降，状态不一致如何恢复？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-043",
+    "rank": 43,
+    "name": "情境声景旅行",
+    "ai": [
+      "perception",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "perception",
+      "space"
+    ],
+    "summary": "依据用户选定的景物与主题生成可调整的声景，让音乐与沿途体验相互呼应。例如选择海岸主题，融合海浪与音乐，可随时换风格。",
+    "outcome": "获得与当前旅程相关的氛围。",
+    "baseline": "固定播放列表。",
+    "question": "是否比固定音乐更受选择，变化是否过于频繁？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-044",
+    "rank": 44,
+    "name": "老人用车协同伙伴",
+    "ai": [
+      "intent",
+      "memory",
+      "emotion"
+    ],
+    "vehicle": [
+      "continuity",
+      "presence"
+    ],
+    "summary": "在本人同意的范围内，用可调整的语速、清晰度和耐心表达组织解释、常用目标与家人协助入口。例如去常去的医院，简明确认，允许打断重问；困惑时询问是否联系家人，而非代替本人作决定。",
+    "outcome": "降低学习与重复求助负担。",
+    "baseline": "简化界面与家人电话指导。",
+    "question": "是否增加独立完成任务的比例？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-045",
+    "rank": 45,
+    "name": "共享旅程的隐私协商",
+    "ai": [
+      "intent",
+      "planning"
+    ],
+    "vehicle": [
+      "presence",
+      "continuity",
+      "perception"
+    ],
+    "summary": "多人共同参与拍摄或创作前，AI帮助明确每人的素材与共享范围，并保留不同选择。例如剪旅行短片，逐人确认出镜与分享范围再处理。",
+    "outcome": "减少隐私冲突和事后删改。",
+    "baseline": "口头询问与事后人工处理。",
+    "question": "是否让成员理解并表达真实选择？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-046",
+    "rank": 46,
+    "name": "远程用车状态代理",
+    "ai": [
+      "perception",
+      "intent",
+      "execution"
+    ],
+    "vehicle": [
+      "integration",
+      "ecosystem"
+    ],
+    "summary": "用户远程提出确认或准备目标，AI汇总可获得的车辆证据并报告允许执行的结果。例如问“车准备好了吗”，汇总状态后可继续委托准备。",
+    "outcome": "减少反复打开多个车辆状态页面。",
+    "baseline": "远程车控页面逐项操作。",
+    "question": "状态与执行结果是否可靠、可解释？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-047",
+    "rank": 47,
+    "name": "露营共同生活空间",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "presence",
+      "integration"
+    ],
+    "summary": "围绕共同用餐、休息、娱乐与返程需要，组织可切换的停驻生活体验。例如晚餐转观影，确认需要后联动照明与座椅。",
+    "outcome": "降低多种活动切换时的准备负担。",
+    "baseline": "手动切换各种设备和设置。",
+    "question": "哪种活动组合有实际复用价值？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-048",
+    "rank": 48,
+    "name": "数字底盘试乘教练",
+    "ai": [
+      "perception",
+      "memory",
+      "planning"
+    ],
+    "vehicle": [
+      "integration",
+      "perception",
+      "movement"
+    ],
+    "summary": "将明确的试乘感受与允许的底盘配置关联，帮助比较不同舒适方案并记住依据。例如同路段试乘后，描述软硬和晃动，整理差异比较。",
+    "outcome": "让用户更容易选择适合的驾乘方式。",
+    "baseline": "凭感觉切换模式。",
+    "question": "反馈是否可重复，建议是否优于固定模式？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-049",
+    "rank": 49,
+    "name": "车辆移动取送任务",
+    "ai": [
+      "planning",
+      "execution",
+      "embodiment"
+    ],
+    "vehicle": [
+      "motion",
+      "ecosystem",
+      "external"
+    ],
+    "summary": "在允许的场地与服务条件下，车辆执行约定的物品取送并确认交接状态。例如营地取物，协调交接方并告知送达位置。",
+    "outcome": "减少人工往返与等待。",
+    "baseline": "人工驾驶取送。",
+    "question": "交接与移动能否形成可靠闭环？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-050",
+    "rank": 50,
+    "name": "遇到阻挡的协作脱困",
+    "ai": [
+      "perception",
+      "planning",
+      "embodiment"
+    ],
+    "vehicle": [
+      "motion",
+      "external",
+      "perception"
+    ],
+    "summary": "发现停放或接回路径受阻时，车辆组织可允许的替代路径、外部沟通或人工协助。例如车前有阻挡，说明情况，尝试允许方案或求助。",
+    "outcome": "减少车主到场处理的负担。",
+    "baseline": "远程查看后联系人工。",
+    "question": "何时应停止自主尝试并交接？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-051",
+    "rank": 51,
+    "name": "停驻影院共同选片",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "ecosystem",
+      "space"
+    ],
+    "summary": "成员提交兴趣与时间限制，AI协助选片和观看准备，保留个人不参与的选择。例如仅有半小时，推荐短片，成员选定后准备观看。",
+    "outcome": "减少选片争执与准备步骤。",
+    "baseline": "成员分别搜索后投票。",
+    "question": "是否更快选定并共同观看？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-052",
+    "rank": 52,
+    "name": "实时剧情空间反馈",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "integration"
+    ],
+    "summary": "理解内容的紧张、舒缓与转场，组织可调强度的空间反馈而非只同步画面颜色。例如追逐转为对话，减弱声光触觉，观众可调强度。",
+    "outcome": "让声光触觉具有内容相关性。",
+    "baseline": "简单颜色或音量同步。",
+    "question": "语义反馈是否比简单同步更有价值？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-053",
+    "rank": 53,
+    "name": "把此刻变成漫画",
+    "ai": [
+      "perception",
+      "creation"
+    ],
+    "vehicle": [
+      "perception",
+      "presence",
+      "movement"
+    ],
+    "summary": "乘客选择现场见闻与角色，AI生成可共同续写的旅途漫画。例如遇见彩虹，口述对白，修改生成的分镜。",
+    "outcome": "把共同经历转化为个人表达。",
+    "baseline": "拍照后用手机生成图片。",
+    "question": "是否实际续写或保存，车内共创是否贡献明显？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-054",
+    "rank": 54,
+    "name": "沿途观察任务共创",
+    "ai": [
+      "perception",
+      "creation"
+    ],
+    "vehicle": [
+      "movement",
+      "perception",
+      "presence"
+    ],
+    "summary": "按成员兴趣生成观察任务，利用用户选定的沿途对象组织讨论与作品。例如孩子爱建筑，用沿途对象出题，口述发现。",
+    "outcome": "增加旅途探索和共同注意。",
+    "baseline": "固定旅行任务卡。",
+    "question": "成员是否主动观察，任务是否增加疲劳？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-055",
+    "rank": 55,
+    "name": "多人声音解谜剧场",
+    "ai": [
+      "intent",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "space"
+    ],
+    "summary": "成员共同听取并提交声音线索，AI组织合作解谜与适度环境反馈。例如成员听到不同线索，口述推理共同答题。",
+    "outcome": "形成无需各自看屏的共享游戏。",
+    "baseline": "固定语音谜题。",
+    "question": "共同参与是否自然，谜题质量是否稳定？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-056",
+    "rank": 56,
+    "name": "航程式商务准备",
+    "ai": [
+      "memory",
+      "planning",
+      "creation"
+    ],
+    "vehicle": [
+      "movement",
+      "continuity",
+      "ecosystem"
+    ],
+    "summary": "结合用户选择的会议材料和到达安排，组织听取摘要、待确认事项与停驻工作准备。例如去见客户，听摘要、补充问题，形成会前清单。",
+    "outcome": "利用旅途时间减少会前准备负担。",
+    "baseline": "手机摘要与手动日程安排。",
+    "question": "材料理解与任务准备是否改善？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-057",
+    "rank": 57,
+    "name": "创作专注座舱",
+    "ai": [
+      "intent",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "continuity"
+    ],
+    "summary": "用户提出创作目标后，AI组织素材、语音灵感和环境主题，保留随时结束的方式。例如停驻写稿，调出相关素材，口述内容接入草稿。",
+    "outcome": "降低短时进入创作状态的准备成本。",
+    "baseline": "手机笔记与固定专注音乐。",
+    "question": "是否产出可继续使用的作品，准备成本多大？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-058",
+    "rank": 58,
+    "name": "旅途即时翻译协作",
+    "ai": [
+      "perception",
+      "intent",
+      "creation"
+    ],
+    "vehicle": [
+      "external",
+      "presence",
+      "ecosystem"
+    ],
+    "summary": "为乘员与车外人员的交流提供带现场线索的翻译辅助，并说明不确定内容。例如营地交流，结合入口标识翻译并澄清所指位置。",
+    "outcome": "减少陌生语言场合的信息错配。",
+    "baseline": "手机翻译应用。",
+    "question": "现场线索是否实质提高交流成功率？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-059",
+    "rank": 59,
+    "name": "多人餐桌式议事",
+    "ai": [
+      "intent",
+      "creation",
+      "planning"
+    ],
+    "vehicle": [
+      "presence",
+      "space"
+    ],
+    "summary": "安全停驻时，AI整理成员提出的议题、分歧与下一步，形成可修改的共同记录。例如讨论假期预算，复述分歧，保留未决定事项。",
+    "outcome": "减少讨论遗漏与由一人整理的负担。",
+    "baseline": "录音与人工会议笔记。",
+    "question": "是否促进真实协商而非强行形成共识？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-060",
+    "rank": 60,
+    "name": "旅途记忆现场回访",
+    "ai": [
+      "memory",
+      "perception"
+    ],
+    "vehicle": [
+      "movement",
+      "continuity"
+    ],
+    "summary": "再次经过用户选择的地点时，唤起有来源的照片或留言，并允许不打扰。例如重返湖边，询问是否回顾，再播放旧片段。",
+    "outcome": "让回忆与真实地点重新连接。",
+    "baseline": "相册日期回忆。",
+    "question": "回顾是否被欢迎，何种时机应保持安静？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-061",
+    "rank": 61,
+    "name": "家庭接送临时交棒",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "continuity",
+      "ecosystem",
+      "movement"
+    ],
+    "summary": "接送责任变化时，AI组织地点、时间、用品与对方确认，保留交接进度。例如临时换人接孩子，汇总待办并由接手人确认。",
+    "outcome": "减少临时换人后的信息遗漏。",
+    "baseline": "群聊逐条交代。",
+    "question": "交接追问和错接是否减少？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-062",
+    "rank": 62,
+    "name": "车辆服务沟通包",
+    "ai": [
+      "perception",
+      "memory",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "integration",
+      "continuity",
+      "ecosystem"
+    ],
+    "summary": "把官方状态、用户描述与相关片段整理为可检查的服务材料，并衔接预约。例如预约查异响，补充发生条件后整理时间线。",
+    "outcome": "减少重复描述和服务前准备。",
+    "baseline": "人工记录问题再预约。",
+    "question": "材料是否帮助服务人员定位需要检查的事项？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-063",
+    "rank": 63,
+    "name": "长途变化取舍助手",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "ecosystem"
+    ],
+    "summary": "延误、天气或成员要求变化后，AI说明保留、缩短或取消活动的影响。例如暴雨影响景点，比较绕行与取消，决定后重排。",
+    "outcome": "帮助用户理解取舍而非只给新路线。",
+    "baseline": "人工对照行程与路况。",
+    "question": "是否降低重排负担，是否保留关键目标？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-064",
+    "rank": 64,
+    "name": "游戏观战与家人参与",
+    "ai": [
+      "perception",
+      "intent",
+      "creation"
+    ],
+    "vehicle": [
+      "presence",
+      "space"
+    ],
+    "summary": "让非玩家通过提问、角色或轻量任务参与停驻游戏，AI将游戏状态转成可理解的共同内容。例如家人不懂战况，简述进展并提供可选助威任务。",
+    "outcome": "减少同车成员被游戏排除的感觉。",
+    "baseline": "旁观或各自使用手机。",
+    "question": "非玩家是否愿意参与，玩家是否被打断？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-065",
+    "rank": 65,
+    "name": "用户自定义车辆角色工坊",
+    "ai": [
+      "intent",
+      "creation",
+      "emotion"
+    ],
+    "vehicle": [
+      "space",
+      "continuity"
+    ],
+    "summary": "用户创作角色形象、表达习惯与声音风格，预览并持续修改车辆伙伴身份。例如设定幽默旅伴，试听其语调、节奏和接话方式，修改后试用；任务准确性与角色表现分别检验。",
+    "outcome": "形成有参与感的个人表达。",
+    "baseline": "固定助手皮肤与声音。",
+    "question": "是否持续使用和修改，是否只是一次新鲜感？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-066",
+    "rank": 66,
+    "name": "多车共同旅途电台",
+    "ai": [
+      "intent",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "ecosystem",
+      "presence"
+    ],
+    "summary": "车队成员分享允许的见闻与留言，AI组织共同节目、会合信息和趣味任务。例如车队分开，留言加入节目，会合时切换协调信息。",
+    "outcome": "把分散车队连接为共同旅程。",
+    "baseline": "对讲机与群聊。",
+    "question": "是否降低协调噪声，娱乐是否影响必要信息？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-067",
+    "rank": 67,
+    "name": "宠物同行协作助手",
+    "ai": [
+      "perception",
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "space",
+      "ecosystem"
+    ],
+    "summary": "围绕用户明确的宠物同行需要，组织停靠、用品与允许的舒适状态观察。例如带宠物去营地，确认用品并提示照料事项。",
+    "outcome": "减少宠物出行准备与现场照料负担。",
+    "baseline": "手动查地点与检查环境。",
+    "question": "是否覆盖真实照料需要，感知误判如何处理？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-068",
+    "rank": 68,
+    "name": "临时访客友好车辆",
+    "ai": [
+      "intent",
+      "memory"
+    ],
+    "vehicle": [
+      "external",
+      "ecosystem",
+      "continuity"
+    ],
+    "summary": "对允许的访客提供简明上车、使用与联系说明，按车主约定回应疑问。例如朋友首次借车，解释设置，疑问转交车主。",
+    "outcome": "减少首次使用车辆时的追问。",
+    "baseline": "消息说明与电话指导。",
+    "question": "是否减少求助，访客是否理解权限？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-069",
+    "rank": 69,
+    "name": "停驻小型演出空间",
+    "ai": [
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "space"
+    ],
+    "summary": "成员选择角色、音乐和主题，AI组织表演内容与屏幕灯光反馈，形成共同演出。例如孩子演故事，选角色与台词，灯光配合演出。",
+    "outcome": "让空间支持主动表演而非只消费内容。",
+    "baseline": "手机配乐和自行表演。",
+    "question": "是否形成自发参与与可留存作品？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-070",
+    "rank": 70,
+    "name": "持续学习的用车习惯解释",
+    "ai": [
+      "perception",
+      "memory",
+      "planning"
+    ],
+    "vehicle": [
+      "continuity",
+      "perception"
+    ],
+    "summary": "用户查看自身允许留存的用车记录时，AI解释反复出现的安排与变化，不默认推断永久偏好。例如问最近为何常绕路，对照记录解释，纠正后讨论调整。",
+    "outcome": "帮助用户看懂习惯并选择调整。",
+    "baseline": "简单统计报表。",
+    "question": "解释是否准确，是否真正影响下一次选择？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-071",
+    "rank": 71,
+    "name": "长期停放自主照料",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "integration",
+      "continuity",
+      "ecosystem"
+    ],
+    "summary": "在车主约定的范围内观察长期停放状态，组织需要的准备、服务提醒或人工协助。例如多日不用车，汇总变化，再确认服务或准备事项。",
+    "outcome": "减少长期不使用车辆时的检查负担。",
+    "baseline": "定期手动查看状态。",
+    "question": "是否减少实际问题，通知是否过度？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-072",
+    "rank": 72,
+    "name": "补能途中临时事务",
+    "ai": [
+      "perception",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "movement"
+    ],
+    "summary": "在补能等待时间内组织用户选择的取餐、采购或休息安排，并衔接返回。例如等待半小时，选来回可完成的事务并提醒返回。",
+    "outcome": "把等待时间转为可完成的任务窗口。",
+    "baseline": "分别估时和搜索附近地点。",
+    "question": "能否完成事务而不增加补能延误？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-073",
+    "rank": 73,
+    "name": "场馆到车辆连续体验",
+    "ai": [
+      "memory",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "movement",
+      "space"
+    ],
+    "summary": "将用户授权的展览、演出或活动素材带入返程，组织回顾、讨论和相关主题。例如看展返程，选择作品，延伸提问并切换空间主题。",
+    "outcome": "把一次线下活动延伸为共同体验。",
+    "baseline": "手机查看活动资料。",
+    "question": "返程延展是否比独立内容更有意义？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-074",
+    "rank": 74,
+    "name": "雨天到达无缝准备",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "space",
+      "ecosystem"
+    ],
+    "summary": "结合目的地入口、天气与成员需要，组织下车顺序、步行线索和后续衔接。例如雨天到店，先选入口与遮雨处，再衔接下车。",
+    "outcome": "减少到达时临时处理的不便。",
+    "baseline": "导航加口头讨论。",
+    "question": "是否改善实际到达过程，信息是否可获得？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-075",
+    "rank": 75,
+    "name": "车辆与停车场协作",
+    "ai": [
+      "planning",
+      "execution",
+      "embodiment"
+    ],
+    "vehicle": [
+      "motion",
+      "ecosystem",
+      "external"
+    ],
+    "summary": "在兼容场地内，车辆与设施协调进出、停放和取回，并报告冲突或未完成事项。例如设施接收停车目标，完成协作后反馈位置与费用。",
+    "outcome": "减少用户处理停车过程的步骤。",
+    "baseline": "人工进出和缴费。",
+    "question": "设施协作是否稳定，跨场地收益是否成立？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-076",
+    "rank": 76,
+    "name": "个性化沉浸健身体验",
+    "ai": [
+      "perception",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "perception"
+    ],
+    "summary": "安全停驻时，根据用户选择的轻量活动与动作反馈组织音乐、节奏和空间互动。例如选肩颈活动，按动作调节奏，反馈后降难度或停止。",
+    "outcome": "增加停驻活动参与感。",
+    "baseline": "手机视频跟练。",
+    "question": "反馈是否有用，有限空间是否适合目标活动？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-077",
+    "rank": 77,
+    "name": "可共同编辑的家庭车史",
+    "ai": [
+      "memory",
+      "intent",
+      "creation"
+    ],
+    "vehicle": [
+      "continuity",
+      "presence"
+    ],
+    "summary": "家庭成员挑选与车辆有关的经历，AI组织可共同修订的长期故事。例如车辆纪念日，补充印象，共同修改回顾。",
+    "outcome": "保留共同记忆和不同人的表达。",
+    "baseline": "零散相册与聊天记录。",
+    "question": "是否持续补充，是否认可故事准确性？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-078",
+    "rank": 78,
+    "name": "陌生提示的现场解释",
+    "ai": [
+      "perception",
+      "intent"
+    ],
+    "vehicle": [
+      "perception",
+      "integration"
+    ],
+    "summary": "用户询问此刻的提示或现象，AI结合本车可读取证据与官方说明解释。例如问图标为何亮起，指出状态并说明下一步。",
+    "outcome": "减少用户描述和检索负担。",
+    "baseline": "手册搜索与客服电话。",
+    "question": "解释是否有据，无法判断时是否清楚说明？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-079",
+    "rank": 79,
+    "name": "停驻专属逃脱游戏",
+    "ai": [
+      "perception",
+      "intent",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "space",
+      "perception"
+    ],
+    "summary": "把可用的座舱空间与成员选择转化为虚构线索，形成可随时结束的合作解谜。例如寻找虚拟钥匙，观察空间线索，口述答案。",
+    "outcome": "提供实体空间参与感。",
+    "baseline": "手机逃脱游戏。",
+    "question": "空间线索是否增加乐趣，是否导致不合适的操作？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-080",
+    "rank": 80,
+    "name": "车辆自行组织服务到访",
+    "ai": [
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "external",
+      "integration"
+    ],
+    "summary": "发现官方可识别的服务需要后，在车主允许范围内组织预约、准备与人员到访确认。例如保养到期，确认到访时间与准备事项后跟踪安排。",
+    "outcome": "减少车主协调服务的步骤。",
+    "baseline": "查看提示并人工预约。",
+    "question": "安排是否适当，服务前提和交接是否齐全？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-081",
+    "rank": 81,
+    "name": "出行中的个人灵感伙伴",
+    "ai": [
+      "memory",
+      "intent",
+      "creation"
+    ],
+    "vehicle": [
+      "movement",
+      "continuity",
+      "space"
+    ],
+    "summary": "用户口述想法后，AI关联已允许保存的主题与片段，整理可继续创作的草稿。例如口述新点子，关联旧记录，追问后整理提纲。",
+    "outcome": "降低旅途中留住和发展想法的负担。",
+    "baseline": "语音备忘录。",
+    "question": "草稿是否被继续使用，错误关联是否增加编辑成本？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-082",
+    "rank": 82,
+    "name": "聚会座舱共同主持",
+    "ai": [
+      "intent",
+      "creation",
+      "emotion",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "space"
+    ],
+    "summary": "安全停驻聚会中，AI按成员选择组织音乐、话题、小游戏与共享主题。例如朋友聚会选主题，需要时提供接话或游戏。",
+    "outcome": "减少主持负担并增加参与。",
+    "baseline": "固定播放列表与手机游戏。",
+    "question": "成员是否自发参与，主持是否过度占据交流？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "security",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-083",
+    "rank": 83,
+    "name": "无人车辆交接见证",
+    "ai": [
+      "perception",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "external",
+      "perception",
+      "ecosystem"
+    ],
+    "summary": "在允许的物品或服务交接中，车辆整理可核对的到访、交付和异常证据。例如物品送达，汇总时间和片段，车主核对。",
+    "outcome": "减少远程确认与争议材料缺失。",
+    "baseline": "电话与人工拍照。",
+    "question": "证据能否支撑实际交接确认？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-084",
+    "rank": 84,
+    "name": "营地多车协作用能",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "integration",
+      "presence"
+    ],
+    "summary": "多个兼容车辆与设备围绕明确的营地用电目标组织预算、协商与异常处理。例如一车余电不足，协商额度后通过兼容设备共享。",
+    "outcome": "减少多人露营能源协调负担。",
+    "baseline": "人工查看设备与分配电源。",
+    "question": "协作是否比人工更有效，兼容前提能否满足？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-085",
+    "rank": 85,
+    "name": "按情节变化的声音空间",
+    "ai": [
+      "perception",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "presence"
+    ],
+    "summary": "理解故事内容与成员选择，组织空间音效与讲述位置，让共同听故事具有场景感。例如角色走向后排，声位随情节变化，成员可选后续。",
+    "outcome": "形成听觉上的共同沉浸。",
+    "baseline": "普通有声书。",
+    "question": "空间反馈是否增加理解或乐趣？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-086",
+    "rank": 86,
+    "name": "车内屏幕个人与共同切换",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "presence",
+      "space"
+    ],
+    "summary": "理解成员想独享或共同参与的目标，组织屏幕内容与声音范围的可确认切换。例如一起看短片，确认成员后切换屏幕与声音。",
+    "outcome": "减少共享空间中的内容冲突。",
+    "baseline": "每个屏幕独立设置。",
+    "question": "是否更快形成可接受的共享安排？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "comfort",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-087",
+    "rank": 87,
+    "name": "行程中的情绪表达支持",
+    "ai": [
+      "intent",
+      "emotion",
+      "creation"
+    ],
+    "vehicle": [
+      "continuity",
+      "space"
+    ],
+    "summary": "用户主动表达感受时，车辆先澄清希望聊天、听内容还是安静，再用选择的风格与合适语气回应。例如说“今天很烦”，先询问是否想聊，可打断、拒绝或转为安静；情绪线索不等于已准确读懂用户。",
+    "outcome": "提供不强迫解释的陪伴和表达空间。",
+    "baseline": "通用聊天应用或音乐播放。",
+    "question": "回应是否有帮助，是否出现过度迎合？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-088",
+    "rank": 88,
+    "name": "跨代共同讲述空间",
+    "ai": [
+      "memory",
+      "intent",
+      "creation"
+    ],
+    "vehicle": [
+      "presence",
+      "continuity"
+    ],
+    "summary": "长辈讲述与孩子提问共同成为家庭故事，AI整理原话与作品并允许纠正。例如长辈讲往事，孩子追问，补写部分另行标明。",
+    "outcome": "促进真实交流并留住记忆。",
+    "baseline": "录音或固定儿童故事。",
+    "question": "是否引发共同对话，生成内容是否忠于讲述？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-089",
+    "rank": 89,
+    "name": "用户设定的车辆仪式",
+    "ai": [
+      "memory",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "continuity"
+    ],
+    "summary": "用户定义出发、到达或纪念时刻的声音和主题，AI在允许的条件下组织可调整的仪式。例如纪念日上车，播放选定留言与主题，可跳过修改。",
+    "outcome": "形成有个人意义的长期体验。",
+    "baseline": "固定欢迎动画。",
+    "question": "是否持续保留，重复后是否变成打扰？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-090",
+    "rank": 90,
+    "name": "路上见闻的兴趣延展",
+    "ai": [
+      "perception",
+      "memory",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "perception",
+      "ecosystem"
+    ],
+    "summary": "用户选定一个沿途对象后，AI组织收藏、相关地点与后续可参与活动的候选。例如看见陶艺店，保存线索，再按选择安排参观。",
+    "outcome": "把即时兴趣连接为可行动的探索。",
+    "baseline": "拍照后自行搜索。",
+    "question": "是否产生真实后续行动，推荐是否偏离原意？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-091",
+    "rank": 91,
+    "name": "灵活用途的移动工作间",
+    "ai": [
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "space",
+      "ecosystem"
+    ],
+    "summary": "安全停驻时围绕临时工作目标组织资料、设备展示、环境和结束恢复。例如停驻开会，确认资料设备，结束后恢复。",
+    "outcome": "减少进入短时工作的准备成本。",
+    "baseline": "手机热点和手动设置。",
+    "question": "是否形成可完成任务的工作条件？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-092",
+    "rank": 92,
+    "name": "任务失败的接管助手",
+    "ai": [
+      "perception",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "ecosystem",
+      "integration"
+    ],
+    "summary": "车内任务因网络、订单或设施问题中断时，AI说明已完成部分并组织可恢复的替代方案。例如下单中断，核对是否付款，再选恢复或人工处理。",
+    "outcome": "避免用户重新开始和重复提交。",
+    "baseline": "错误提示后人工处理。",
+    "question": "是否减少恢复时间和重复交易？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "ease",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-093",
+    "rank": 93,
+    "name": "车外探索问答站",
+    "ai": [
+      "perception",
+      "intent"
+    ],
+    "vehicle": [
+      "external",
+      "perception"
+    ],
+    "summary": "安全停驻时，车外人员可围绕允许展示的现场对象与活动提问，车辆提供明确范围内的回应。例如营地问活动位置，结合公开线索指引并支持追问。",
+    "outcome": "让车辆成为可访问的现场信息节点。",
+    "baseline": "手机搜索与固定说明牌。",
+    "question": "是否有人主动使用，回应是否适合现场？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": "expression",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-094",
+    "rank": 94,
+    "name": "感知驱动的合作动作游戏",
+    "ai": [
+      "perception",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "perception",
+      "presence",
+      "space"
+    ],
+    "summary": "安全停驻时理解成员选定的动作，组织可暂停的合作游戏与声光反馈。例如两人挥手接虚拟物品，声光反馈配合得分。",
+    "outcome": "把动作参与转化为共同娱乐。",
+    "baseline": "手机体感小游戏。",
+    "question": "识别误差是否影响合作，空间是否足够？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-095",
+    "rank": 95,
+    "name": "服务偏好可解释迁移",
+    "ai": [
+      "memory",
+      "intent",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "continuity",
+      "ecosystem"
+    ],
+    "summary": "用户换目的地或服务提供方时，AI用有来源的偏好组织新选择，并让用户修正。例如换餐厅，说明沿用口味与预算，纠正后筛选。",
+    "outcome": "减少重新填写与重复解释。",
+    "baseline": "手动保存偏好并重新搜索。",
+    "question": "偏好迁移是否有效，过时偏好能否被识别？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "delight",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-096",
+    "rank": 96,
+    "name": "整车体验的试验配方",
+    "ai": [
+      "intent",
+      "creation",
+      "planning",
+      "execution"
+    ],
+    "vehicle": [
+      "integration",
+      "space"
+    ],
+    "summary": "用户提出希望的主题或驾乘体验，AI组织可预览、可撤回的允许配置候选。例如试雨夜爵士，预览声光组合，确认后保存。",
+    "outcome": "帮助用户探索本车可能的体验组合。",
+    "baseline": "固定驾驶模式和情景模式。",
+    "question": "组合是否比固定模式更有价值，配置冲突如何处理？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "expression",
+    "secondaryNeed": "comfort",
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-097",
+    "rank": 97,
+    "name": "车辆与家庭共同角色",
+    "ai": [
+      "memory",
+      "intent",
+      "emotion"
+    ],
+    "vehicle": [
+      "continuity",
+      "ecosystem"
+    ],
+    "summary": "家庭定义车辆伙伴的共同身份、表达风格与各成员边界，在车内外服务中维持可调整的一致互动。例如共同选定温和旅伴，对不同成员沿用其偏好，私人记录各自保留；人格一致不意味着所有人偏好相同。",
+    "outcome": "减少共享助手的身份与偏好冲突。",
+    "baseline": "每人独立助手。",
+    "question": "共享角色是否受欢迎，各人的边界是否被尊重？",
+    "horizon": "条件预研",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-098",
+    "rank": 98,
+    "name": "目的地主题空间",
+    "ai": [
+      "perception",
+      "creation",
+      "execution"
+    ],
+    "vehicle": [
+      "movement",
+      "space"
+    ],
+    "summary": "乘客选择目的地主题后，AI把相关内容组织为声音、视觉和适度环境体验。例如去海洋馆，以主题音乐和问答探索目的地。",
+    "outcome": "让旅途成为目的地体验的前奏。",
+    "baseline": "目的地宣传视频。",
+    "question": "是否增加探索兴趣，是否只是一时新鲜？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "delight",
+    "secondaryNeed": null,
+    "autonomyMode": "用户发起或确认后推进；主动建议需另行定义",
+    "id": "TOP-099",
+    "rank": 99,
+    "name": "围绕真实场景的模拟训练",
+    "ai": [
+      "perception",
+      "creation"
+    ],
+    "vehicle": [
+      "perception",
+      "space",
+      "movement"
+    ],
+    "summary": "安全停驻时，利用用户选定的真实场景素材生成观察、判断或语言练习。例如用现场路牌练外语，出题讲解，可换难度。",
+    "outcome": "让练习与亲历情境相关。",
+    "baseline": "通用题库应用。",
+    "question": "情境关联是否改善学习与持续参与？",
+    "horizon": "近期试验",
+    "evidence": "价值待验证"
+  },
+  {
+    "primaryNeed": "ease",
+    "secondaryNeed": "security",
+    "autonomyMode": "约定范围内持续执行（需有效授权与回执）",
+    "id": "TOP-100",
+    "rank": 100,
+    "name": "自主返位与待命",
+    "ai": [
+      "perception",
+      "planning",
+      "embodiment"
+    ],
+    "vehicle": [
+      "motion",
+      "integration",
+      "external"
+    ],
+    "summary": "在允许场所完成临时任务后，车辆返回约定位置并确认待命条件。例如营地取送后，返回指定位置并报告待命。",
+    "outcome": "减少用户安排车辆收尾的负担。",
+    "baseline": "人工移车和检查。",
+    "question": "自主收尾是否可靠，未知状态能否及时交接？",
+    "horizon": "前瞻探索",
+    "evidence": "价值待验证"
+  }
+]

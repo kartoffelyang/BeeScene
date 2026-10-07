@@ -1,0 +1,12 @@
+node_modules/
+dist/
+qa/
+.DS_Store
+.npm-cache/
+.env
+.env.*
+archive/
+scripts/
+TOP100*.json
+TOP100*.md
+投资决策卡案例-*.json

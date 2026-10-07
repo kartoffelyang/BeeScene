@@ -1,0 +1,208 @@
+Bounded execution of explicit commands
+Explicit execution and bounded delegation
+The human provides a specific goal and object; facts are reliable, capability available, conflicts resolved and matching permission valid.
+Human initiates
+Human determines goal and specific action
+Agent executes authorized actions
+Human may correct or stop; Agent reports honestly
+Human initiates; determines goal and action; Agent executes authorized actions; human may correct or stop and receives honest feedback
+Execute a specific action, then monitor receipts or report results
+Expand an ambiguous command into combined controls.
+Candidate design mechanism, not an established taxonomy
+Retain the pattern while separating submission, pending and success; a reliable immediate receipt does not require P11.
+Context-triggered proactive suggestion
+Proactive suggestions and timing
+The Agent finds a fact-supported, feasible nonurgent opportunity at a suitable time without action permission; it proposes a specific candidate only.
+Agent initiates
+Human chooses adoption and specific action
+No external action before confirmation
+Human may reject, defer and define refusal scope
+Agent initiates; human decides adoption and action; no external execution before confirmation; human may reject or defer with explicit scope
+Propose a specific candidate; after adoption recheck goal and action permission
+Expand accepted advice into permission for other actions.
+Retain definition and revise navigation grouping; facts and capability are required before suggesting, and acceptance binds to specific actions.
+Bounded delegation within authorization
+The human has defined goals, boundaries and valid permission; the Agent may organize subtasks within them.
+Human delegates; Agent progresses
+Human sets goals and limits; Agent selects in-domain steps
+Agent executes subtasks within scope
+Human may revoke or correct; out-of-scope steps ask again
+Human delegates; Agent progresses; human sets goals and limits; Agent selects and executes permitted steps; human may revoke or correct and is consulted at boundaries
+Retain goal, limits and delegation context; switch local patterns for clarification, verification or monitoring and recheck permission and context before each action.
+Automatically extend delegation to payment or new data-sharing consequences.
+Track enduring delegation and current local pattern separately; P07, P04 or P11 may operate within original limits.
+Clarify intent and parameters
+Prerequisites incomplete
+A goal, object or parameter necessary for the next action is unclear.
+Either party triggers; Agent clarifies
+Human specifies needs; Agent exposes ambiguity
+No target action before clarification
+Human may revise goals; Agent must not present inference as fact
+Either party triggers clarification; human specifies needs; Agent exposes ambiguity and refrains from execution or factual guesses
+Complete necessary parameters, then recheck other conditions
+Repeatedly ask irrelevant parameters for formal completeness.
+Retain the pattern; specify necessary fields, permitted defaults and rechecks after clarification.
+Action-specific permission confirmation
+The goal is clear, but current action permission is missing, insufficient or must be renewed.
+Agent requests confirmation
+Authorized party decides action and scope
+No target action before permission
+Human may refuse, narrow or revoke
+Agent requests confirmation; authorized party defines scope; no execution before permission; human may refuse, narrow or revoke
+Bind action, object and impact before obtaining confirmation
+Bind an ambiguous yes to undisclosed actions.
+Specify confirmer, object, action and scope; intent and authorization may share a sentence but require separate evidence.
+Negotiation among affected people
+An action affects multiple people with unresolved needs or authority conflicts.
+Any affected person may initiate
+Relevant parties negotiate under explicit authority rules
+Do not submit shared actions while conflict is unresolved
+All parties may correct; driver authority is not universal
+Any affected person may initiate; parties negotiate explicit authority; shared actions wait for resolution; everyone may correct and the driver does not own every decision
+Form a clearly bounded shared or zoned plan
+Override all occupants' legitimate needs because one is the driver.
+Define decisions by zone, affected people and shared resources; zoned actions may proceed independently but unresolved shared actions may not.
+Verify and refresh evidence
+Facts needed for decisions or completion are stale or unknown, or execution lacks reliable receipts.
+Agent detects an evidence gap
+Decide after evidence is sufficient; human may provide facts
+Queries and verification stay within permission
+Human may correct; Agent labels uncertainty
+Agent detects gaps; decisions await evidence; human may provide corrections and Agent verifies only within scope while labeling uncertainty
+Verify target state or receipts; confidence does not replace evidence
+Claim completion without outcome evidence.
+Retain ID, with pre-action and result-verification subtypes; queries also require permission, privacy and side-effect checks.
+Defer to a suitable time
+A useful nonurgent suggestion faces high or unknown workload. Delay visible advice, not internal verification or recovery of failed or unknown tasks.
+Agent evaluates internally without interrupting
+Human retains choice; Agent rechecks timing
+No proposed execution or immediate announcement
+Human may resume or reject; changed timing requires rechecking value
+Agent evaluates without interruption; human retains choice; no immediate execution or announcement; resumption requires rechecking timing and value
+Retain the candidate until a suitable time; suppress if expired
+Replay an obsolete suggestion without rechecking value.
+Distinguish deferred speech from deferred verification and recovery; delaying ordinary advice must not pause failure handling.
+Capability reduction and alternative collaboration
+The original tool or capability is insufficient, but an explainable alternative exists.
+Agent explains the capability gap
+Human chooses an alternative goal or manual handling
+Execute only selected, authorized alternatives
+Human may abandon; Agent cannot claim the original task complete
+Agent explains gaps; human chooses alternatives or manual handling; only authorized selections execute; abandonment is possible without false original completion
+Narrow the goal, choose a feasible path and recheck permission
+Present cached or alternative results as the original capability or live information.
+Distinguish viable alternatives from none; explain limits and end or appropriately hand over rather than invent an option.
+Refuse out-of-domain requests and hand over appropriately
+Appropriateness of intervention
+A request lies outside the permitted product domain or is prohibited without obtainable permission. Use P05 for in-domain permission that can be supplied.
+Request or event initiates
+Return decision authority to the authorized party or dedicated system
+Agent does not execute out-of-domain actions
+Human uses an appropriate channel; handover is not accepted receipt
+Request or event triggers; authority returns to the proper party or system; Agent refuses out-of-domain execution and does not equate referral with receipt
+Explain boundaries and offer available appropriate channels
+Invent successful handover or assign handling to incapable people.
+P10 addresses prohibited or currently unauthorized domain boundaries; use P05 for obtainable in-domain permission and verify handover receipt separately.
+Execution monitoring and progress collaboration
+Task already progressing
+An action was submitted without reliable completion evidence. Observe and verify it, but separately recheck permission for new actions.
+Agent monitors; user may query
+Original limits remain; new goals require new decisions
+Verify submitted action state; new submissions or subtasks require current permission checks
+Human may cancel or take over; Agent distinguishes submission from completion
+Agent monitors and user queries; original limits remain; new goals and actions require permission checks; human may cancel or take over with clear submission versus completion status
+Report progress or preserve observability while awaiting receipts
+Over-announce progress or treat a sent request as success.
+Separate observing existing submissions from submitting new subtasks; recheck new permissions and continue verifying earlier actions after revocation.
+Failure recovery and renegotiation
+Failure or partial failure has occurred, or retry or compensation is needed.
+Agent or human detects failure
+Recover within explicit retry scope; otherwise human chooses retry, compensation or abandonment
+Execute only after checking recovery conditions and required permission
+Human may take over; Agent verifies each action without rollback guarantees
+Agent or human detects failure; recover within explicit retry limits or seek a choice; verify conditions and permission without promising rollback
+Retain known successes, verify failure and negotiate next steps
+Blindly retry, repeat successful actions or claim irreversible operations rolled back.
+Define retry scope, counts, idempotency, partial success and compensation; valid existing permission may cover retry, otherwise renegotiate.
+Revoke, stop and take over
+The user revokes an arrangement or takes over; distinguish submitted from unsubmitted actions.
+Human requests stop or takeover
+Human controls next steps; verify cancelability of submitted actions
+Stop new actions; request and verify cancellation where needed
+Agent states submitted and stopped parts; human decides next steps
+Human stops or takes over; controls future actions; Agent checks cancelability, stops new submissions and reports actual outcomes
+Stop new submissions; verify cancellation or enter recovery
+Immediately describe a cancellation request as successful cancellation.
+Retain the pattern and define per-action stopping and recovery for accepted, ongoing, partial, irreversible or unknown states.
+Negotiate memory scope
+Information may become a long-term preference or arrangement; its scope needs clarification.
+Either party proposes memory
+Human chooses what, for how long and how to revise it
+No long-term saving before write permission
+Human may edit or delete; one action is not a permanent preference
+Either party proposes memory; human determines content and duration; saving awaits permission; edits and deletion remain available without permanent-preference inference
+Specify content, use, person and duration; temporary trip scope may be agreed, while lasting storage is a separately authorized action with a receipt.
+Infer a permanent preference from one refusal.
+Separate memory content, use, duration, person and write permission; verify and trace writes, edits and deletion.
+Suppress expired value or explicit refusal scope
+An opportunity has expired or a suggestion matches explicit refusal scope. Trip-only memory does not itself imply suppression.
+Agent assesses internally, usually silently
+Follow the human's explicit refusal scope
+Do not submit proposed actions or repeat reminders
+Human may revise; reassess new scopes or journeys
+Agent assesses usually silently; respects refusal scope without action or repetition; human may revise and new journeys are reassessed
+Stay quiet or confirm current scope only; do not write permanent preferences
+Extend a trip-specific refusal to a permanent preference.
+Suppress the current proposed behavior; trip-only limits duration, while speech and temporary memory depend on the request.
+Evidence-supported result reporting
+Reliable outcome evidence exists and matches the reported object, action and actual sequence.
+Agent or user query triggers
+No new action; human chooses the next goal
+Present results only; do not start another task automatically
+Human may challenge or correct; Agent provides appropriate sources
+Agent or query triggers; no new actions; human selects next goals, challenges or corrects results and can inspect sources
+State completed work, scope and evidence; a new goal starts a new decision
+Hide partial failure because the overall experience felt smooth.
+Retain pattern; include action ID, source, time, result scope and partial success; decide new goals separately.
+Domain boundaries
+Vehicle safety control is outside this example cockpit Agent's execution domain.
+Normative requirement
+Only some branches have synthetic contract checks; no user experiments performed
+To be specified
+Outside the example scope, review again; do not transfer automatically
+Retain scope; configure future execution domains by explicit product or adapter permissions, not user authorization alone.
+Check authorization for each action
+Every consequential external action must check grantor, object, action and parameter limits.
+Define checks for goals, queries, writes and recovery; bind actions and recheck before submission without interrupting for already valid permission.
+Authorization expiry and revocation
+Stop new actions under old permission after expiry, revocation or changes to action or object.
+Separate new-submission bans, ongoing-action stop requests, state queries and necessary compensation; revoking permission does not mean execution was canceled.
+Fact freshness
+Refresh unknown or stale critical states before acting; do not reuse by default.
+Design inference
+Record fact age, source, importance and validity; if refresh fails, preserve unknowns and pause, clarify or reduce capability according to consequences.
+Intent clarification
+Clarify missing necessary goals or parameters; a complete sentence does not imply a complete task.
+Retain rule; add necessary fields, authorized defaults and minimum clarification standards.
+Capability reduction
+Do not execute an infeasible original action. Check alternative capability and permission; if none exists, explain and exit.
+Clearly reject infeasible or unauthorized originals; verified, authorized alternatives may execute.
+Proactive timing
+Defer nonurgent suggestions under high or unknown workload and suppress expired ones, without skipping internal verification or recovery of failures or unknowns.
+Strategy awaiting validation
+Define intervention by message purpose, validity, channel and urgency; internal evaluation may continue, critical failures must not be hidden, and thresholds need calibration.
+Conflicts among affected people
+Negotiate unresolved needs or authority conflicts before actions affecting multiple people.
+Specify shared versus zoned actions, affected parties, negotiation rules and default exit for unresolved conflict.
+Truthful state reporting
+Report completion only with reliable tool evidence; distinguish pending, failed and unknown.
+Retain rule; add receipt association, time, reliable source, partial success, timeouts and unknowns; no evidence means no success claim.
+Termination and recovery
+Choose cancellation, verification or compensation by submission state; do not claim irreversible actions were rolled back.
+Retain rule; specify action-level cancellation and compensation, retry idempotency and unknown cancellation paths.
+Refusal and memory scope
+Handle refusal by explicit object and duration without overwriting permanent preferences or ongoing permission; trip-only duration does not automatically mean silence.
+Add scope type, object, duration, edits and cross-journey rules; trip-only does not mandate silence.
+Decision evidence chain
+Policy outputs reference triggering rules and versions; real execution also needs authorization snapshots and tool receipts.
+Retain step snapshots; add provenance and missing-evidence markers, retention and access scope; inferred reasons are not actual triggers.

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {parseEvidence,validateDraft,latestEvidence,briefCases,dimensions} from '../src/decisionEvidence.js';
+const a={id:'a',sceneId:'TOP-006',dimension:'acceptance',type:'用户调研',date:'2026-10-05',scope:'家庭用户，原型A',source:'访谈01',finding:'第一次愿意启用',direction:'支持',judgment:'正向',createdAt:'2026-10-05T00:00:00Z',link:''};
+const b={...a,id:'b',scope:'单人用户，原型B',finding:'未发现净收益',direction:'反驳',judgment:'负向'};
+const records=parseEvidence(JSON.stringify([a,b]));
+assert.equal(records.length,2);assert.equal(records[0].direction,'支持');assert.equal(latestEvidence(records,'TOP-006','acceptance').id,'b');assert.equal(latestEvidence(records,'TOP-005','acceptance'),undefined);
+assert.throws(()=>parseEvidence('{bad'));assert.throws(()=>parseEvidence(JSON.stringify([{...a,sceneId:'TOP-099'}])));assert.throws(()=>parseEvidence('{}'));
+assert.ok(validateDraft({...a,source:''}));assert.ok(validateDraft({...a,link:'javascript:alert(1)'}));assert.equal(validateDraft(a),'');
+for(const value of Object.values(briefCases))assert.equal(dimensions.filter(([id])=>value[id]).length,6);
+console.log('PASS: history survives serialization, conflicting observations retained, scenes isolated, invalid records rejected, six dimensions covered');
