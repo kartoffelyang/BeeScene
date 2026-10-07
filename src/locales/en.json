@@ -1687,5 +1687,7 @@
   "受阻路径的恢复需要车辆移动系统和人工协助协同。": "Blocked-path recovery coordinates the vehicle-motion system and human assistance.",
   "与停车设施协作完成车辆进出、停放和取回。": "Coordinates vehicle entry, parking and retrieval with parking infrastructure.",
   "车辆自主返回约定位置，需要专用运动系统及状态回执。": "Autonomous return needs a dedicated motion system and state receipts.",
-  "扩展研究：车辆运动执行需专用系统及交接契约，现有示范R01不直接覆盖。": "Extended research: vehicle-motion execution requires dedicated systems and handover contracts; the R01 example does not directly cover it."
+  "扩展研究：车辆运动执行需专用系统及交接契约，现有示范R01不直接覆盖。": "Extended research: vehicle-motion execution requires dedicated systems and handover contracts; the R01 example does not directly cover it.",
+  "场景库": "Scenario library",
+  "放宽四个维度的选择，或把这个空白作为后续探索方向。": "Broaden the four filter dimensions, or use this gap as a direction for further exploration."
 }
